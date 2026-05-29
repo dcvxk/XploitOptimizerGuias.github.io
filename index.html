@@ -595,8 +595,6 @@
     </div>
 
     <div class="layout-container">
-      <!-- FIX 1 & 5: Cada slot del sidebar usa formato rectangle 300x250 (predecible, sin conflicto con min-height)
-           y cada posición tiene su propio data-ad-slot único -->
       <aside class="ad-sidebar left">
         <div class="ad-premium-container">
           <div class="ad-header"><div class="ad-badge"></div><span>Patrocinado</span></div>
@@ -605,7 +603,7 @@
               <ins class="adsbygoogle"
                    style="display:inline-block;width:300px;height:250px"
                    data-ad-client="ca-pub-7123646713653046"
-                   data-ad-slot="5608812254s"></ins>
+                   data-ad-slot="5608812254"></ins>
             </div>
           </div>
         </div>
@@ -662,8 +660,6 @@
 
   <script>
     (function() {
-      // FIX 3: Detección de AdBlock mejorada — usa fetch a un recurso de Google Ads
-      // en lugar de offsetHeight (que daba falsos positivos en móvil / layouts especiales)
       let adBlockDetected = false;
       const overlay = document.getElementById('antiAdblockOverlay');
       const mainWrapper = document.getElementById('mainWrapper');
@@ -684,17 +680,21 @@
         location.reload();
       });
 
-      // FIX 3: Detección fiable via fetch — si el recurso de AdSense es bloqueado, falla la petición
+      // Detección de AdBlock más fiable (evita falsos positivos en localhost)
       function testAdBlock() {
-        return fetch(
-          'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-          { method: 'HEAD', mode: 'no-cors', cache: 'no-store' }
-        )
-          .then(() => false)   // fetch OK → no bloqueado
-          .catch(() => true);  // fetch bloqueado → AdBlock activo
+        return new Promise((resolve) => {
+          const testDiv = document.createElement('div');
+          testDiv.className = 'adsbox';
+          testDiv.style.cssText = 'position:absolute;top:-1000px;width:1px;height:1px;';
+          document.body.appendChild(testDiv);
+          setTimeout(() => {
+            const blocked = testDiv.offsetHeight === 0;
+            document.body.removeChild(testDiv);
+            resolve(blocked);
+          }, 100);
+        });
       }
 
-      // Inicialización de anuncios de Google
       function loadAdSense() {
         return new Promise((resolve) => {
           if (document.querySelector('script[src*="adsbygoogle.js"]')) {
@@ -711,27 +711,21 @@
         });
       }
 
-      // FIX 2 & 4: Helper que inserta y empuja UN solo <ins> correctamente,
-      // evitando el push en lote (que fallaba con elementos recién creados)
-      // y permitiendo empujar sidebars y contenido dinámico por separado.
-      function pushSingleAd(insElement) {
+      function pushAds() {
         try {
           (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch(e) {}
+        } catch(e) {
+          console.warn('AdSense push error:', e);
+        }
       }
 
-      // Empuja todos los <ins> que aún no han sido inicializados por AdSense
-      function pushPendingAds() {
-        document.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status])').forEach(ins => {
-          pushSingleAd(ins);
-        });
+      function pushAllAds() {
+        document.querySelectorAll('.adsbygoogle').forEach(() => pushAds());
       }
 
-      // Contenido dinámico
       const mainArea = document.getElementById('mainContentArea');
       const navBtns = document.querySelectorAll('.nav-link');
       const navPill = document.getElementById('navPill');
-      let currentSection = 'inicio';
       
       const videoList = [
         { file: "optimizacion_windows.mp4", title: "Guía Completa de Optimización para Windows" },
@@ -745,7 +739,6 @@
         'https://placehold.co/900x550/0c0c18/c4a8ff?text=Reducción+de+Latencia:+30ms+a+8ms'
       ];
 
-      // Scroll para nav compacto
       let lastScroll = 0;
       window.addEventListener('scroll', () => {
         const current = window.scrollY;
@@ -755,8 +748,6 @@
       });
 
       function renderInicio() {
-        // FIX 1: data-ad-slot único para el banner de contenido
-        // FIX 5: formato fluid sigue siendo válido para el banner principal (ancho completo)
         mainArea.innerHTML = `
           <div class="banner-ad-container">
             <div class="banner-ad-header">
@@ -766,11 +757,11 @@
             <div class="banner-ad-content">
               <div class="adsense-wrapper">
                 <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
+                     style="display:block; text-align:center; min-width:300px; width:100%; height:auto;"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"
                      data-ad-client="ca-pub-7123646713653046"
-                     data-ad-slot="SLOT_BANNER_INICIO"></ins>
+                     data-ad-slot="5608812254"></ins>
               </div>
             </div>
           </div>
@@ -792,8 +783,7 @@
             </div>
           </div>
         `;
-        // FIX 2: push solo los <ins> nuevos (no inicializados aún)
-        pushPendingAds();
+        pushAds(); // Solo un push para todos los nuevos ins (el selector .adsbygoogle ya los incluye)
       }
 
       function renderVideos() {
@@ -870,7 +860,6 @@
       }
 
       function switchSection(section) {
-        currentSection = section;
         if (section === 'inicio') renderInicio();
         else if (section === 'videos') renderVideos();
         else if (section === 'resultados') renderResultados();
@@ -885,19 +874,16 @@
         });
       });
 
-      // Arranque con detección de AdBlock
       async function bootstrap() {
         const isBlocked = await testAdBlock();
         if (isBlocked) {
-          adBlockDetected = true;
           showAntiAdblock();
           return;
         }
         
         await loadAdSense();
-        // FIX 4: Primero empuja los sidebars (ya están en el DOM desde el HTML),
-        // luego renderiza el contenido y empuja sus anuncios por separado
-        pushPendingAds();
+        // Empujar todos los anuncios ya presentes (sidebars)
+        pushAllAds();
         hideAntiAdblock();
         switchSection('inicio');
       }
