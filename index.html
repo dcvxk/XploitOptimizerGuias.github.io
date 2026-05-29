@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Xploit Optimizer | Optimización Profesional de Sistemas</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Guías profesionales de optimización para Windows: Regedit Tweaks, Settings Tweaks y Game Tweaks. Mejora el rendimiento de tu sistema con Xploit Optimizer.">
+  <meta name="keywords" content="optimización windows, regedit tweaks, settings tweaks, game tweaks, rendimiento pc, xploit optimizer, fps boost, latencia">
+  <meta name="author" content="Xploit Optimizer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://xploit-optimizer.com/">
+  <meta property="og:title" content="Xploit Optimizer | Guías de Optimización Premium">
+  <meta property="og:description" content="Descubre las mejores optimizaciones para Windows. Mejora FPS, reduce latencia y optimiza tu sistema.">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #e5e5e5;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 30% 40%, #0f0a1a 0%, #050508 100%);
+    }
+
+    .animated-bg::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -20%;
+      width: 80%;
+      height: 80%;
+      background: radial-gradient(circle, rgba(100, 50, 160, 0.2) 0%, transparent 70%);
+      filter: blur(100px);
+      animation: floatMorph 14s infinite alternate ease-in-out;
+    }
+
+    .animated-bg::after {
+      content: "";
+      position: absolute;
+      bottom: -10%;
+      right: -10%;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(60, 30, 120, 0.25) 0%, transparent 70%);
+      filter: blur(110px);
+      animation: floatMorph 18s infinite alternate-reverse ease-in-out;
+    }
+
+    @keyframes floatMorph {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+      100% { transform: translate(5%, 5%) scale(1.3); opacity: 1; }
+    }
+
+    /* Anti-Adblock Overlay */
+    .anti-adblock-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 40%, #0a0a0f 0%, #000000 100%);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(24px);
+    }
+
+    .anti-adblock-card {
+      background: linear-gradient(135deg, rgba(22, 22, 30, 0.95) 0%, rgba(12, 12, 18, 0.98) 100%);
+      backdrop-filter: blur(20px);
+      border-radius: 48px;
+      padding: 3rem 2.5rem;
+      max-width: 520px;
+      width: 90%;
+      text-align: center;
+      border: 1px solid rgba(180, 130, 255, 0.3);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .anti-adblock-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .anti-adblock-message {
+      color: #a5a0bc;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .anti-adblock-instruction {
+      background: rgba(130, 100, 220, 0.12);
+      border-radius: 20px;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border: 1px solid rgba(130, 100, 220, 0.25);
+    }
+
+    .anti-adblock-instruction p {
+      color: #c4b0ff;
+      font-size: 0.85rem;
+      margin: 0.3rem 0;
+    }
+
+    .anti-adblock-btn {
+      background: linear-gradient(135deg, #7a4bc2, #5a2a9e);
+      border: none;
+      padding: 0.85rem 2rem;
+      border-radius: 60px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .anti-adblock-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(130, 100, 220, 0.5);
+    }
+
+    /* Layout principal */
+    .main-wrapper {
+      transition: opacity 0.3s ease;
+    }
+
+    .layout-container {
+      display: flex;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+      min-height: calc(100vh - 180px);
+    }
+
+    .ad-sidebar {
+      flex: 0 0 300px;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .ad-premium-container {
+      background: linear-gradient(135deg, rgba(18, 18, 26, 0.7) 0%, rgba(12, 12, 18, 0.8) 100%);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      border: 1px solid rgba(130, 100, 220, 0.15);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .ad-premium-container:hover {
+      border-color: rgba(130, 100, 220, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .ad-header {
+      padding: 0.8rem 1.2rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(130, 100, 220, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ad-badge {
+      width: 6px;
+      height: 6px;
+      background: #7a4bc2;
+      border-radius: 50%;
+    }
+
+    .ad-header span {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #9a8ec2;
+    }
+
+    .ad-content {
+      padding: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 260px;
+    }
+
+    /* Banner principal con anuncio */
+    .banner-ad-container {
+      width: 100%;
+      margin: 0 auto 2.5rem;
+      border-radius: 32px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(18, 18, 26, 0.8) 0%, rgba(12, 12, 18, 0.9) 100%);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(130, 100, 220, 0.2);
+      transition: all 0.3s ease;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .banner-ad-container:hover {
+      border-color: rgba(130, 100, 220, 0.5);
+    }
+
+    .banner-ad-header {
+      padding: 0.8rem 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(130, 100, 220, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .banner-ad-badge {
+      width: 8px;
+      height: 8px;
+      background: #b083e0;
+      border-radius: 50%;
+    }
+
+    .banner-ad-header span {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #c4b0ff;
+    }
+
+    .banner-ad-content {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 280px;
+    }
+
+    .adsense-wrapper {
+      width: 100%;
+      text-align: center;
+    }
+
+    .main-content-area {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* Dynamic Island Navigation */
+    .dynamic-island {
+      position: sticky;
+      top: 1.5rem;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+
+    .nav-pill {
+      pointer-events: auto;
+      background: rgba(12, 12, 18, 0.85);
+      backdrop-filter: blur(24px);
+      border-radius: 100px;
+      padding: 0.6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: fit-content;
+      max-width: 95%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(130, 100, 220, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .nav-pill.compact {
+      padding: 0.5rem 1.5rem;
+    }
+
+    .nav-pill.compact .nav-links {
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 0%, #c4b0ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-right: 2rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .nav-link {
+      background: transparent;
+      border: none;
+      color: rgba(200, 190, 230, 0.8);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .nav-link:hover {
+      background: rgba(130, 100, 220, 0.15);
+      color: #ffffff;
+    }
+
+    .nav-link.active {
+      background: rgba(130, 100, 220, 0.35);
+      color: white;
+    }
+
+    /* Tarjetas de optimización */
+    .tweaks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tweak-card {
+      background: linear-gradient(135deg, rgba(22, 22, 30, 0.8) 0%, rgba(16, 16, 24, 0.9) 100%);
+      backdrop-filter: blur(12px);
+      border-radius: 32px;
+      padding: 2rem;
+      border: 1px solid rgba(130, 100, 220, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .tweak-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(130, 100, 220, 0.5);
+      box-shadow: 0 20px 35px -12px rgba(80, 50, 160, 0.3);
+    }
+
+    .tweak-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #c4a8ff, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .tweak-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #ece4ff;
+    }
+
+    .tweak-desc {
+      color: #a5a0bc;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Sección Videos */
+    .videos-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: rgba(18, 18, 26, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(130, 100, 220, 0.15);
+    }
+
+    .video-card:hover {
+      border-color: rgba(130, 100, 220, 0.35);
+    }
+
+    .video-title {
+      padding: 1rem 1.8rem;
+      font-weight: 700;
+      font-size: 1rem;
+      background: rgba(30, 28, 45, 0.6);
+      border-bottom: 1px solid rgba(130, 100, 220, 0.2);
+      color: #d4bfff;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    /* Resultados Carrusel */
+    .results-carousel-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      background: rgba(10, 10, 16, 0.5);
+      padding: 1rem;
+    }
+
+    .results-carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .results-slide {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .results-slide img {
+      max-width: 100%;
+      max-height: 550px;
+      border-radius: 28px;
+      object-fit: contain;
+      background: #0f0f16;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(130, 100, 220, 0.2);
+    }
+
+    .results-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    .results-btn {
+      background: rgba(30, 28, 48, 0.8);
+      border: 1px solid rgba(130, 100, 220, 0.3);
+      padding: 0.6rem 1.5rem;
+      border-radius: 60px;
+      color: #e0d6ff;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+
+    .results-btn:hover {
+      background: rgba(130, 100, 220, 0.5);
+      color: white;
+    }
+
+    /* Keys - En desarrollo */
+    .development-card {
+      background: linear-gradient(135deg, rgba(22, 22, 30, 0.8) 0%, rgba(16, 16, 24, 0.9) 100%);
+      backdrop-filter: blur(12px);
+      border-radius: 40px;
+      padding: 4rem 2rem;
+      text-align: center;
+      border: 1px solid rgba(130, 100, 220, 0.2);
+    }
+
+    .dev-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ece4ff;
+    }
+
+    .dev-text {
+      color: #a5a0bc;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-profesional {
+      margin-top: 3rem;
+      background: rgba(8, 8, 12, 0.95);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(130, 100, 220, 0.15);
+      padding: 2rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #8a82aa;
+      font-size: 0.85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      color: #9a90b8;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #c4b0ff;
+    }
+
+    @media (max-width: 1100px) {
+      .ad-sidebar { flex: 0 0 260px; }
+    }
+
+    @media (max-width: 900px) {
+      .layout-container { flex-direction: column; }
+      .ad-sidebar { display: none; }
+    }
+
+    @media (max-width: 650px) {
+      .nav-pill { padding: 0.4rem 1rem; }
+      .tweaks-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <div id="antiAdblockOverlay" class="anti-adblock-overlay" style="display: none;">
+    <div class="anti-adblock-card">
+      <h2 class="anti-adblock-title">Bloqueador de anuncios detectado</h2>
+      <p class="anti-adblock-message">Xploit Optimizer ofrece contenido gratuito gracias a la publicidad. Por favor, desactiva tu bloqueador de anuncios para continuar.</p>
+      <div class="anti-adblock-instruction">
+        <p>• Desactiva AdBlock, uBlock Origin o extensiones similares</p>
+        <p>• Recarga la página después de desactivarlo</p>
+      </div>
+      <button class="anti-adblock-btn" id="retryAccessBtn">Recargar página</button>
+    </div>
+  </div>
+
+  <div id="mainWrapper" class="main-wrapper">
+    <div class="dynamic-island">
+      <div class="nav-pill" id="navPill">
+        <span class="logo">XPLOIT OPTIMIZER</span>
+        <div class="nav-links">
+          <button class="nav-link active" data-section="inicio">Inicio</button>
+          <button class="nav-link" data-section="videos">Videos</button>
+          <button class="nav-link" data-section="resultados">Resultados</button>
+          <button class="nav-link" data-section="keys">Keys</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-container">
+      <!-- FIX 1 & 5: Cada slot del sidebar usa formato rectangle 300x250 (predecible, sin conflicto con min-height)
+           y cada posición tiene su propio data-ad-slot único -->
+      <aside class="ad-sidebar left">
+        <div class="ad-premium-container">
+          <div class="ad-header"><div class="ad-badge"></div><span>Patrocinado</span></div>
+          <div class="ad-content">
+            <div class="adsense-wrapper">
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:300px;height:250px"
+                   data-ad-client="ca-pub-7123646713653046"
+                   data-ad-slot="SLOT_SIDEBAR_IZQ_1"></ins>
+            </div>
+          </div>
+        </div>
+        <div class="ad-premium-container">
+          <div class="ad-header"><div class="ad-badge"></div><span>Publicidad</span></div>
+          <div class="ad-content">
+            <div class="adsense-wrapper">
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:300px;height:250px"
+                   data-ad-client="ca-pub-7123646713653046"
+                   data-ad-slot="SLOT_SIDEBAR_IZQ_2"></ins>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content-area" id="mainContentArea"></main>
+
+      <aside class="ad-sidebar right">
+        <div class="ad-premium-container">
+          <div class="ad-header"><div class="ad-badge"></div><span>Colaboración</span></div>
+          <div class="ad-content">
+            <div class="adsense-wrapper">
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:300px;height:250px"
+                   data-ad-client="ca-pub-7123646713653046"
+                   data-ad-slot="SLOT_SIDEBAR_DER_1"></ins>
+            </div>
+          </div>
+        </div>
+        <div class="ad-premium-container">
+          <div class="ad-header"><div class="ad-badge"></div><span>Anuncio</span></div>
+          <div class="ad-content">
+            <div class="adsense-wrapper">
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:300px;height:250px"
+                   data-ad-client="ca-pub-7123646713653046"
+                   data-ad-slot="SLOT_SIDEBAR_DER_2"></ins>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer-profesional">
+      <span>© 2026 Xploit Optimizer — Optimización Profesional de Sistemas</span>
+      <div class="footer-links">
+        <a href="#">Aviso Legal</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Contacto</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function() {
+      // FIX 3: Detección de AdBlock mejorada — usa fetch a un recurso de Google Ads
+      // en lugar de offsetHeight (que daba falsos positivos en móvil / layouts especiales)
+      let adBlockDetected = false;
+      const overlay = document.getElementById('antiAdblockOverlay');
+      const mainWrapper = document.getElementById('mainWrapper');
+
+      function showAntiAdblock() {
+        overlay.style.display = 'flex';
+        mainWrapper.style.opacity = '0.3';
+        mainWrapper.style.pointerEvents = 'none';
+      }
+
+      function hideAntiAdblock() {
+        overlay.style.display = 'none';
+        mainWrapper.style.opacity = '1';
+        mainWrapper.style.pointerEvents = 'auto';
+      }
+
+      document.getElementById('retryAccessBtn')?.addEventListener('click', () => {
+        location.reload();
+      });
+
+      // FIX 3: Detección fiable via fetch — si el recurso de AdSense es bloqueado, falla la petición
+      function testAdBlock() {
+        return fetch(
+          'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+          { method: 'HEAD', mode: 'no-cors', cache: 'no-store' }
+        )
+          .then(() => false)   // fetch OK → no bloqueado
+          .catch(() => true);  // fetch bloqueado → AdBlock activo
+      }
+
+      // Inicialización de anuncios de Google
+      function loadAdSense() {
+        return new Promise((resolve) => {
+          if (document.querySelector('script[src*="adsbygoogle.js"]')) {
+            resolve();
+            return;
+          }
+          const script = document.createElement('script');
+          script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7123646713653046';
+          script.crossOrigin = 'anonymous';
+          script.async = true;
+          script.onload = () => resolve();
+          script.onerror = () => resolve();
+          document.head.appendChild(script);
+        });
+      }
+
+      // FIX 2 & 4: Helper que inserta y empuja UN solo <ins> correctamente,
+      // evitando el push en lote (que fallaba con elementos recién creados)
+      // y permitiendo empujar sidebars y contenido dinámico por separado.
+      function pushSingleAd(insElement) {
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch(e) {}
+      }
+
+      // Empuja todos los <ins> que aún no han sido inicializados por AdSense
+      function pushPendingAds() {
+        document.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status])').forEach(ins => {
+          pushSingleAd(ins);
+        });
+      }
+
+      // Contenido dinámico
+      const mainArea = document.getElementById('mainContentArea');
+      const navBtns = document.querySelectorAll('.nav-link');
+      const navPill = document.getElementById('navPill');
+      let currentSection = 'inicio';
+      
+      const videoList = [
+        { file: "optimizacion_windows.mp4", title: "Guía Completa de Optimización para Windows" },
+        { file: "regedit_advanced.mp4", title: "Regedit Tweaks Avanzados - Mejora tu Latencia" },
+        { file: "gaming_fps.mp4", title: "Aumenta FPS en Juegos con Configuraciones Exclusivas" }
+      ];
+      
+      const resultsImages = [
+        'https://placehold.co/900x550/12121e/b083e0?text=Benchmark+Antes+y+Después',
+        'https://placehold.co/900x550/0f0f1a/8b5cf6?text=Mejora+de+FPS:+Incremento+del+45%25',
+        'https://placehold.co/900x550/0c0c18/c4a8ff?text=Reducción+de+Latencia:+30ms+a+8ms'
+      ];
+
+      // Scroll para nav compacto
+      let lastScroll = 0;
+      window.addEventListener('scroll', () => {
+        const current = window.scrollY;
+        if (current > 40 && lastScroll <= 40) navPill.classList.add('compact');
+        else if (current <= 40 && lastScroll > 40) navPill.classList.remove('compact');
+        lastScroll = current;
+      });
+
+      function renderInicio() {
+        // FIX 1: data-ad-slot único para el banner de contenido
+        // FIX 5: formato fluid sigue siendo válido para el banner principal (ancho completo)
+        mainArea.innerHTML = `
+          <div class="banner-ad-container">
+            <div class="banner-ad-header">
+              <div class="banner-ad-badge"></div>
+              <span>Sponsored</span>
+            </div>
+            <div class="banner-ad-content">
+              <div class="adsense-wrapper">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-7123646713653046"
+                     data-ad-slot="SLOT_BANNER_INICIO"></ins>
+              </div>
+            </div>
+          </div>
+          <div class="tweaks-grid">
+            <div class="tweak-card">
+              <div class="tweak-icon">⚙</div>
+              <h3 class="tweak-title">Regedit Tweaks</h3>
+              <p class="tweak-desc">Optimizaciones profundas en el registro de Windows para reducir latencia del sistema, mejorar tiempos de respuesta y eliminar cuellos de botella.</p>
+            </div>
+            <div class="tweak-card">
+              <div class="tweak-icon">🖥</div>
+              <h3 class="tweak-title">Settings Tweaks</h3>
+              <p class="tweak-desc">Configuración avanzada del sistema operativo, desactivación de servicios innecesarios y ajustes de rendimiento para maximizar recursos.</p>
+            </div>
+            <div class="tweak-card">
+              <div class="tweak-icon">🎮</div>
+              <h3 class="tweak-title">Game / Apps Tweaks</h3>
+              <p class="tweak-desc">Parámetros específicos para juegos y aplicaciones pesadas. Reduce el stuttering, aumenta FPS y optimiza el uso de GPU y CPU.</p>
+            </div>
+          </div>
+        `;
+        // FIX 2: push solo los <ins> nuevos (no inicializados aún)
+        pushPendingAds();
+      }
+
+      function renderVideos() {
+        let html = '<div class="videos-grid">';
+        videoList.forEach(video => {
+          html += `
+            <div class="video-card">
+              <div class="video-title">${escapeHtml(video.title)}</div>
+              <div class="video-wrapper">
+                <video controls preload="metadata" poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video">
+                  <source src="video/${video.file}" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          `;
+        });
+        html += '</div>';
+        mainArea.innerHTML = html;
+      }
+
+      let resIndex = 0;
+      function renderResultados() {
+        let html = `
+          <div class="results-carousel-container">
+            <div class="results-carousel-track" id="resultsTrack"></div>
+          </div>
+          <div class="results-controls">
+            <button class="results-btn" id="resPrev">Anterior</button>
+            <button class="results-btn" id="resNext">Siguiente</button>
+          </div>
+        `;
+        mainArea.innerHTML = html;
+        
+        const track = document.getElementById('resultsTrack');
+        resultsImages.forEach(src => {
+          const slide = document.createElement('div');
+          slide.className = 'results-slide';
+          slide.innerHTML = `<img src="${src}" loading="lazy">`;
+          track.appendChild(slide);
+        });
+        
+        resIndex = 0;
+        function update() { track.style.transform = `translateX(-${resIndex * 100}%)`; }
+        
+        document.getElementById('resPrev')?.addEventListener('click', () => {
+          resIndex = (resIndex - 1 + resultsImages.length) % resultsImages.length;
+          update();
+        });
+        document.getElementById('resNext')?.addEventListener('click', () => {
+          resIndex = (resIndex + 1) % resultsImages.length;
+          update();
+        });
+        update();
+      }
+
+      function renderKeys() {
+        mainArea.innerHTML = `
+          <div class="development-card">
+            <h2 class="dev-title">En desarrollo</h2>
+            <p class="dev-text">Próximamente encontrarás claves de activación y recursos exclusivos para miembros.</p>
+            <p class="dev-text" style="margin-top: 0.8rem;">Mantente atento a las actualizaciones.</p>
+          </div>
+        `;
+      }
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+          if (m === '&') return '&amp;';
+          if (m === '<') return '&lt;';
+          if (m === '>') return '&gt;';
+          return m;
+        });
+      }
+
+      function switchSection(section) {
+        currentSection = section;
+        if (section === 'inicio') renderInicio();
+        else if (section === 'videos') renderVideos();
+        else if (section === 'resultados') renderResultados();
+        else if (section === 'keys') renderKeys();
+      }
+
+      navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          navBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          switchSection(btn.getAttribute('data-section'));
+        });
+      });
+
+      // Arranque con detección de AdBlock
+      async function bootstrap() {
+        const isBlocked = await testAdBlock();
+        if (isBlocked) {
+          adBlockDetected = true;
+          showAntiAdblock();
+          return;
+        }
+        
+        await loadAdSense();
+        // FIX 4: Primero empuja los sidebars (ya están en el DOM desde el HTML),
+        // luego renderiza el contenido y empuja sus anuncios por separado
+        pushPendingAds();
+        hideAntiAdblock();
+        switchSection('inicio');
+      }
+
+      bootstrap();
+    })();
+  </script>
+</body>
+</html>
