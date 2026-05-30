@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -418,10 +417,12 @@
       border-radius: 32px;
       overflow: hidden;
       border: 1px solid rgba(130, 100, 220, 0.15);
+      transition: all 0.3s ease;
     }
 
     .video-card:hover {
       border-color: rgba(130, 100, 220, 0.35);
+      transform: translateY(-2px);
     }
 
     .video-title {
@@ -437,11 +438,69 @@
       position: relative;
       width: 100%;
       background: #000;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    .video-wrapper iframe,
     .video-wrapper video {
       width: 100%;
-      display: block;
+      height: 100%;
+      border: none;
+    }
+
+    /* ESTILOS PARA PANTALLA COMPLETA CON ANUNCIOS LATERALES */
+    .video-wrapper:fullscreen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      background: #000000;
+      padding: 2rem;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000;
+    }
+
+    .video-wrapper:fullscreen iframe,
+    .video-wrapper:fullscreen video {
+      width: calc(100% - 640px);
+      max-width: 1200px;
+      height: auto;
+      max-height: 80vh;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+
+    .video-wrapper:fullscreen .fullscreen-ad {
+      width: 280px;
+      min-width: 280px;
+      height: auto;
+      min-height: 250px;
+      background: linear-gradient(135deg, rgba(22,22,30,0.95), rgba(12,12,18,0.98));
+      border-radius: 24px;
+      border: 1px solid rgba(130,100,220,0.4);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .video-wrapper:fullscreen .fullscreen-ad .adsense-wrapper {
+      width: 100%;
+      text-align: center;
+    }
+
+    .video-wrapper:fullscreen .fullscreen-ad ins {
+      display: inline-block;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      min-height: 250px;
     }
 
     /* Resultados Carrusel */
@@ -681,7 +740,7 @@
         location.reload();
       });
 
-      // Detección de AdBlock más fiable (evita falsos positivos en localhost)
+      // Detección de AdBlock más fiable
       function testAdBlock() {
         return new Promise((resolve) => {
           const testDiv = document.createElement('div');
@@ -728,14 +787,27 @@
       const navBtns = document.querySelectorAll('.nav-link');
       const navPill = document.getElementById('navPill');
       
+      // Lista de videos - YouTube con parámetros para ocultar logo y enlaces
       const videoList = [
-        { file: "optimizacion_windows.mp4", title: "Guía Completa de Optimización para Windows" },
-        { file: "regedit_advanced.mp4", title: "Regedit Tweaks Avanzados - Mejora tu Latencia" },
-        { file: "gaming_fps.mp4", title: "Aumenta FPS en Juegos con Configuraciones Exclusivas" }
+        { 
+          type: "youtube", 
+          url: "https://www.youtube-nocookie.com/embed/ERECR8pEHHI?modestbranding=1&showinfo=0&controls=1&rel=0&iv_load_policy=3&color=white&disablekb=1&fs=1", 
+          title: "Cómo los profesionales optimizan Windows para aumentar los FPS (Guía de optimización free tweak)" 
+        },
+        { 
+          type: "local", 
+          file: "regedit_advanced.mp4", 
+          title: "Regedit Tweaks Avanzados - Mejora tu Latencia" 
+        },
+        { 
+          type: "local", 
+          file: "gaming_fps.mp4", 
+          title: "Aumenta FPS en Juegos con Configuraciones Exclusivas" 
+        }
       ];
       
       const resultsImages = [
-        'Resultados/imagen1.png',
+        'https://placehold.co/900x550/12121e/b083e0?text=Benchmark+Antes+y+Después',
         'https://placehold.co/900x550/0f0f1a/8b5cf6?text=Mejora+de+FPS:+Incremento+del+45%25',
         'https://placehold.co/900x550/0c0c18/c4a8ff?text=Reducción+de+Latencia:+30ms+a+8ms'
       ];
@@ -747,6 +819,78 @@
         else if (current <= 40 && lastScroll > 40) navPill.classList.remove('compact');
         lastScroll = current;
       });
+
+      // Función para manejar los anuncios laterales en pantalla completa
+      function setupFullscreenAds() {
+        const wrappers = document.querySelectorAll('.video-wrapper');
+        wrappers.forEach(wrapper => {
+          const media = wrapper.querySelector('iframe, video');
+          if (!media) return;
+          
+          // Función para crear un anuncio lateral
+          function createFullscreenAd(side) {
+            const adDiv = document.createElement('div');
+            adDiv.className = 'fullscreen-ad';
+            adDiv.setAttribute('data-side', side);
+            adDiv.innerHTML = `
+              <div class="ad-header" style="padding: 0.5rem; border-bottom: 1px solid rgba(130,100,220,0.3);">
+                <div class="ad-badge"></div>
+                <span style="font-size: 0.6rem;">${side === 'left' ? 'Patrocinado' : 'Publicidad'}</span>
+              </div>
+              <div class="ad-content" style="padding: 0.8rem; min-height: auto;">
+                <div class="adsense-wrapper">
+                  <ins class="adsbygoogle"
+                       style="display:inline-block;width:280px;height:250px"
+                       data-ad-client="ca-pub-7123646713653046"
+                       data-ad-slot="5608812254"></ins>
+                </div>
+              </div>
+            `;
+            return adDiv;
+          }
+          
+          function addFullscreenAds() {
+            // Evitar duplicados
+            if (wrapper.querySelector('.fullscreen-ad')) return;
+            
+            const leftAd = createFullscreenAd('left');
+            const rightAd = createFullscreenAd('right');
+            
+            wrapper.insertBefore(leftAd, media);
+            wrapper.appendChild(rightAd);
+            
+            // Recargar los nuevos ads
+            if (window.adsbygoogle) {
+              wrapper.querySelectorAll('.adsbygoogle').forEach(() => {
+                try { window.adsbygoogle.push({}); } catch(e) {}
+              });
+            }
+          }
+          
+          function removeFullscreenAds() {
+            const ads = wrapper.querySelectorAll('.fullscreen-ad');
+            ads.forEach(ad => ad.remove());
+          }
+          
+          // Escuchar cambios de pantalla completa
+          media.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement === wrapper) {
+              addFullscreenAds();
+            } else if (document.fullscreenElement === null) {
+              removeFullscreenAds();
+            }
+          });
+          
+          // También escuchar en el wrapper por si acaso
+          wrapper.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement === wrapper) {
+              addFullscreenAds();
+            } else if (document.fullscreenElement === null) {
+              removeFullscreenAds();
+            }
+          });
+        });
+      }
 
       function renderInicio() {
         mainArea.innerHTML = `
@@ -784,7 +928,7 @@
             </div>
           </div>
         `;
-        pushAds(); // Solo un push para todos los nuevos ins (el selector .adsbygoogle ya los incluye)
+        pushAds();
       }
 
       function renderVideos() {
@@ -794,15 +938,32 @@
             <div class="video-card">
               <div class="video-title">${escapeHtml(video.title)}</div>
               <div class="video-wrapper">
-                <video controls preload="metadata" poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video">
-                  <source src="video/${video.file}" type="video/mp4">
-                </video>
+          `;
+          if (video.type === 'youtube') {
+            html += `<iframe src="${video.url}" 
+                              title="${escapeHtml(video.title)}"
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin" 
+                              allowfullscreen></iframe>`;
+          } else {
+            html += `<video controls preload="metadata" poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video">
+                       <source src="video/${video.file}" type="video/mp4">
+                       Tu navegador no soporta la etiqueta de video.
+                     </video>`;
+          }
+          html += `
               </div>
             </div>
           `;
         });
         html += '</div>';
         mainArea.innerHTML = html;
+        
+        // Configurar los anuncios laterales para pantalla completa
+        setTimeout(() => {
+          setupFullscreenAds();
+        }, 100);
       }
 
       let resIndex = 0;
@@ -822,7 +983,7 @@
         resultsImages.forEach(src => {
           const slide = document.createElement('div');
           slide.className = 'results-slide';
-          slide.innerHTML = `<img src="${src}" loading="lazy">`;
+          slide.innerHTML = `<img src="Resultados/imagen1.png" loading="lazy" alt="Resultado de optimización">`;
           track.appendChild(slide);
         });
         
@@ -883,7 +1044,6 @@
         }
         
         await loadAdSense();
-        // Empujar todos los anuncios ya presentes (sidebars)
         pushAllAds();
         hideAntiAdblock();
         switchSection('inicio');
