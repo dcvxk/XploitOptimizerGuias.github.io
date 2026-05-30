@@ -2,39 +2,97 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Xploit Optimizer | Optimización Profesional de Sistemas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <title>Xploit Optimizer | Optimización Profesional de Sistemas - Tweaks Avanzados Gratis</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Guías profesionales de optimización para Windows: Regedit Tweaks, Settings Tweaks y Game Tweaks. Mejora el rendimiento de tu sistema con Xploit Optimizer.">
-  <meta name="keywords" content="optimización windows, regedit tweaks, settings tweaks, game tweaks, rendimiento pc, xploit optimizer, fps boost, latencia">
+  <!-- SEO Ultra Avanzado -->
+  <meta name="description" content="Guías profesionales y gratuitas de optimización para Windows: Regedit Tweaks, Settings Tweaks, Game Tweaks y Information Tweaks avanzados. Mejora FPS, reduce latencia y domina tu sistema.">
+  <meta name="keywords" content="optimización windows, regedit tweaks, settings tweaks, game tweaks, information tweaks, rendimiento pc, xploit optimizer, fps boost, latencia, tweaks gratis, optimización avanzada windows 11, windows 10 optimizer, xploitsev">
   <meta name="author" content="Xploit Optimizer">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://xploitsev.online/">
-  <meta property="og:title" content="Xploit Optimizer | Guías de Optimización Premium">
-  <meta property="og:description" content="Descubre las mejores optimizaciones para Windows. Mejora FPS, reduce latencia y optimiza tu sistema.">
-  <meta property="og:type" content="website">
   
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Xploit Optimizer | Guías de Optimización Premium Gratuitas">
+  <meta property="og:description" content="Descubre las optimizaciones que otros venden. Xploit Optimizer te las ofrece gratis: Registro, Sistema, Gaming y Tweaks de Información.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0a0a0f/8b5cf6?text=Xploit+Optimizer">
+  <meta property="og:url" content="https://xploitsev.online/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Xploit Optimizer">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Xploit Optimizer - Tweaks Profesionales Gratis">
+  <meta name="twitter:description" content="Optimizaciones avanzadas para Windows que aumentan FPS y reducen latencia. Todo gratis.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/0a0a0f/8b5cf6?text=Xploit+Optimizer">
+  
+  <!-- PWA / Theme -->
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Xploit Optimizer">
+  
+  <!-- Preconexión y recursos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
   
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Estilos principales -->
   <style>
-    * {
+    /* ========== RESET Y VARIABLES ========== */
+    :root {
+      --primary: #8b5cf6;
+      --primary-light: #a78bfa;
+      --primary-dark: #6d28d9;
+      --background: #0a0a0a;
+      --surface: rgba(18, 18, 26, 0.8);
+      --surface-hover: rgba(22, 22, 30, 0.9);
+      --text-primary: #e5e5e5;
+      --text-secondary: #a5a0bc;
+      --text-accent: #c4b0ff;
+      --border: rgba(130, 100, 220, 0.2);
+      --border-hover: rgba(130, 100, 220, 0.5);
+      --shadow: 0 25px 35px -12px rgba(80, 50, 160, 0.3);
+      --radius-sm: 16px;
+      --radius-md: 24px;
+      --radius-lg: 32px;
+      --radius-xl: 48px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      background: #0a0a0a;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #e5e5e5;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
+    body {
+      background: var(--background);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ========== FONDO ANIMADO ========== */
     .animated-bg {
       position: fixed;
       top: 0;
@@ -52,7 +110,7 @@
       left: -20%;
       width: 80%;
       height: 80%;
-      background: radial-gradient(circle, rgba(100, 50, 160, 0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(100, 50, 160, 0.25) 0%, transparent 70%);
       filter: blur(100px);
       animation: floatMorph 14s infinite alternate ease-in-out;
     }
@@ -70,11 +128,32 @@
     }
 
     @keyframes floatMorph {
-      0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-      100% { transform: translate(5%, 5%) scale(1.3); opacity: 1; }
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(5%, 5%) scale(1.4);
+        opacity: 0.8;
+      }
     }
 
-    /* Anti-Adblock Overlay */
+    /* ========== CANVAS DE PARTÍCULAS ========== */
+    #particlesCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    /* ========== OVERLAY ANTI-ADBLOCK ========== */
     .anti-adblock-overlay {
       position: fixed;
       top: 0;
@@ -83,257 +162,230 @@
       height: 100%;
       background: radial-gradient(circle at 30% 40%, #0a0a0f 0%, #000000 100%);
       z-index: 10000;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .anti-adblock-overlay.active {
+      display: flex;
     }
 
     .anti-adblock-card {
       background: linear-gradient(135deg, rgba(22, 22, 30, 0.95) 0%, rgba(12, 12, 18, 0.98) 100%);
       backdrop-filter: blur(20px);
-      border-radius: 48px;
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-xl);
       padding: 3rem 2.5rem;
       max-width: 520px;
       width: 90%;
       text-align: center;
       border: 1px solid rgba(180, 130, 255, 0.3);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+      animation: fadeInUp 0.5s ease;
     }
 
     .anti-adblock-title {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: #ffffff;
       margin-bottom: 1rem;
+      color: var(--text-accent);
+      letter-spacing: -0.5px;
     }
 
     .anti-adblock-message {
-      color: #a5a0bc;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      color: var(--text-secondary);
       margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
 
     .anti-adblock-instruction {
-      background: rgba(130, 100, 220, 0.12);
-      border-radius: 20px;
-      padding: 1rem;
-      margin: 1.2rem 0;
-      border: 1px solid rgba(130, 100, 220, 0.25);
+      background: rgba(130, 100, 220, 0.1);
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      border: 1px solid var(--border);
     }
 
     .anti-adblock-instruction p {
-      color: #c4b0ff;
       font-size: 0.85rem;
-      margin: 0.3rem 0;
+      color: var(--text-secondary);
+      margin: 0.4rem 0;
     }
 
     .anti-adblock-btn {
-      background: linear-gradient(135deg, #7a4bc2, #5a2a9e);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       border: none;
-      padding: 0.85rem 2rem;
+      padding: 0.8rem 2rem;
       border-radius: 60px;
       color: white;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.9rem;
       cursor: pointer;
-      transition: all 0.3s;
-      font-family: inherit;
+      transition: var(--transition);
+      letter-spacing: -0.3px;
     }
 
     .anti-adblock-btn:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px rgba(130, 100, 220, 0.5);
-    }
-
-    /* Layout principal */
-    .main-wrapper {
-      transition: opacity 0.3s ease;
-    }
-
-    .layout-container {
-      display: flex;
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
-      min-height: calc(100vh - 180px);
-    }
-
-    .ad-sidebar {
-      flex: 0 0 300px;
-      position: sticky;
-      top: 100px;
-      height: fit-content;
-      align-self: flex-start;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .ad-premium-container {
-      background: linear-gradient(135deg, rgba(18, 18, 26, 0.7) 0%, rgba(12, 12, 18, 0.8) 100%);
-      backdrop-filter: blur(16px);
-      border-radius: 28px;
-      border: 1px solid rgba(130, 100, 220, 0.15);
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .ad-premium-container:hover {
-      border-color: rgba(130, 100, 220, 0.4);
       transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(80, 50, 160, 0.5);
     }
 
-    .ad-header {
-      padding: 0.8rem 1.2rem;
-      background: rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(130, 100, 220, 0.2);
+    .anti-adblock-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ========== COOKIE CONSENT ========== */
+    .cookie-consent {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(12, 12, 18, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.8rem;
+      z-index: 9999;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: space-between;
+      gap: 1rem;
+      border: 1px solid var(--border-hover);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      transform: translateY(150%);
+      transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .ad-badge {
-      width: 6px;
-      height: 6px;
-      background: #7a4bc2;
-      border-radius: 50%;
+    .cookie-consent.show {
+      transform: translateY(0);
     }
 
-    .ad-header span {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #9a8ec2;
-    }
-
-    .ad-content {
-      padding: 1.2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 260px;
-    }
-
-    /* Banner principal con anuncio */
-    .banner-ad-container {
-      width: 100%;
-      margin: 0 auto 2.5rem;
-      border-radius: 32px;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(18, 18, 26, 0.8) 0%, rgba(12, 12, 18, 0.9) 100%);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(130, 100, 220, 0.2);
-      transition: all 0.3s ease;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .banner-ad-container:hover {
-      border-color: rgba(130, 100, 220, 0.5);
-    }
-
-    .banner-ad-header {
-      padding: 0.8rem 1.5rem;
-      background: rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(130, 100, 220, 0.2);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .banner-ad-badge {
-      width: 8px;
-      height: 8px;
-      background: #b083e0;
-      border-radius: 50%;
-    }
-
-    .banner-ad-header span {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #c4b0ff;
-    }
-
-    .banner-ad-content {
-      padding: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 280px;
-    }
-
-    .adsense-wrapper {
-      width: 100%;
-      text-align: center;
-    }
-
-    .main-content-area {
+    .cookie-text {
+      font-size: 0.85rem;
+      color: var(--text-accent);
       flex: 1;
-      min-width: 0;
+      min-width: 200px;
     }
 
-    /* Dynamic Island Navigation */
+    .cookie-text a {
+      color: var(--primary-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .cookie-btn {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 60px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      letter-spacing: -0.3px;
+    }
+
+    .cookie-btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--primary);
+    }
+
+    .cookie-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(80, 50, 160, 0.4);
+    }
+
+    /* ========== WRAPPER PRINCIPAL ========== */
+    .main-wrapper {
+      transition: opacity 0.3s ease, filter 0.3s ease;
+      opacity: 1;
+      filter: none;
+    }
+
+    .main-wrapper.blocked {
+      opacity: 0.3;
+      pointer-events: none;
+      filter: blur(4px);
+    }
+
+    /* ========== DYNAMIC ISLAND / NAVEGACIÓN ========== */
     .dynamic-island {
       position: sticky;
-      top: 1.5rem;
+      top: 1rem;
       z-index: 100;
       display: flex;
       justify-content: center;
       pointer-events: none;
-      margin-bottom: 2rem;
-      padding: 0 1rem;
+      margin-bottom: 2.5rem;
+      padding: 0 1.5rem;
     }
 
     .nav-pill {
       pointer-events: auto;
       background: rgba(12, 12, 18, 0.85);
       backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       border-radius: 100px;
-      padding: 0.6rem 2rem;
+      padding: 0.6rem 1.8rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: fit-content;
-      max-width: 95%;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(130, 100, 220, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .nav-pill.compact {
-      padding: 0.5rem 1.5rem;
-    }
-
-    .nav-pill.compact .nav-links {
-      max-width: 0;
-      opacity: 0;
-      overflow: hidden;
-      margin: 0;
+      width: 100%;
+      max-width: 1300px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(130, 100, 220, 0.25);
+      transition: var(--transition);
     }
 
     .logo {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1.3rem;
       letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #ffffff 0%, #c4b0ff 100%);
+      background: linear-gradient(135deg, #ffffff 0%, var(--text-accent) 100%);
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;
-      margin-right: 2rem;
+      -webkit-text-fill-color: transparent;
       white-space: nowrap;
+      user-select: none;
+    }
+
+    /* ========== MENÚ HAMBURGUESA ========== */
+    .hamburger {
+      display: none;
+      background: rgba(130, 100, 220, 0.15);
+      border: 1px solid var(--border);
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0.5rem 0.7rem;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .hamburger:hover {
+      background: rgba(130, 100, 220, 0.3);
+      border-color: var(--border-hover);
     }
 
     .nav-links {
       display: flex;
-      gap: 0.3rem;
+      gap: 0.4rem;
       align-items: center;
-      transition: all 0.3s;
+      transition: var(--transition);
     }
 
     .nav-link {
@@ -343,26 +395,132 @@
       font-family: inherit;
       font-weight: 600;
       font-size: 0.9rem;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
       cursor: pointer;
-      transition: 0.2s;
+      transition: var(--transition);
+      letter-spacing: -0.3px;
+      white-space: nowrap;
     }
 
-    .nav-link:hover {
-      background: rgba(130, 100, 220, 0.15);
-      color: #ffffff;
+    .nav-link i {
+      margin-right: 0.4rem;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      background: rgba(130, 100, 220, 0.25);
+      color: white;
+      outline: none;
     }
 
     .nav-link.active {
-      background: rgba(130, 100, 220, 0.35);
+      background: rgba(130, 100, 220, 0.4);
       color: white;
+      box-shadow: 0 0 0 1px rgba(130, 100, 220, 0.3);
     }
 
-    /* Tarjetas de optimización */
+    /* ========== LAYOUT PRINCIPAL ========== */
+    .layout-container {
+      display: flex;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+      min-height: calc(100vh - 250px);
+    }
+
+    .ad-sidebar {
+      flex: 0 0 300px;
+      position: sticky;
+      top: 110px;
+      height: fit-content;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .ad-premium-container {
+      background: linear-gradient(135deg, rgba(18, 18, 26, 0.75) 0%, rgba(12, 12, 18, 0.85) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .ad-premium-container:hover {
+      border-color: var(--border-hover);
+    }
+
+    .ad-header {
+      padding: 0.7rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-accent);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .ad-content {
+      padding: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 250px;
+    }
+
+    .adsense-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .adsense-wrapper ins {
+      display: block;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: var(--radius-sm);
+    }
+
+    .main-content-area {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* ========== BANNER AD ========== */
+    .banner-ad-container {
+      width: 100%;
+      margin-bottom: 2rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(18, 18, 26, 0.8), rgba(12, 12, 18, 0.9));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+    }
+
+    .banner-ad-container .ad-header {
+      padding: 0.7rem 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .banner-ad-container .ad-content {
+      padding: 1.5rem;
+      min-height: auto;
+    }
+
+    /* ========== TARJETAS DE TWEAKS ========== */
     .tweaks-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.8rem;
       margin-bottom: 2.5rem;
     }
@@ -370,25 +528,34 @@
     .tweak-card {
       background: linear-gradient(135deg, rgba(22, 22, 30, 0.8) 0%, rgba(16, 16, 24, 0.9) 100%);
       backdrop-filter: blur(12px);
-      border-radius: 32px;
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--radius-lg);
       padding: 2rem;
-      border: 1px solid rgba(130, 100, 220, 0.15);
-      transition: all 0.3s ease;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      cursor: default;
+      animation: fadeInUp 0.5s ease backwards;
     }
 
+    .tweak-card:nth-child(1) { animation-delay: 0.1s; }
+    .tweak-card:nth-child(2) { animation-delay: 0.2s; }
+    .tweak-card:nth-child(3) { animation-delay: 0.3s; }
+    .tweak-card:nth-child(4) { animation-delay: 0.4s; }
+
     .tweak-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(130, 100, 220, 0.5);
-      box-shadow: 0 20px 35px -12px rgba(80, 50, 160, 0.3);
+      transform: translateY(-8px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow);
     }
 
     .tweak-icon {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
-      background: linear-gradient(135deg, #c4a8ff, #8b5cf6);
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
 
     .tweak-title {
@@ -396,15 +563,16 @@
       font-weight: 700;
       margin-bottom: 0.75rem;
       color: #ece4ff;
+      letter-spacing: -0.3px;
     }
 
     .tweak-desc {
-      color: #a5a0bc;
+      color: var(--text-secondary);
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* Sección Videos */
+    /* ========== SECCIÓN DE VIDEOS ========== */
     .videos-grid {
       display: flex;
       flex-direction: column;
@@ -414,24 +582,26 @@
     .video-card {
       background: rgba(18, 18, 26, 0.7);
       backdrop-filter: blur(12px);
-      border-radius: 32px;
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid rgba(130, 100, 220, 0.15);
-      transition: all 0.3s ease;
+      border: 1px solid var(--border);
+      transition: var(--transition);
     }
 
     .video-card:hover {
-      border-color: rgba(130, 100, 220, 0.35);
-      transform: translateY(-2px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow);
     }
 
     .video-title {
-      padding: 1rem 1.8rem;
+      padding: 1rem 1.5rem;
       font-weight: 700;
-      font-size: 1rem;
-      background: rgba(30, 28, 45, 0.6);
-      border-bottom: 1px solid rgba(130, 100, 220, 0.2);
-      color: #d4bfff;
+      font-size: 1.1rem;
+      color: #ece4ff;
+      letter-spacing: -0.3px;
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border);
     }
 
     .video-wrapper {
@@ -449,72 +619,65 @@
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
 
-    /* ESTILOS PARA PANTALLA COMPLETA CON ANUNCIOS LATERALES */
-    .video-wrapper:fullscreen {
+    .video-wrapper video {
+      object-fit: contain;
+    }
+
+    /* ========== FULLSCREEN ADS ========== */
+    .fullscreen-ad {
+      position: absolute;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      background: rgba(12, 12, 18, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      background: #000000;
-      padding: 2rem;
-      width: 100vw;
-      height: 100vh;
-      background-color: #000000;
-    }
-
-    .video-wrapper:fullscreen iframe,
-    .video-wrapper:fullscreen video {
-      width: calc(100% - 640px);
-      max-width: 1200px;
-      height: auto;
-      max-height: 80vh;
-      border-radius: 20px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5);
-    }
-
-    .video-wrapper:fullscreen .fullscreen-ad {
-      width: 280px;
-      min-width: 280px;
-      height: auto;
-      min-height: 250px;
-      background: linear-gradient(135deg, rgba(22,22,30,0.95), rgba(12,12,18,0.98));
-      border-radius: 24px;
-      border: 1px solid rgba(130,100,220,0.4);
-      backdrop-filter: blur(12px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       flex-direction: column;
-      padding: 1rem;
+      z-index: 10;
     }
 
-    .video-wrapper:fullscreen .fullscreen-ad .adsense-wrapper {
-      width: 100%;
-      text-align: center;
+    .fullscreen-ad[data-side="left"] {
+      left: -320px;
     }
 
-    .video-wrapper:fullscreen .fullscreen-ad ins {
-      display: inline-block;
-      width: 100%;
-      max-width: 280px;
-      height: auto;
-      min-height: 250px;
+    .fullscreen-ad[data-side="right"] {
+      right: -320px;
     }
 
-    /* Resultados Carrusel */
+    .fullscreen-ad .ad-header {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.65rem;
+    }
+
+    .fullscreen-ad .ad-content {
+      flex: 1;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ========== CARRUSEL DE RESULTADOS ========== */
     .results-carousel-container {
       position: relative;
       overflow: hidden;
-      border-radius: 32px;
+      border-radius: var(--radius-lg);
       background: rgba(10, 10, 16, 0.5);
-      padding: 1rem;
+      padding: 1.2rem;
+      border: 1px solid var(--border);
     }
 
     .results-carousel-track {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
     }
 
     .results-slide {
@@ -528,11 +691,13 @@
     .results-slide img {
       max-width: 100%;
       max-height: 550px;
-      border-radius: 28px;
+      border-radius: var(--radius-md);
       object-fit: contain;
       background: #0f0f16;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(130, 100, 220, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      border: 1px solid var(--border);
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     .results-controls {
@@ -544,120 +709,296 @@
 
     .results-btn {
       background: rgba(30, 28, 48, 0.8);
-      border: 1px solid rgba(130, 100, 220, 0.3);
-      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--border);
+      padding: 0.7rem 1.8rem;
       border-radius: 60px;
       color: #e0d6ff;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.85rem;
-      transition: 0.2s;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      letter-spacing: -0.3px;
     }
 
     .results-btn:hover {
-      background: rgba(130, 100, 220, 0.5);
-      color: white;
+      background: rgba(130, 100, 220, 0.3);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
     }
 
-    /* Keys - En desarrollo */
+    .results-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ========== SECCIÓN EN DESARROLLO ========== */
     .development-card {
-      background: linear-gradient(135deg, rgba(22, 22, 30, 0.8) 0%, rgba(16, 16, 24, 0.9) 100%);
+      background: linear-gradient(135deg, rgba(22, 22, 30, 0.8), rgba(16, 16, 24, 0.9));
       backdrop-filter: blur(12px);
-      border-radius: 40px;
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--radius-xl);
       padding: 4rem 2rem;
       text-align: center;
-      border: 1px solid rgba(130, 100, 220, 0.2);
+      border: 1px solid var(--border);
+      animation: fadeInUp 0.5s ease;
     }
 
     .dev-title {
-      font-size: 1.8rem;
-      font-weight: 700;
+      font-size: 2rem;
+      font-weight: 800;
       margin-bottom: 1rem;
-      color: #ece4ff;
+      letter-spacing: -0.5px;
+    }
+
+    .dev-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
     }
 
     .dev-text {
-      color: #a5a0bc;
+      color: var(--text-secondary);
       font-size: 1rem;
+      line-height: 1.7;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
-    /* Footer */
+    .dev-text + .dev-text {
+      margin-top: 0.8rem;
+    }
+
+    /* ========== FOOTER PROFESIONAL ========== */
     .footer-profesional {
       margin-top: 3rem;
       background: rgba(8, 8, 12, 0.95);
       backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(130, 100, 220, 0.15);
-      padding: 2rem 2rem;
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border);
+      padding: 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       color: #8a82aa;
       font-size: 0.85rem;
+      gap: 1rem;
     }
 
     .footer-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .footer-links a {
-      color: #9a90b8;
+      color: #8a82aa;
       text-decoration: none;
-      transition: 0.2s;
+      transition: color 0.2s;
     }
 
     .footer-links a:hover {
-      color: #c4b0ff;
+      color: var(--text-accent);
     }
 
-    @media (max-width: 1100px) {
-      .ad-sidebar { flex: 0 0 260px; }
+    /* ========== ANIMACIONES ========== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1200px) {
+      .layout-container {
+        gap: 1.5rem;
+      }
+      
+      .ad-sidebar {
+        flex: 0 0 250px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .layout-container {
+        flex-direction: column;
+      }
+      
+      .ad-sidebar {
+        display: none;
+      }
+      
+      .tweaks-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
     }
 
     @media (max-width: 900px) {
-      .layout-container { flex-direction: column; }
-      .ad-sidebar { display: none; }
+      .hamburger {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 1rem;
+        right: 1rem;
+        background: rgba(12, 12, 18, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        gap: 0.6rem;
+        border: 1px solid var(--border-hover);
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        z-index: 99;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      }
+      
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-pill {
+        justify-content: space-between;
+        padding: 0.5rem 1.2rem;
+      }
+      
+      .logo {
+        font-size: 1.1rem;
+      }
     }
 
     @media (max-width: 650px) {
-      .nav-pill { padding: 0.4rem 1rem; }
-      .tweaks-grid { grid-template-columns: 1fr; }
+      .tweaks-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cookie-consent {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border-radius: var(--radius-md);
+        padding: 1rem;
+      }
+      
+      .cookie-buttons {
+        width: 100%;
+        justify-content: stretch;
+      }
+      
+      .cookie-btn {
+        flex: 1;
+        text-align: center;
+      }
+      
+      .footer-profesional {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .footer-links {
+        justify-content: center;
+      }
+      
+      .anti-adblock-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .dynamic-island {
+        padding: 0 0.8rem;
+        top: 0.5rem;
+      }
+      
+      .nav-pill {
+        padding: 0.4rem 1rem;
+      }
+      
+      .logo {
+        font-size: 0.95rem;
+      }
+      
+      .layout-container {
+        padding: 0 0.8rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Fondo animado -->
   <div class="animated-bg"></div>
+  
+  <!-- Canvas de partículas -->
+  <canvas id="particlesCanvas"></canvas>
 
-  <div id="antiAdblockOverlay" class="anti-adblock-overlay" style="display: none;">
+  <!-- Overlay Anti-Adblock -->
+  <div id="antiAdblockOverlay" class="anti-adblock-overlay">
     <div class="anti-adblock-card">
-      <h2 class="anti-adblock-title">Bloqueador de anuncios detectado</h2>
-      <p class="anti-adblock-message">Xploit Optimizer ofrece contenido gratuito gracias a la publicidad. Por favor, desactiva tu bloqueador de anuncios para continuar.</p>
+      <h2 class="anti-adblock-title">🔒 Bloqueador de anuncios detectado</h2>
+      <p class="anti-adblock-message">Xploit Optimizer ofrece contenido 100% gratuito gracias a la publicidad. Para continuar accediendo a nuestras guías profesionales, por favor desactiva tu bloqueador de anuncios.</p>
       <div class="anti-adblock-instruction">
-        <p>• Desactiva AdBlock, uBlock Origin o extensiones similares</p>
-        <p>• Recarga la página después de desactivarlo</p>
+        <p>✅ Desactiva AdBlock, uBlock Origin o similares</p>
+        <p>✅ Agrega este sitio a la lista blanca</p>
+        <p>✅ Recarga la página después de desactivarlo</p>
       </div>
-      <button class="anti-adblock-btn" id="retryAccessBtn">Recargar página</button>
+      <button class="anti-adblock-btn" id="retryAccessBtn">🔄 Recargar página</button>
     </div>
   </div>
 
+  <!-- Contenido principal -->
   <div id="mainWrapper" class="main-wrapper">
+    <!-- Navegación Dynamic Island -->
     <div class="dynamic-island">
-      <div class="nav-pill" id="navPill">
-        <span class="logo">XPLOIT OPTIMIZER</span>
-        <div class="nav-links">
-          <button class="nav-link active" data-section="inicio">Inicio</button>
-          <button class="nav-link" data-section="videos">Videos</button>
-          <button class="nav-link" data-section="resultados">Resultados</button>
-          <button class="nav-link" data-section="keys">Keys</button>
+      <nav class="nav-pill" id="navPill" aria-label="Navegación principal">
+        <span class="logo" aria-label="Xploit Optimizer">XPLOIT OPTIMIZER</span>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks" role="navigation">
+          <button class="nav-link active" data-section="inicio" aria-current="page">
+            <i class="fas fa-home"></i> Inicio
+          </button>
+          <button class="nav-link" data-section="videos">
+            <i class="fab fa-youtube"></i> Videos
+          </button>
+          <button class="nav-link" data-section="resultados">
+            <i class="fas fa-chart-line"></i> Resultados
+          </button>
+          <button class="nav-link" data-section="keys">
+            <i class="fas fa-key"></i> Keys
+          </button>
         </div>
-      </div>
+      </nav>
     </div>
 
+    <!-- Layout principal -->
     <div class="layout-container">
-      <aside class="ad-sidebar left">
+      <!-- Sidebar izquierdo -->
+      <aside class="ad-sidebar left" aria-label="Publicidad lateral izquierda">
         <div class="ad-premium-container">
-          <div class="ad-header"><div class="ad-badge"></div><span>Patrocinado</span></div>
+          <div class="ad-header"><span>Patrocinado</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -668,7 +1009,7 @@
           </div>
         </div>
         <div class="ad-premium-container">
-          <div class="ad-header"><div class="ad-badge"></div><span>Publicidad</span></div>
+          <div class="ad-header"><span>Publicidad</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -680,11 +1021,15 @@
         </div>
       </aside>
 
-      <main class="main-content-area" id="mainContentArea"></main>
+      <!-- Contenido principal -->
+      <main class="main-content-area" id="mainContentArea" aria-live="polite">
+        <!-- Renderizado dinámico -->
+      </main>
 
-      <aside class="ad-sidebar right">
+      <!-- Sidebar derecho -->
+      <aside class="ad-sidebar right" aria-label="Publicidad lateral derecha">
         <div class="ad-premium-container">
-          <div class="ad-header"><div class="ad-badge"></div><span>Colaboración</span></div>
+          <div class="ad-header"><span>Colaboración</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -695,7 +1040,7 @@
           </div>
         </div>
         <div class="ad-premium-container">
-          <div class="ad-header"><div class="ad-badge"></div><span>Anuncio</span></div>
+          <div class="ad-header"><span>Anuncio</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -708,91 +1053,239 @@
       </aside>
     </div>
 
-    <footer class="footer-profesional">
-      <span>© 2026 Xploit Optimizer — Optimización Profesional de Sistemas</span>
+    <!-- Footer -->
+    <footer class="footer-profesional" role="contentinfo">
+      <span>&copy; 2026 Xploit Optimizer — Optimización Profesional de Sistemas</span>
       <div class="footer-links">
-        <a href="#">Aviso Legal</a>
-        <a href="#">Política de Privacidad</a>
-        <a href="#">Contacto</a>
+        <a href="#" rel="nofollow">Aviso Legal</a>
+        <a href="#" rel="nofollow">Política de Privacidad</a>
+        <a href="#" rel="nofollow">Contacto</a>
       </div>
     </footer>
   </div>
 
+  <!-- Cookie Consent -->
+  <div id="cookieConsent" class="cookie-consent" role="dialog" aria-label="Consentimiento de cookies">
+    <div class="cookie-text">
+      <i class="fas fa-cookie-bite"></i> 
+      Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra 
+      <a href="#" rel="nofollow">política de cookies</a>.
+    </div>
+    <div class="cookie-buttons">
+      <button id="acceptCookies" class="cookie-btn">Aceptar</button>
+      <button id="declineCookies" class="cookie-btn cookie-btn-outline">Rechazar</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
     (function() {
-      let adBlockDetected = false;
+      'use strict';
+
+      // ========== SISTEMA DE PARTÍCULAS ==========
+      const canvas = document.getElementById('particlesCanvas');
+      let ctx = canvas.getContext('2d');
+      let particles = [];
+      let animationId;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2.5 + 1;
+          this.speedX = (Math.random() - 0.5) * 0.4;
+          this.speedY = (Math.random() - 0.5) * 0.3;
+          this.opacity = Math.random() * 0.5 + 0.1;
+        }
+        
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          
+          if (this.x < -10) this.x = canvas.width + 10;
+          if (this.x > canvas.width + 10) this.x = -10;
+          if (this.y < -10) this.y = canvas.height + 10;
+          if (this.y > canvas.height + 10) this.y = -10;
+        }
+        
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(140, 110, 230, ${this.opacity})`;
+          ctx.fill();
+        }
+      }
+
+      function initParticles(count = 80) {
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function animateParticles() {
+        if (!ctx) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        
+        animationId = requestAnimationFrame(animateParticles);
+      }
+
+      initParticles();
+      animateParticles();
+
+      // ========== SISTEMA ANTI-ADBLOCK ==========
       const overlay = document.getElementById('antiAdblockOverlay');
       const mainWrapper = document.getElementById('mainWrapper');
+      let adBlockDetected = false;
 
       function showAntiAdblock() {
-        overlay.style.display = 'flex';
-        mainWrapper.style.opacity = '0.3';
-        mainWrapper.style.pointerEvents = 'none';
+        if (adBlockDetected) return;
+        adBlockDetected = true;
+        overlay.classList.add('active');
+        mainWrapper.classList.add('blocked');
+        document.body.style.overflow = 'hidden';
       }
 
       function hideAntiAdblock() {
-        overlay.style.display = 'none';
-        mainWrapper.style.opacity = '1';
-        mainWrapper.style.pointerEvents = 'auto';
+        adBlockDetected = false;
+        overlay.classList.remove('active');
+        mainWrapper.classList.remove('blocked');
+        document.body.style.overflow = '';
       }
 
       document.getElementById('retryAccessBtn')?.addEventListener('click', () => {
         location.reload();
       });
 
-      // Detección de AdBlock más fiable
       function testAdBlock() {
         return new Promise((resolve) => {
           const testDiv = document.createElement('div');
           testDiv.className = 'adsbox';
-          testDiv.style.cssText = 'position:absolute;top:-1000px;width:1px;height:1px;';
+          testDiv.style.cssText = 'position:absolute;top:-1000px;left:-1000px;width:1px;height:1px;';
           document.body.appendChild(testDiv);
+          
           setTimeout(() => {
-            const blocked = testDiv.offsetHeight === 0;
+            const blocked = testDiv.offsetHeight === 0 || 
+                           testDiv.offsetParent === null ||
+                           testDiv.clientHeight === 0;
             document.body.removeChild(testDiv);
             resolve(blocked);
-          }, 100);
+          }, 150);
         });
       }
 
-      function loadAdSense() {
+      // ========== CARGA DE ADSENSE ==========
+      function loadAdSenseScript() {
         return new Promise((resolve) => {
           if (document.querySelector('script[src*="adsbygoogle.js"]')) {
             resolve();
             return;
           }
+          
           const script = document.createElement('script');
           script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7123646713653046';
-          script.crossOrigin = 'anonymous';
           script.async = true;
+          script.crossOrigin = 'anonymous';
           script.onload = () => resolve();
-          script.onerror = () => resolve();
+          script.onerror = () => {
+            console.warn('AdSense script failed to load');
+            resolve();
+          };
           document.head.appendChild(script);
         });
       }
 
-      function pushAds() {
+      function pushAdSense() {
         try {
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch(e) {
-          console.warn('AdSense push error:', e);
+          if (window.adsbygoogle && window.adsbygoogle.push) {
+            window.adsbygoogle.push({});
+          }
+        } catch (e) {
+          console.warn('AdSense push error:', e.message);
         }
       }
 
       function pushAllAds() {
-        document.querySelectorAll('.adsbygoogle').forEach(() => pushAds());
+        document.querySelectorAll('.adsbygoogle').forEach(() => {
+          pushAdSense();
+        });
       }
 
+      // ========== COOKIE CONSENT ==========
+      const cookieDiv = document.getElementById('cookieConsent');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          cookieDiv?.classList.add('show');
+        }, 800);
+      }
+
+      document.getElementById('acceptCookies')?.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieDiv?.classList.remove('show');
+      });
+
+      document.getElementById('declineCookies')?.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        cookieDiv?.classList.remove('show');
+      });
+
+      // ========== MENÚ HAMBURGUESA ==========
+      const hamburger = document.getElementById('hamburgerBtn');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+      });
+
+      document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('open') && 
+            !navLinks.contains(e.target) && 
+            !hamburger.contains(e.target)) {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'fas fa-bars';
+        }
+      });
+
+      // Cerrar menú con tecla Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'fas fa-bars';
+        }
+      });
+
+      // ========== DATOS DE CONTENIDO ==========
       const mainArea = document.getElementById('mainContentArea');
       const navBtns = document.querySelectorAll('.nav-link');
-      const navPill = document.getElementById('navPill');
-      
-      // Lista de videos - YouTube con parámetros para ocultar logo y enlaces
+
       const videoList = [
         { 
           type: "youtube", 
           url: "https://www.youtube-nocookie.com/embed/ERECR8pEHHI?modestbranding=1&showinfo=0&controls=1&rel=0&iv_load_policy=3&color=white&disablekb=1&fs=1", 
-          title: "Cómo los profesionales optimizan Windows para aumentar los FPS (Guía de optimización free tweak)" 
+          title: "Cómo los profesionales optimizan Windows para aumentar los FPS (Guía gratuita)" 
         },
         { 
           type: "local", 
@@ -805,104 +1298,31 @@
           title: "Aumenta FPS en Juegos con Configuraciones Exclusivas" 
         }
       ];
-      
+
       const resultsImages = [
         'https://placehold.co/900x550/12121e/b083e0?text=Benchmark+Antes+y+Después',
         'https://placehold.co/900x550/0f0f1a/8b5cf6?text=Mejora+de+FPS:+Incremento+del+45%25',
         'https://placehold.co/900x550/0c0c18/c4a8ff?text=Reducción+de+Latencia:+30ms+a+8ms'
       ];
 
-      let lastScroll = 0;
-      window.addEventListener('scroll', () => {
-        const current = window.scrollY;
-        if (current > 40 && lastScroll <= 40) navPill.classList.add('compact');
-        else if (current <= 40 && lastScroll > 40) navPill.classList.remove('compact');
-        lastScroll = current;
-      });
-
-      // Función para manejar los anuncios laterales en pantalla completa
-      function setupFullscreenAds() {
-        const wrappers = document.querySelectorAll('.video-wrapper');
-        wrappers.forEach(wrapper => {
-          const media = wrapper.querySelector('iframe, video');
-          if (!media) return;
-          
-          // Función para crear un anuncio lateral
-          function createFullscreenAd(side) {
-            const adDiv = document.createElement('div');
-            adDiv.className = 'fullscreen-ad';
-            adDiv.setAttribute('data-side', side);
-            adDiv.innerHTML = `
-              <div class="ad-header" style="padding: 0.5rem; border-bottom: 1px solid rgba(130,100,220,0.3);">
-                <div class="ad-badge"></div>
-                <span style="font-size: 0.6rem;">${side === 'left' ? 'Patrocinado' : 'Publicidad'}</span>
-              </div>
-              <div class="ad-content" style="padding: 0.8rem; min-height: auto;">
-                <div class="adsense-wrapper">
-                  <ins class="adsbygoogle"
-                       style="display:inline-block;width:280px;height:250px"
-                       data-ad-client="ca-pub-7123646713653046"
-                       data-ad-slot="5608812254"></ins>
-                </div>
-              </div>
-            `;
-            return adDiv;
-          }
-          
-          function addFullscreenAds() {
-            // Evitar duplicados
-            if (wrapper.querySelector('.fullscreen-ad')) return;
-            
-            const leftAd = createFullscreenAd('left');
-            const rightAd = createFullscreenAd('right');
-            
-            wrapper.insertBefore(leftAd, media);
-            wrapper.appendChild(rightAd);
-            
-            // Recargar los nuevos ads
-            if (window.adsbygoogle) {
-              wrapper.querySelectorAll('.adsbygoogle').forEach(() => {
-                try { window.adsbygoogle.push({}); } catch(e) {}
-              });
-            }
-          }
-          
-          function removeFullscreenAds() {
-            const ads = wrapper.querySelectorAll('.fullscreen-ad');
-            ads.forEach(ad => ad.remove());
-          }
-          
-          // Escuchar cambios de pantalla completa
-          media.addEventListener('fullscreenchange', () => {
-            if (document.fullscreenElement === wrapper) {
-              addFullscreenAds();
-            } else if (document.fullscreenElement === null) {
-              removeFullscreenAds();
-            }
-          });
-          
-          // También escuchar en el wrapper por si acaso
-          wrapper.addEventListener('fullscreenchange', () => {
-            if (document.fullscreenElement === wrapper) {
-              addFullscreenAds();
-            } else if (document.fullscreenElement === null) {
-              removeFullscreenAds();
-            }
-          });
-        });
+      function escapeHtml(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
       }
 
+      // ========== RENDERIZADO DE SECCIONES ==========
       function renderInicio() {
         mainArea.innerHTML = `
           <div class="banner-ad-container">
-            <div class="banner-ad-header">
-              <div class="banner-ad-badge"></div>
-              <span>Sponsored</span>
+            <div class="ad-header">
+              <span style="font-size:0.7rem;font-weight:600;color:var(--text-accent);">Sponsored</span>
             </div>
-            <div class="banner-ad-content">
+            <div class="ad-content">
               <div class="adsense-wrapper">
                 <ins class="adsbygoogle"
-                     style="display:block; text-align:center; min-width:300px; width:100%; height:auto;"
+                     style="display:block;text-align:center;width:100%;min-height:90px;"
                      data-ad-format="auto"
                      data-full-width-responsive="true"
                      data-ad-client="ca-pub-7123646713653046"
@@ -912,144 +1332,277 @@
           </div>
           <div class="tweaks-grid">
             <div class="tweak-card">
-              <div class="tweak-icon">⚙</div>
+              <div class="tweak-icon">⚙️</div>
               <h3 class="tweak-title">Regedit Tweaks</h3>
               <p class="tweak-desc">Optimizaciones profundas en el registro de Windows para reducir latencia del sistema, mejorar tiempos de respuesta y eliminar cuellos de botella.</p>
             </div>
             <div class="tweak-card">
-              <div class="tweak-icon">🖥</div>
+              <div class="tweak-icon">🖥️</div>
               <h3 class="tweak-title">Settings Tweaks</h3>
               <p class="tweak-desc">Configuración avanzada del sistema operativo, desactivación de servicios innecesarios y ajustes de rendimiento para maximizar recursos.</p>
             </div>
             <div class="tweak-card">
               <div class="tweak-icon">🎮</div>
               <h3 class="tweak-title">Game / Apps Tweaks</h3>
-              <p class="tweak-desc">Parámetros específicos para juegos y aplicaciones pesadas. Reduce el stuttering, aumenta FPS y optimiza el uso de GPU y CPU.</p>
+              <p class="tweak-desc">Parámetros específicos para juegos y aplicaciones pesadas. Reduce stuttering, aumenta FPS y optimiza GPU/CPU.</p>
+            </div>
+            <div class="tweak-card">
+              <div class="tweak-icon">📡</div>
+              <h3 class="tweak-title">Information Tweaks</h3>
+              <p class="tweak-desc"><strong style="color:#c4a8ff;">Optimizaciones de élite que otros venden</strong><br>XploitSev te las ofrece GRATIS: tweaks de baja latencia de red, priorización de procesos y ajustes ocultos de kernel. Domina tu sistema.</p>
             </div>
           </div>
         `;
-        pushAds();
+        pushAllAds();
       }
 
       function renderVideos() {
         let html = '<div class="videos-grid">';
         videoList.forEach(video => {
+          const videoContent = video.type === 'youtube' 
+            ? `<iframe src="${video.url}" 
+                       title="${escapeHtml(video.title)}"
+                       frameborder="0" 
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                       allowfullscreen
+                       loading="lazy"></iframe>`
+            : `<video controls 
+                     preload="metadata" 
+                     poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video"
+                     title="${escapeHtml(video.title)}">
+                 <source src="video/${video.file}" type="video/mp4">
+                 Tu navegador no soporta la reproducción de video.
+               </video>`;
+          
           html += `
             <div class="video-card">
               <div class="video-title">${escapeHtml(video.title)}</div>
-              <div class="video-wrapper">
-          `;
-          if (video.type === 'youtube') {
-            html += `<iframe src="${video.url}" 
-                              title="${escapeHtml(video.title)}"
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerpolicy="strict-origin-when-cross-origin" 
-                              allowfullscreen></iframe>`;
-          } else {
-            html += `<video controls preload="metadata" poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video">
-                       <source src="video/${video.file}" type="video/mp4">
-                       Tu navegador no soporta la etiqueta de video.
-                     </video>`;
-          }
-          html += `
-              </div>
-            </div>
-          `;
+              <div class="video-wrapper">${videoContent}</div>
+            </div>`;
         });
         html += '</div>';
         mainArea.innerHTML = html;
         
-        // Configurar los anuncios laterales para pantalla completa
-        setTimeout(() => {
-          setupFullscreenAds();
-        }, 100);
+        // Configurar anuncios en pantalla completa después del renderizado
+        setTimeout(() => setupFullscreenAds(), 200);
       }
 
+      function setupFullscreenAds() {
+        document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+          const media = wrapper.querySelector('iframe, video');
+          if (!media) return;
+
+          function createAd(side) {
+            const ad = document.createElement('div');
+            ad.className = 'fullscreen-ad';
+            ad.setAttribute('data-side', side);
+            ad.innerHTML = `
+              <div class="ad-header">
+                <span style="font-size:0.65rem;text-transform:uppercase;">${side === 'left' ? 'Patrocinado' : 'Publicidad'}</span>
+              </div>
+              <div class="ad-content">
+                <div class="adsense-wrapper">
+                  <ins class="adsbygoogle" 
+                       style="display:inline-block;width:280px;height:250px"
+                       data-ad-client="ca-pub-7123646713653046" 
+                       data-ad-slot="5608812254"></ins>
+                </div>
+              </div>`;
+            return ad;
+          }
+
+          function handleFullscreenChange() {
+            if (document.fullscreenElement === wrapper || 
+                document.webkitFullscreenElement === wrapper) {
+              if (!wrapper.querySelector('.fullscreen-ad')) {
+                wrapper.insertBefore(createAd('left'), media);
+                wrapper.appendChild(createAd('right'));
+                // Empujar nuevos anuncios
+                wrapper.querySelectorAll('.adsbygoogle').forEach(() => {
+                  try { window.adsbygoogle?.push({}); } catch(e) {}
+                });
+              }
+            } else {
+              wrapper.querySelectorAll('.fullscreen-ad').forEach(ad => ad.remove());
+            }
+          }
+
+          // Eventos de fullscreen
+          wrapper.addEventListener('fullscreenchange', handleFullscreenChange);
+          wrapper.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+          media.addEventListener('fullscreenchange', handleFullscreenChange);
+          media.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        });
+      }
+
+      // ========== CARRUSEL DE RESULTADOS ==========
       let resIndex = 0;
+
       function renderResultados() {
-        let html = `
+        mainArea.innerHTML = `
           <div class="results-carousel-container">
             <div class="results-carousel-track" id="resultsTrack"></div>
           </div>
           <div class="results-controls">
-            <button class="results-btn" id="resPrev">Anterior</button>
-            <button class="results-btn" id="resNext">Siguiente</button>
-          </div>
-        `;
-        mainArea.innerHTML = html;
-        
+            <button class="results-btn" id="resPrev" aria-label="Imagen anterior">
+              <i class="fas fa-chevron-left"></i> Anterior
+            </button>
+            <button class="results-btn" id="resNext" aria-label="Imagen siguiente">
+              Siguiente <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>`;
+
         const track = document.getElementById('resultsTrack');
-        resultsImages.forEach(src => {
+        
+        resultsImages.forEach((src, index) => {
           const slide = document.createElement('div');
           slide.className = 'results-slide';
-          slide.innerHTML = `<img src="Resultados/imagen1.png" loading="lazy" alt="Resultado de optimización">`;
+          slide.setAttribute('aria-label', `Resultado de optimización ${index + 1}`);
+          slide.innerHTML = `<img src="${src}" loading="lazy" alt="Resultado de optimización Xploit ${index + 1}">`;
           track.appendChild(slide);
         });
-        
-        resIndex = 0;
-        function update() { track.style.transform = `translateX(-${resIndex * 100}%)`; }
-        
+
+        function updateCarousel() {
+          track.style.transform = `translateX(-${resIndex * 100}%)`;
+        }
+
         document.getElementById('resPrev')?.addEventListener('click', () => {
           resIndex = (resIndex - 1 + resultsImages.length) % resultsImages.length;
-          update();
+          updateCarousel();
         });
+
         document.getElementById('resNext')?.addEventListener('click', () => {
           resIndex = (resIndex + 1) % resultsImages.length;
-          update();
+          updateCarousel();
         });
-        update();
+
+        // Soporte para teclado
+        document.addEventListener('keydown', function carouselKeys(e) {
+          if (mainArea.querySelector('.results-carousel-container')) {
+            if (e.key === 'ArrowLeft') {
+              resIndex = (resIndex - 1 + resultsImages.length) % resultsImages.length;
+              updateCarousel();
+            } else if (e.key === 'ArrowRight') {
+              resIndex = (resIndex + 1) % resultsImages.length;
+              updateCarousel();
+            }
+          }
+        });
+
+        updateCarousel();
       }
 
       function renderKeys() {
         mainArea.innerHTML = `
           <div class="development-card">
+            <div class="tweak-icon">🔧</div>
             <h2 class="dev-title">En desarrollo</h2>
-            <p class="dev-text">Próximamente encontrarás claves de activación y recursos exclusivos para miembros.</p>
-            <p class="dev-text" style="margin-top: 0.8rem;">Mantente atento a las actualizaciones.</p>
-          </div>
-        `;
+            <p class="dev-text">Próximamente claves de activación y recursos exclusivos para miembros.</p>
+            <p class="dev-text">Mantente atento a las actualizaciones.</p>
+          </div>`;
       }
 
-      function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>]/g, function(m) {
-          if (m === '&') return '&amp;';
-          if (m === '<') return '&lt;';
-          if (m === '>') return '&gt;';
-          return m;
-        });
-      }
-
+      // ========== NAVEGACIÓN ==========
       function switchSection(section) {
-        if (section === 'inicio') renderInicio();
-        else if (section === 'videos') renderVideos();
-        else if (section === 'resultados') renderResultados();
-        else if (section === 'keys') renderKeys();
+        // Limpiar estado del carrusel
+        resIndex = 0;
+        
+        switch(section) {
+          case 'inicio':
+            renderInicio();
+            break;
+          case 'videos':
+            renderVideos();
+            break;
+          case 'resultados':
+            renderResultados();
+            break;
+          case 'keys':
+            renderKeys();
+            break;
+          default:
+            renderInicio();
+        }
+        
+        // Scroll al contenido en móvil
+        if (window.innerWidth < 1000) {
+          setTimeout(() => {
+            mainArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
       }
 
       navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          navBtns.forEach(b => b.classList.remove('active'));
+          const section = btn.getAttribute('data-section');
+          
+          // Actualizar estado activo
+          navBtns.forEach(b => {
+            b.classList.remove('active');
+            b.removeAttribute('aria-current');
+          });
           btn.classList.add('active');
-          switchSection(btn.getAttribute('data-section'));
+          btn.setAttribute('aria-current', 'page');
+          
+          // Cambiar sección
+          switchSection(section);
+          
+          // Cerrar menú móvil si está abierto
+          if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.querySelector('i').className = 'fas fa-bars';
+          }
         });
       });
 
+      // ========== INICIALIZACIÓN ==========
       async function bootstrap() {
-        const isBlocked = await testAdBlock();
-        if (isBlocked) {
-          showAntiAdblock();
-          return;
+        try {
+          // Verificar AdBlock
+          const isBlocked = await testAdBlock();
+          if (isBlocked) {
+            showAntiAdblock();
+            return;
+          }
+
+          // Cargar AdSense
+          await loadAdSenseScript();
+          
+          // Empujar anuncios iniciales
+          setTimeout(() => {
+            pushAllAds();
+          }, 300);
+
+          hideAntiAdblock();
+          
+          // Renderizar sección inicial
+          switchSection('inicio');
+
+        } catch (error) {
+          console.error('Error durante la inicialización:', error);
+          // En caso de error, mostrar la página sin anuncios
+          hideAntiAdblock();
+          switchSection('inicio');
         }
-        
-        await loadAdSense();
-        pushAllAds();
-        hideAntiAdblock();
-        switchSection('inicio');
       }
 
-      bootstrap();
+      // Iniciar cuando el DOM esté listo
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bootstrap);
+      } else {
+        bootstrap();
+      }
+
+      // Limpiar animación de partículas cuando la página se oculta
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          cancelAnimationFrame(animationId);
+        } else {
+          animateParticles();
+        }
+      });
+
     })();
   </script>
 </body>
