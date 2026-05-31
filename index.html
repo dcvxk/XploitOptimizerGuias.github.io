@@ -1287,10 +1287,98 @@
         }
       });
 
-      // ========== DATOS DE CONTENIDO ==========
+      // ========== SISTEMA DE NAVEGACIÓN POR HASH ==========
       const mainArea = document.getElementById('mainContentArea');
       const navBtns = document.querySelectorAll('.nav-link');
 
+      // Mapa de secciones válidas
+      const validSections = {
+        'inicio': true,
+        'videos': true,
+        'resultados': true,
+        'keys': true
+      };
+
+      // Mapa de hash a sección (soporta múltiples formatos)
+      const hashToSection = {
+        '': 'inicio',
+        '#inicio': 'inicio',
+        '#videos': 'videos',
+        '#resultados': 'resultados',
+        '#keys': 'keys'
+      };
+
+      function getSectionFromHash() {
+        const hash = window.location.hash.toLowerCase();
+        // Buscar coincidencia exacta
+        if (hashToSection[hash]) {
+          return hashToSection[hash];
+        }
+        // Buscar coincidencia parcial (por si alguien pone #Resultados con mayúscula)
+        for (const [key, value] of Object.entries(hashToSection)) {
+          if (key.toLowerCase() === hash) {
+            return value;
+          }
+        }
+        // Si no coincide, redirigir a inicio
+        return 'inicio';
+      }
+
+      function updateActiveButton(section) {
+        navBtns.forEach(btn => {
+          const btnSection = btn.getAttribute('data-section');
+          if (btnSection === section) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-current', 'page');
+          } else {
+            btn.classList.remove('active');
+            btn.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      function navigateToSection(section, updateHash = true) {
+        if (!validSections[section]) {
+          section = 'inicio';
+        }
+
+        // Actualizar hash en la URL sin recargar la página
+        if (updateHash) {
+          const newHash = section === 'inicio' ? '' : `#${section.charAt(0).toUpperCase() + section.slice(1)}`;
+          if (window.location.hash !== newHash) {
+            history.pushState(null, '', newHash || window.location.pathname);
+          }
+        }
+
+        // Actualizar botón activo
+        updateActiveButton(section);
+
+        // Renderizar sección
+        switchSection(section);
+
+        // Cerrar menú móvil si está abierto
+        if (navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'fas fa-bars';
+        }
+      }
+
+      // Escuchar cambios en el hash (navegación con botones atrás/adelante)
+      window.addEventListener('hashchange', () => {
+        const section = getSectionFromHash();
+        navigateToSection(section, false);
+      });
+
+      // Manejar clics en los botones de navegación
+      navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const section = btn.getAttribute('data-section');
+          navigateToSection(section, true);
+        });
+      });
+
+      // ========== DATOS DE CONTENIDO ==========
       const videoList = [
         { 
           type: "youtube", 
@@ -1346,7 +1434,7 @@
           <section class="about-section" aria-label="Quiénes somos">
             <h2 class="about-title">¿Quiénes somos?</h2>
             <p class="about-text">
-              <strong>Xploit Optimizer</strong> somos un servicio de optimizaciones para Windows que tienen <strong>miles de tweaks</strong> para que tu rendimiento llegue a las nubes en juegos competitivos como <strong>Fortnite, Valorant, CSGO</strong> entre otros. Nosotros nos centramos en que todos los jugadores que quieran competir tengan el <strong>mejor rendimiento</strong> para que tengan una experiencia de juego super fluida. Nos centraremos especialmente en <strong>aumentar la estabilidad de los FPS y mejorarlos</strong>, aparte de <strong>mejorar tu conexión a internet</strong> para bajar el ping y tener mayor reacción a la hora de jugar. Gracias por confiar en Xploit Optimizer
+              <strong>Xploit Optimizer</strong> somos un servicio de optimizaciones para Windows que tienen <strong>miles de tweaks</strong> para que tu rendimiento llegue a las nubes en juegos competitivos como <strong>Fortnite, Valorant, CSGO</strong> entre otros. Nosotros nos centramos en que todos los jugadores que quieran competir tengan el <strong>mejor rendimiento</strong> para que tengan una experiencia de juego super fluida. Nos centraremos especialmente en <strong>aumentar la estabilidad de los FPS y mejorarlos</strong>, aparte de <strong>mejorar tu conexión a internet</strong> para bajar el ping y tener mayor reacción a la hora de jugar.
             </p>
           </section>
 
@@ -1523,7 +1611,7 @@
           </div>`;
       }
 
-      // ========== NAVEGACIÓN ==========
+      // ========== SWITCH DE SECCIÓN ==========
       function switchSection(section) {
         resIndex = 0;
         
@@ -1551,27 +1639,6 @@
         }
       }
 
-      navBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const section = btn.getAttribute('data-section');
-          
-          navBtns.forEach(b => {
-            b.classList.remove('active');
-            b.removeAttribute('aria-current');
-          });
-          btn.classList.add('active');
-          btn.setAttribute('aria-current', 'page');
-          
-          switchSection(section);
-          
-          if (navLinks.classList.contains('open')) {
-            navLinks.classList.remove('open');
-            hamburger.setAttribute('aria-expanded', 'false');
-            hamburger.querySelector('i').className = 'fas fa-bars';
-          }
-        });
-      });
-
       // ========== INICIALIZACIÓN ==========
       async function bootstrap() {
         try {
@@ -1588,12 +1655,16 @@
           }, 300);
 
           hideAntiAdblock();
-          switchSection('inicio');
+          
+          // Navegar a la sección según el hash inicial
+          const initialSection = getSectionFromHash();
+          navigateToSection(initialSection, false);
 
         } catch (error) {
           console.error('Error durante la inicialización:', error);
           hideAntiAdblock();
-          switchSection('inicio');
+          const initialSection = getSectionFromHash();
+          navigateToSection(initialSection, false);
         }
       }
 
