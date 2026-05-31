@@ -3,53 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <title>Xploit Optimizer | Mejores Optimizaciones Para Gaming</title>
+  <title id="pageTitle">Xploit Optimizer | Mejores Optimizaciones Para Gaming</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="icon.ico">
   <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
   
-  <!-- SEO Ultra Avanzado -->
-  <meta name="description" content="Xploit Optimizer: Servicio premium de optimización de Windows para gaming. Cientos de tweaks para mejorar FPS, reducir latencia y dominar en Fortnite, Valorant, CSGO y más. ¡Rendimiento al máximo!">
-  <meta name="keywords" content="optimizacion windows gamer, servicio fps boost, tweaks fortnite, bajar ping valorant, optimizar pc para jugar, xploit optimizer, mejorar rendimiento juegos, estabilidad fps, xploitsev, windows 10 11 tweaks">
+  <!-- SEO Meta Tags (se actualizarán dinámicamente) -->
+  <meta name="description" id="metaDescription" content="Xploit Optimizer: Servicio premium de optimización de Windows para gaming. Cientos de tweaks para mejorar FPS, reducir latencia y dominar en Fortnite, Valorant, CSGO y más.">
+  <meta name="keywords" id="metaKeywords" content="optimizacion windows gamer, servicio fps boost, tweaks fortnite, bajar ping valorant, optimizar pc para jugar, xploit optimizer">
   <meta name="author" content="Xploit Optimizer">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://xploitsev.online/">
   
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Xploit Optimizer | Optimización Premium para Gaming">
-  <meta property="og:description" content="Cientos de tweaks para que tu rendimiento en juegos llegue a las nubes. FPS estables, ping bajo, máxima reacción. Especialistas en Fortnite, Valorant y CSGO.">
+  <meta property="og:title" id="ogTitle" content="Xploit Optimizer | Optimización Premium para Gaming">
+  <meta property="og:description" id="ogDescription" content="Cientos de tweaks para que tu rendimiento en juegos llegue a las nubes. FPS estables, ping bajo, máxima reacción.">
   <meta property="og:image" content="icon.ico">
   <meta property="og:url" content="https://xploitsev.online/">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale" id="ogLocale" content="es_ES">
   <meta property="og:site_name" content="Xploit Optimizer">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Xploit Optimizer - Servicio de Tweaks Premium">
-  <meta name="twitter:description" content="Optimizaciones avanzadas para Windows que aumentan FPS y reducen latencia. Domina tus juegos competitivos.">
+  <meta name="twitter:title" id="twitterTitle" content="Xploit Optimizer - Servicio de Tweaks Premium">
+  <meta name="twitter:description" id="twitterDescription" content="Optimizaciones avanzadas para Windows que aumentan FPS y reducen latencia.">
   <meta name="twitter:image" content="icon.ico">
 
-  <!-- Datos Estructurados (Schema.org) para SEO -->
-  <script type="application/ld+json">
+  <!-- Datos Estructurados (Schema.org) -->
+  <script type="application/ld+json" id="schemaData">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Xploit Optimizer",
       "url": "https://xploitsev.online/",
       "logo": "https://xploitsev.online/icon.ico",
-      "description": "Servicio premium de optimizaciones para Windows con miles de tweaks para mejorar el rendimiento en juegos competitivos.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Online",
-        "addressRegion": "Global"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "availableLanguage": "Spanish"
-      }
+      "description": "Servicio premium de optimizaciones para Windows con miles de tweaks para mejorar el rendimiento en juegos competitivos."
     }
   </script>
   
@@ -154,17 +144,9 @@
     }
 
     @keyframes floatMorph {
-      0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.4;
-      }
-      50% {
-        opacity: 0.7;
-      }
-      100% {
-        transform: translate(5%, 5%) scale(1.4);
-        opacity: 0.8;
-      }
+      0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+      50% { opacity: 0.7; }
+      100% { transform: translate(5%, 5%) scale(1.4); opacity: 0.8; }
     }
 
     /* ========== CANVAS DE PARTÍCULAS ========== */
@@ -967,14 +949,14 @@
   <!-- Overlay Anti-Adblock -->
   <div id="antiAdblockOverlay" class="anti-adblock-overlay">
     <div class="anti-adblock-card">
-      <h2 class="anti-adblock-title">🔒 Bloqueador de anuncios detectado</h2>
-      <p class="anti-adblock-message">Xploit Optimizer ofrece contenido 100% gratuito gracias a la publicidad. Para continuar accediendo a nuestras guías profesionales, por favor desactiva tu bloqueador de anuncios.</p>
+      <h2 class="anti-adblock-title" id="antiAdblockTitle">🔒 Bloqueador de anuncios detectado</h2>
+      <p class="anti-adblock-message" id="antiAdblockMessage">Xploit Optimizer ofrece contenido 100% gratuito gracias a la publicidad. Para continuar accediendo a nuestras guías profesionales, por favor desactiva tu bloqueador de anuncios.</p>
       <div class="anti-adblock-instruction">
-        <p>✅ Desactiva AdBlock, uBlock Origin o similares</p>
-        <p>✅ Agrega este sitio a la lista blanca</p>
-        <p>✅ Recarga la página después de desactivarlo</p>
+        <p id="antiAdblockInstr1">✅ Desactiva AdBlock, uBlock Origin o similares</p>
+        <p id="antiAdblockInstr2">✅ Agrega este sitio a la lista blanca</p>
+        <p id="antiAdblockInstr3">✅ Recarga la página después de desactivarlo</p>
       </div>
-      <button class="anti-adblock-btn" id="retryAccessBtn">🔄 Recargar página</button>
+      <button class="anti-adblock-btn" id="retryAccessBtn">🔄 <span id="antiAdblockBtn">Recargar página</span></button>
     </div>
   </div>
 
@@ -989,16 +971,16 @@
         </button>
         <div class="nav-links" id="navLinks" role="navigation">
           <button class="nav-link active" data-section="inicio" aria-current="page">
-            <i class="fas fa-home"></i> Inicio
+            <i class="fas fa-home"></i> <span id="navInicio">Inicio</span>
           </button>
           <button class="nav-link" data-section="videos">
-            <i class="fab fa-youtube"></i> Videos
+            <i class="fab fa-youtube"></i> <span id="navVideos">Videos</span>
           </button>
           <button class="nav-link" data-section="resultados">
-            <i class="fas fa-chart-line"></i> Resultados
+            <i class="fas fa-chart-line"></i> <span id="navResultados">Resultados</span>
           </button>
           <button class="nav-link" data-section="keys">
-            <i class="fas fa-key"></i> Keys
+            <i class="fas fa-key"></i> <span id="navKeys">Keys</span>
           </button>
         </div>
       </nav>
@@ -1009,7 +991,7 @@
       <!-- Sidebar izquierdo -->
       <aside class="ad-sidebar left" aria-label="Publicidad lateral izquierda">
         <div class="ad-premium-container">
-          <div class="ad-header"><span>Patrocinado</span></div>
+          <div class="ad-header"><span id="adLeft1">Patrocinado</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -1020,7 +1002,7 @@
           </div>
         </div>
         <div class="ad-premium-container">
-          <div class="ad-header"><span>Publicidad</span></div>
+          <div class="ad-header"><span id="adLeft2">Publicidad</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -1040,7 +1022,7 @@
       <!-- Sidebar derecho -->
       <aside class="ad-sidebar right" aria-label="Publicidad lateral derecha">
         <div class="ad-premium-container">
-          <div class="ad-header"><span>Colaboración</span></div>
+          <div class="ad-header"><span id="adRight1">Colaboración</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -1051,7 +1033,7 @@
           </div>
         </div>
         <div class="ad-premium-container">
-          <div class="ad-header"><span>Anuncio</span></div>
+          <div class="ad-header"><span id="adRight2">Anuncio</span></div>
           <div class="ad-content">
             <div class="adsense-wrapper">
               <ins class="adsbygoogle"
@@ -1066,11 +1048,11 @@
 
     <!-- Footer -->
     <footer class="footer-profesional" role="contentinfo">
-      <span>&copy; 2026 Xploit Optimizer — Optimización Profesional de Sistemas</span>
+      <span id="footerCopyright">&copy; 2026 Xploit Optimizer — Optimización Profesional de Sistemas</span>
       <div class="footer-links">
-        <a href="#" id="linkAvisoLegal" rel="nofollow">Aviso Legal</a>
-        <a href="#" id="linkPoliticaPrivacidad" rel="nofollow">Política de Privacidad</a>
-        <a href="#" id="linkContacto" rel="nofollow">Contacto</a>
+        <a href="#" rel="nofollow" id="footerAvisoLegal">Aviso Legal</a>
+        <a href="#" rel="nofollow" id="footerPrivacidad">Política de Privacidad</a>
+        <a href="#" rel="nofollow" id="footerContacto">Contacto</a>
       </div>
     </footer>
   </div>
@@ -1079,12 +1061,12 @@
   <div id="cookieConsent" class="cookie-consent" role="dialog" aria-label="Consentimiento de cookies">
     <div class="cookie-text">
       <i class="fas fa-cookie-bite"></i> 
-      Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra 
-      <a href="#" id="linkPoliticaCookies" rel="nofollow">política de cookies</a>.
+      <span id="cookieText">Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra</span> 
+      <a href="#" rel="nofollow" id="cookieLink">política de cookies</a>.
     </div>
     <div class="cookie-buttons">
-      <button id="acceptCookies" class="cookie-btn">Aceptar</button>
-      <button id="declineCookies" class="cookie-btn cookie-btn-outline">Rechazar</button>
+      <button id="acceptCookies" class="cookie-btn"><span id="cookieAccept">Aceptar</span></button>
+      <button id="declineCookies" class="cookie-btn cookie-btn-outline"><span id="cookieDecline">Rechazar</span></button>
     </div>
   </div>
 
@@ -1092,6 +1074,243 @@
   <script>
     (function() {
       'use strict';
+
+      // ========== SISTEMA DE IDIOMAS ==========
+      const translations = {
+        es: {
+          pageTitle: 'Xploit Optimizer | Mejores Optimizaciones Para Gaming',
+          metaDescription: 'Xploit Optimizer: Servicio premium de optimización de Windows para gaming. Cientos de tweaks para mejorar FPS, reducir latencia y dominar en Fortnite, Valorant, CSGO y más. ¡Rendimiento al máximo!',
+          metaKeywords: 'optimizacion windows gamer, servicio fps boost, tweaks fortnite, bajar ping valorant, optimizar pc para jugar, xploit optimizer, mejorar rendimiento juegos, estabilidad fps, xploitsev, windows 10 11 tweaks',
+          ogTitle: 'Xploit Optimizer | Optimización Premium para Gaming',
+          ogDescription: 'Cientos de tweaks para que tu rendimiento en juegos llegue a las nubes. FPS estables, ping bajo, máxima reacción. Especialistas en Fortnite, Valorant y CSGO.',
+          ogLocale: 'es_ES',
+          twitterTitle: 'Xploit Optimizer - Servicio de Tweaks Premium',
+          twitterDescription: 'Optimizaciones avanzadas para Windows que aumentan FPS y reducen latencia. Domina tus juegos competitivos.',
+          schemaDescription: 'Servicio premium de optimizaciones para Windows con miles de tweaks para mejorar el rendimiento en juegos competitivos.',
+          navInicio: 'Inicio',
+          navVideos: 'Videos',
+          navResultados: 'Resultados',
+          navKeys: 'Keys',
+          bannerAd: 'Sponsored',
+          aboutTitle: '¿Quiénes somos?',
+          aboutText: '<strong>Xploit Optimizer</strong> somos un servicio de optimizaciones para Windows que tienen <strong>miles de tweaks</strong> para que tu rendimiento llegue a las nubes en juegos competitivos como <strong>Fortnite, Valorant, CSGO</strong> entre otros. Nosotros nos centramos en que todos los jugadores que quieran competir tengan el <strong>mejor rendimiento</strong> para que tengan una experiencia de juego super fluida. Nos centraremos especialmente en <strong>aumentar la estabilidad de los FPS y mejorarlos</strong>, aparte de <strong>mejorar tu conexión a internet</strong> para bajar el ping y tener mayor reacción a la hora de jugar.',
+          tweak1Title: 'Regedit Tweaks',
+          tweak1Desc: 'Optimizaciones profundas en el registro de Windows para reducir latencia del sistema, mejorar tiempos de respuesta y eliminar cuellos de botella.',
+          tweak2Title: 'Settings Tweaks',
+          tweak2Desc: 'Configuración avanzada del sistema operativo, desactivación de servicios innecesarios y ajustes de rendimiento para maximizar recursos.',
+          tweak3Title: 'Game / Apps Tweaks',
+          tweak3Desc: 'Parámetros específicos para juegos y aplicaciones pesadas. Reduce stuttering, aumenta FPS y optimiza GPU/CPU.',
+          tweak4Title: 'Information Tweaks',
+          tweak4Desc: '<strong style="color:#c4a8ff;">Optimizaciones de élite que otros venden</strong><br>XploitSev te las ofrece GRATIS: tweaks de baja latencia de red, priorización de procesos y ajustes ocultos de kernel. Domina tu sistema.',
+          video1Title: 'Cómo los profesionales optimizan Windows para aumentar los FPS (Guía gratuita)',
+          video2Title: 'Regedit Tweaks Avanzados - Mejora tu Latencia',
+          video3Title: 'Aumenta FPS en Juegos con Configuraciones Exclusivas',
+          resultsPrev: 'Anterior',
+          resultsNext: 'Siguiente',
+          devTitle: 'En desarrollo',
+          devText1: 'Próximamente claves de activación y recursos exclusivos para miembros.',
+          devText2: 'Mantente atento a las actualizaciones.',
+          footerCopyright: '© 2026 Xploit Optimizer — Optimización Profesional de Sistemas',
+          footerAvisoLegal: 'Aviso Legal',
+          footerPrivacidad: 'Política de Privacidad',
+          footerContacto: 'Contacto',
+          adLeft1: 'Patrocinado',
+          adLeft2: 'Publicidad',
+          adRight1: 'Colaboración',
+          adRight2: 'Anuncio',
+          cookieText: 'Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra',
+          cookieLink: 'política de cookies',
+          cookieAccept: 'Aceptar',
+          cookieDecline: 'Rechazar',
+          antiAdblockTitle: '🔒 Bloqueador de anuncios detectado',
+          antiAdblockMessage: 'Xploit Optimizer ofrece contenido 100% gratuito gracias a la publicidad. Para continuar accediendo a nuestras guías profesionales, por favor desactiva tu bloqueador de anuncios.',
+          antiAdblockInstr1: '✅ Desactiva AdBlock, uBlock Origin o similares',
+          antiAdblockInstr2: '✅ Agrega este sitio a la lista blanca',
+          antiAdblockInstr3: '✅ Recarga la página después de desactivarlo',
+          antiAdblockBtn: 'Recargar página'
+        },
+        en: {
+          pageTitle: 'Xploit Optimizer | Best Gaming Optimizations',
+          metaDescription: 'Xploit Optimizer: Premium Windows optimization service for gaming. Hundreds of tweaks to improve FPS, reduce latency and dominate in Fortnite, Valorant, CSGO and more. Maximum performance!',
+          metaKeywords: 'windows gaming optimization, fps boost service, fortnite tweaks, lower valorant ping, optimize pc for gaming, xploit optimizer, improve game performance, fps stability, xploitsev, windows 10 11 tweaks',
+          ogTitle: 'Xploit Optimizer | Premium Gaming Optimization',
+          ogDescription: 'Hundreds of tweaks to take your gaming performance to the next level. Stable FPS, low ping, maximum reaction. Specialists in Fortnite, Valorant and CSGO.',
+          ogLocale: 'en_US',
+          twitterTitle: 'Xploit Optimizer - Premium Tweaks Service',
+          twitterDescription: 'Advanced Windows optimizations that increase FPS and reduce latency. Dominate your competitive games.',
+          schemaDescription: 'Premium Windows optimization service with thousands of tweaks to improve performance in competitive games.',
+          navInicio: 'Home',
+          navVideos: 'Videos',
+          navResultados: 'Results',
+          navKeys: 'Keys',
+          bannerAd: 'Sponsored',
+          aboutTitle: 'Who are we?',
+          aboutText: '<strong>Xploit Optimizer</strong> is a Windows optimization service with <strong>thousands of tweaks</strong> to boost your performance to the max in competitive games like <strong>Fortnite, Valorant, CSGO</strong> and others. We focus on giving all competitive players the <strong>best performance</strong> for a super smooth gaming experience. We will focus especially on <strong>increasing FPS stability and improving them</strong>, as well as <strong>improving your internet connection</strong> to lower ping and have better reaction time while playing.',
+          tweak1Title: 'Regedit Tweaks',
+          tweak1Desc: 'Deep Windows registry optimizations to reduce system latency, improve response times and eliminate bottlenecks.',
+          tweak2Title: 'Settings Tweaks',
+          tweak2Desc: 'Advanced operating system configuration, disabling unnecessary services and performance adjustments to maximize resources.',
+          tweak3Title: 'Game / Apps Tweaks',
+          tweak3Desc: 'Specific parameters for heavy games and applications. Reduce stuttering, increase FPS and optimize GPU/CPU.',
+          tweak4Title: 'Information Tweaks',
+          tweak4Desc: '<strong style="color:#c4a8ff;">Elite optimizations that others sell</strong><br>XploitSev offers them for FREE: low-latency network tweaks, process prioritization and hidden kernel adjustments. Dominate your system.',
+          video1Title: 'How professionals optimize Windows to increase FPS (Free guide)',
+          video2Title: 'Advanced Regedit Tweaks - Improve your Latency',
+          video3Title: 'Increase FPS in Games with Exclusive Settings',
+          resultsPrev: 'Previous',
+          resultsNext: 'Next',
+          devTitle: 'Under development',
+          devText1: 'Activation keys and exclusive member resources coming soon.',
+          devText2: 'Stay tuned for updates.',
+          footerCopyright: '© 2026 Xploit Optimizer — Professional System Optimization',
+          footerAvisoLegal: 'Legal Notice',
+          footerPrivacidad: 'Privacy Policy',
+          footerContacto: 'Contact',
+          adLeft1: 'Sponsored',
+          adLeft2: 'Advertising',
+          adRight1: 'Collaboration',
+          adRight2: 'Advertisement',
+          cookieText: 'We use cookies to improve your experience. By continuing, you accept our',
+          cookieLink: 'cookie policy',
+          cookieAccept: 'Accept',
+          cookieDecline: 'Decline',
+          antiAdblockTitle: '🔒 Ad Blocker Detected',
+          antiAdblockMessage: 'Xploit Optimizer offers 100% free content thanks to advertising. To continue accessing our professional guides, please disable your ad blocker.',
+          antiAdblockInstr1: '✅ Disable AdBlock, uBlock Origin or similar',
+          antiAdblockInstr2: '✅ Add this site to your whitelist',
+          antiAdblockInstr3: '✅ Reload the page after disabling it',
+          antiAdblockBtn: 'Reload Page'
+        },
+        fr: {
+          pageTitle: 'Xploit Optimizer | Meilleures Optimisations Pour Le Gaming',
+          metaDescription: 'Xploit Optimizer: Service premium d\'optimisation Windows pour le gaming. Des centaines de tweaks pour améliorer les FPS, réduire la latence et dominer dans Fortnite, Valorant, CSGO et plus. Performance maximale !',
+          metaKeywords: 'optimisation windows gaming, service fps boost, tweaks fortnite, réduire ping valorant, optimiser pc pour jouer, xploit optimizer, améliorer performances jeux, stabilité fps, xploitsev, windows 10 11 tweaks',
+          ogTitle: 'Xploit Optimizer | Optimisation Premium Pour Le Gaming',
+          ogDescription: 'Des centaines de tweaks pour que vos performances de jeu atteignent des sommets. FPS stables, ping bas, réaction maximale. Spécialistes de Fortnite, Valorant et CSGO.',
+          ogLocale: 'fr_FR',
+          twitterTitle: 'Xploit Optimizer - Service de Tweaks Premium',
+          twitterDescription: 'Optimisations avancées pour Windows qui augmentent les FPS et réduisent la latence. Dominez vos jeux compétitifs.',
+          schemaDescription: 'Service premium d\'optimisations Windows avec des milliers de tweaks pour améliorer les performances dans les jeux compétitifs.',
+          navInicio: 'Accueil',
+          navVideos: 'Vidéos',
+          navResultados: 'Résultats',
+          navKeys: 'Clés',
+          bannerAd: 'Sponsorisé',
+          aboutTitle: 'Qui sommes-nous ?',
+          aboutText: '<strong>Xploit Optimizer</strong> est un service d\'optimisations Windows avec <strong>des milliers de tweaks</strong> pour que vos performances atteignent des sommets dans des jeux compétitifs comme <strong>Fortnite, Valorant, CSGO</strong> et autres. Nous nous concentrons sur le fait que tous les joueurs qui veulent rivaliser aient la <strong>meilleure performance</strong> pour une expérience de jeu super fluide. Nous nous concentrerons particulièrement sur <strong>l\'augmentation de la stabilité des FPS et leur amélioration</strong>, ainsi que sur <strong>l\'amélioration de votre connexion internet</strong> pour réduire le ping et avoir un meilleur temps de réaction en jouant.',
+          tweak1Title: 'Regedit Tweaks',
+          tweak1Desc: 'Optimisations profondes du registre Windows pour réduire la latence système, améliorer les temps de réponse et éliminer les goulots d\'étranglement.',
+          tweak2Title: 'Settings Tweaks',
+          tweak2Desc: 'Configuration avancée du système d\'exploitation, désactivation des services inutiles et ajustements de performance pour maximiser les ressources.',
+          tweak3Title: 'Game / Apps Tweaks',
+          tweak3Desc: 'Paramètres spécifiques pour les jeux et applications lourdes. Réduit le stuttering, augmente les FPS et optimise GPU/CPU.',
+          tweak4Title: 'Information Tweaks',
+          tweak4Desc: '<strong style="color:#c4a8ff;">Optimisations d\'élite que d\'autres vendent</strong><br>XploitSev vous les offre GRATUITEMENT: tweaks réseau à faible latence, priorisation des processus et ajustements cachés du noyau. Dominez votre système.',
+          video1Title: 'Comment les professionnels optimisent Windows pour augmenter les FPS (Guide gratuit)',
+          video2Title: 'Regedit Tweaks Avancés - Améliorez votre Latence',
+          video3Title: 'Augmentez les FPS dans les Jeux avec des Configurations Exclusives',
+          resultsPrev: 'Précédent',
+          resultsNext: 'Suivant',
+          devTitle: 'En développement',
+          devText1: 'Clés d\'activation et ressources exclusives pour les membres à venir prochainement.',
+          devText2: 'Restez à l\'écoute des mises à jour.',
+          footerCopyright: '© 2026 Xploit Optimizer — Optimisation Professionnelle des Systèmes',
+          footerAvisoLegal: 'Mentions Légales',
+          footerPrivacidad: 'Politique de Confidentialité',
+          footerContacto: 'Contact',
+          adLeft1: 'Sponsorisé',
+          adLeft2: 'Publicité',
+          adRight1: 'Collaboration',
+          adRight2: 'Annonce',
+          cookieText: 'Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre',
+          cookieLink: 'politique de cookies',
+          cookieAccept: 'Accepter',
+          cookieDecline: 'Refuser',
+          antiAdblockTitle: '🔒 Bloqueur de publicité détecté',
+          antiAdblockMessage: 'Xploit Optimizer offre un contenu 100% gratuit grâce à la publicité. Pour continuer à accéder à nos guides professionnels, veuillez désactiver votre bloqueur de publicité.',
+          antiAdblockInstr1: '✅ Désactivez AdBlock, uBlock Origin ou similaire',
+          antiAdblockInstr2: '✅ Ajoutez ce site à votre liste blanche',
+          antiAdblockInstr3: '✅ Rechargez la page après l\'avoir désactivé',
+          antiAdblockBtn: 'Recharger la page'
+        }
+      };
+
+      // Detectar idioma del navegador
+      function detectLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage || 'es';
+        const langCode = browserLang.split('-')[0].toLowerCase();
+        
+        // Si el idioma está soportado, usarlo; si no, español por defecto
+        if (translations[langCode]) {
+          return langCode;
+        }
+        return 'es'; // idioma por defecto
+      }
+
+      const currentLang = detectLanguage();
+      const t = translations[currentLang];
+
+      // Actualizar atributo lang del HTML
+      document.documentElement.lang = currentLang === 'en' ? 'en' : currentLang === 'fr' ? 'fr' : 'es';
+
+      // Función para aplicar traducciones
+      function applyTranslations() {
+        // Actualizar meta tags
+        document.getElementById('pageTitle').textContent = t.pageTitle;
+        document.getElementById('metaDescription').setAttribute('content', t.metaDescription);
+        document.getElementById('metaKeywords').setAttribute('content', t.metaKeywords);
+        document.getElementById('ogTitle').setAttribute('content', t.ogTitle);
+        document.getElementById('ogDescription').setAttribute('content', t.ogDescription);
+        document.getElementById('ogLocale').setAttribute('content', t.ogLocale);
+        document.getElementById('twitterTitle').setAttribute('content', t.twitterTitle);
+        document.getElementById('twitterDescription').setAttribute('content', t.twitterDescription);
+        
+        // Actualizar Schema.org
+        const schemaData = {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Xploit Optimizer",
+          "url": "https://xploitsev.online/",
+          "logo": "https://xploitsev.online/icon.ico",
+          "description": t.schemaDescription
+        };
+        document.getElementById('schemaData').textContent = JSON.stringify(schemaData);
+
+        // Actualizar navegación
+        document.getElementById('navInicio').textContent = t.navInicio;
+        document.getElementById('navVideos').textContent = t.navVideos;
+        document.getElementById('navResultados').textContent = t.navResultados;
+        document.getElementById('navKeys').textContent = t.navKeys;
+
+        // Actualizar sidebars
+        document.getElementById('adLeft1').textContent = t.adLeft1;
+        document.getElementById('adLeft2').textContent = t.adLeft2;
+        document.getElementById('adRight1').textContent = t.adRight1;
+        document.getElementById('adRight2').textContent = t.adRight2;
+
+        // Actualizar footer
+        document.getElementById('footerCopyright').textContent = t.footerCopyright;
+        document.getElementById('footerAvisoLegal').textContent = t.footerAvisoLegal;
+        document.getElementById('footerPrivacidad').textContent = t.footerPrivacidad;
+        document.getElementById('footerContacto').textContent = t.footerContacto;
+
+        // Actualizar cookies
+        document.getElementById('cookieText').textContent = t.cookieText;
+        document.getElementById('cookieLink').textContent = t.cookieLink;
+        document.getElementById('cookieAccept').textContent = t.cookieAccept;
+        document.getElementById('cookieDecline').textContent = t.cookieDecline;
+
+        // Actualizar anti-adblock
+        document.getElementById('antiAdblockTitle').textContent = t.antiAdblockTitle;
+        document.getElementById('antiAdblockMessage').textContent = t.antiAdblockMessage;
+        document.getElementById('antiAdblockInstr1').textContent = t.antiAdblockInstr1;
+        document.getElementById('antiAdblockInstr2').textContent = t.antiAdblockInstr2;
+        document.getElementById('antiAdblockInstr3').textContent = t.antiAdblockInstr3;
+        document.getElementById('antiAdblockBtn').textContent = t.antiAdblockBtn;
+      }
+
+      // Aplicar traducciones inmediatamente para elementos estáticos
+      applyTranslations();
 
       // ========== SISTEMA DE PARTÍCULAS ==========
       const canvas = document.getElementById('particlesCanvas');
@@ -1291,7 +1510,6 @@
       const mainArea = document.getElementById('mainContentArea');
       const navBtns = document.querySelectorAll('.nav-link');
 
-      // Mapa de secciones válidas
       const validSections = {
         'inicio': true,
         'videos': true,
@@ -1299,7 +1517,6 @@
         'keys': true
       };
 
-      // Mapa de hash a sección (soporta múltiples formatos)
       const hashToSection = {
         '': 'inicio',
         '#inicio': 'inicio',
@@ -1310,17 +1527,14 @@
 
       function getSectionFromHash() {
         const hash = window.location.hash.toLowerCase();
-        // Buscar coincidencia exacta
         if (hashToSection[hash]) {
           return hashToSection[hash];
         }
-        // Buscar coincidencia parcial (por si alguien pone #Resultados con mayúscula)
         for (const [key, value] of Object.entries(hashToSection)) {
           if (key.toLowerCase() === hash) {
             return value;
           }
         }
-        // Si no coincide, redirigir a inicio
         return 'inicio';
       }
 
@@ -1342,7 +1556,6 @@
           section = 'inicio';
         }
 
-        // Actualizar hash en la URL sin recargar la página
         if (updateHash) {
           const newHash = section === 'inicio' ? '' : `#${section.charAt(0).toUpperCase() + section.slice(1)}`;
           if (window.location.hash !== newHash) {
@@ -1350,13 +1563,9 @@
           }
         }
 
-        // Actualizar botón activo
         updateActiveButton(section);
-
-        // Renderizar sección
         switchSection(section);
 
-        // Cerrar menú móvil si está abierto
         if (navLinks.classList.contains('open')) {
           navLinks.classList.remove('open');
           hamburger.setAttribute('aria-expanded', 'false');
@@ -1364,13 +1573,11 @@
         }
       }
 
-      // Escuchar cambios en el hash (navegación con botones atrás/adelante)
       window.addEventListener('hashchange', () => {
         const section = getSectionFromHash();
         navigateToSection(section, false);
       });
 
-      // Manejar clics en los botones de navegación
       navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           const section = btn.getAttribute('data-section');
@@ -1383,17 +1590,17 @@
         { 
           type: "youtube", 
           url: "https://www.youtube-nocookie.com/embed/ERECR8pEHHI?modestbranding=1&showinfo=0&controls=1&rel=0&iv_load_policy=3&color=white&disablekb=1&fs=1", 
-          title: "Cómo los profesionales optimizan Windows para aumentar los FPS (Guía gratuita)" 
+          titleKey: 'video1Title'
         },
         { 
           type: "local", 
           file: "regedit_advanced.mp4", 
-          title: "Regedit Tweaks Avanzados - Mejora tu Latencia" 
+          titleKey: 'video2Title'
         },
         { 
           type: "local", 
           file: "gaming_fps.mp4", 
-          title: "Aumenta FPS en Juegos con Configuraciones Exclusivas" 
+          titleKey: 'video3Title'
         }
       ];
 
@@ -1413,10 +1620,9 @@
       // ========== RENDERIZADO DE SECCIONES ==========
       function renderInicio() {
         mainArea.innerHTML = `
-          <!-- Banner de anuncio superior -->
           <div class="banner-ad-container">
             <div class="ad-header">
-              <span style="font-size:0.7rem;font-weight:600;color:var(--text-accent);">Sponsored</span>
+              <span style="font-size:0.7rem;font-weight:600;color:var(--text-accent);">${t.bannerAd}</span>
             </div>
             <div class="ad-content">
               <div class="adsense-wrapper">
@@ -1430,35 +1636,31 @@
             </div>
           </div>
 
-          <!-- SECCIÓN "QUIÉNES SOMOS" -->
-          <section class="about-section" aria-label="Quiénes somos">
-            <h2 class="about-title">¿Quiénes somos?</h2>
-            <p class="about-text">
-              <strong>Xploit Optimizer</strong> somos un servicio de optimizaciones para Windows que tienen <strong>miles de tweaks</strong> para que tu rendimiento llegue a las nubes en juegos competitivos como <strong>Fortnite, Valorant, CSGO</strong> entre otros. Nosotros nos centramos en que todos los jugadores que quieran competir tengan el <strong>mejor rendimiento</strong> para que tengan una experiencia de juego super fluida. Nos centraremos especialmente en <strong>aumentar la estabilidad de los FPS y mejorarlos</strong>, aparte de <strong>mejorar tu conexión a internet</strong> para bajar el ping y tener mayor reacción a la hora de jugar.
-            </p>
+          <section class="about-section" aria-label="${t.aboutTitle}">
+            <h2 class="about-title">${t.aboutTitle}</h2>
+            <p class="about-text">${t.aboutText}</p>
           </section>
 
-          <!-- Tarjetas de características -->
           <div class="tweaks-grid">
             <div class="tweak-card">
               <div class="tweak-icon">⚙️</div>
-              <h3 class="tweak-title">Regedit Tweaks</h3>
-              <p class="tweak-desc">Optimizaciones profundas en el registro de Windows para reducir latencia del sistema, mejorar tiempos de respuesta y eliminar cuellos de botella.</p>
+              <h3 class="tweak-title">${t.tweak1Title}</h3>
+              <p class="tweak-desc">${t.tweak1Desc}</p>
             </div>
             <div class="tweak-card">
               <div class="tweak-icon">🖥️</div>
-              <h3 class="tweak-title">Settings Tweaks</h3>
-              <p class="tweak-desc">Configuración avanzada del sistema operativo, desactivación de servicios innecesarios y ajustes de rendimiento para maximizar recursos.</p>
+              <h3 class="tweak-title">${t.tweak2Title}</h3>
+              <p class="tweak-desc">${t.tweak2Desc}</p>
             </div>
             <div class="tweak-card">
               <div class="tweak-icon">🎮</div>
-              <h3 class="tweak-title">Game / Apps Tweaks</h3>
-              <p class="tweak-desc">Parámetros específicos para juegos y aplicaciones pesadas. Reduce stuttering, aumenta FPS y optimiza GPU/CPU.</p>
+              <h3 class="tweak-title">${t.tweak3Title}</h3>
+              <p class="tweak-desc">${t.tweak3Desc}</p>
             </div>
             <div class="tweak-card">
               <div class="tweak-icon">📡</div>
-              <h3 class="tweak-title">Information Tweaks</h3>
-              <p class="tweak-desc"><strong style="color:#c4a8ff;">Optimizaciones de élite que otros venden</strong><br>XploitSev te las ofrece GRATIS: tweaks de baja latencia de red, priorización de procesos y ajustes ocultos de kernel. Domina tu sistema.</p>
+              <h3 class="tweak-title">${t.tweak4Title}</h3>
+              <p class="tweak-desc">${t.tweak4Desc}</p>
             </div>
           </div>
         `;
@@ -1468,9 +1670,10 @@
       function renderVideos() {
         let html = '<div class="videos-grid">';
         videoList.forEach(video => {
+          const title = t[video.titleKey] || video.titleKey;
           const videoContent = video.type === 'youtube' 
             ? `<iframe src="${video.url}" 
-                       title="${escapeHtml(video.title)}"
+                       title="${escapeHtml(title)}"
                        frameborder="0" 
                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                        allowfullscreen
@@ -1478,14 +1681,13 @@
             : `<video controls 
                      preload="metadata" 
                      poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video"
-                     title="${escapeHtml(video.title)}">
+                     title="${escapeHtml(title)}">
                  <source src="video/${video.file}" type="video/mp4">
-                 Tu navegador no soporta la reproducción de video.
                </video>`;
           
           html += `
             <div class="video-card">
-              <div class="video-title">${escapeHtml(video.title)}</div>
+              <div class="video-title">${escapeHtml(title)}</div>
               <div class="video-wrapper">${videoContent}</div>
             </div>`;
         });
@@ -1506,7 +1708,7 @@
             ad.setAttribute('data-side', side);
             ad.innerHTML = `
               <div class="ad-header">
-                <span style="font-size:0.65rem;text-transform:uppercase;">${side === 'left' ? 'Patrocinado' : 'Publicidad'}</span>
+                <span style="font-size:0.65rem;text-transform:uppercase;">${side === 'left' ? t.adLeft1 : t.adLeft2}</span>
               </div>
               <div class="ad-content">
                 <div class="adsense-wrapper">
@@ -1554,11 +1756,11 @@
             <div class="results-carousel-track" id="resultsTrack"></div>
           </div>
           <div class="results-controls">
-            <button class="results-btn" id="resPrev" aria-label="Imagen anterior">
-              <i class="fas fa-chevron-left"></i> Anterior
+            <button class="results-btn" id="resPrev" aria-label="${t.resultsPrev}">
+              <i class="fas fa-chevron-left"></i> ${t.resultsPrev}
             </button>
-            <button class="results-btn" id="resNext" aria-label="Imagen siguiente">
-              Siguiente <i class="fas fa-chevron-right"></i>
+            <button class="results-btn" id="resNext" aria-label="${t.resultsNext}">
+              ${t.resultsNext} <i class="fas fa-chevron-right"></i>
             </button>
           </div>`;
 
@@ -1605,9 +1807,9 @@
         mainArea.innerHTML = `
           <div class="development-card">
             <div class="tweak-icon">🔧</div>
-            <h2 class="dev-title">En desarrollo</h2>
-            <p class="dev-text">Próximamente claves de activación y recursos exclusivos para miembros.</p>
-            <p class="dev-text">Mantente atento a las actualizaciones.</p>
+            <h2 class="dev-title">${t.devTitle}</h2>
+            <p class="dev-text">${t.devText1}</p>
+            <p class="dev-text">${t.devText2}</p>
           </div>`;
       }
 
@@ -1656,7 +1858,6 @@
 
           hideAntiAdblock();
           
-          // Navegar a la sección según el hash inicial
           const initialSection = getSectionFromHash();
           navigateToSection(initialSection, false);
 
