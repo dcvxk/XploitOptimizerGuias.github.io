@@ -1,1889 +1,692 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <title id="pageTitle">Xploit Optimizer | Mejores Optimizaciones Para Gaming</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="icon.ico">
-  <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-  
-  <!-- SEO Meta Tags (se actualizarán dinámicamente) -->
-  <meta name="description" id="metaDescription" content="Xploit Optimizer: Servicio premium de optimización de Windows para gaming. Cientos de tweaks para mejorar FPS, reducir latencia y dominar en Fortnite, Valorant, CSGO y más.">
-  <meta name="keywords" id="metaKeywords" content="optimizacion windows gamer, servicio fps boost, tweaks fortnite, bajar ping valorant, optimizar pc para jugar, xploit optimizer">
-  <meta name="author" content="Xploit Optimizer">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <link rel="canonical" href="https://xploitsev.online/">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:title" id="ogTitle" content="Xploit Optimizer | Optimización Premium para Gaming">
-  <meta property="og:description" id="ogDescription" content="Cientos de tweaks para que tu rendimiento en juegos llegue a las nubes. FPS estables, ping bajo, máxima reacción.">
-  <meta property="og:image" content="icon.ico">
-  <meta property="og:url" content="https://xploitsev.online/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" id="ogLocale" content="es_ES">
-  <meta property="og:site_name" content="Xploit Optimizer">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" id="twitterTitle" content="Xploit Optimizer - Servicio de Tweaks Premium">
-  <meta name="twitter:description" id="twitterDescription" content="Optimizaciones avanzadas para Windows que aumentan FPS y reducen latencia.">
-  <meta name="twitter:image" content="icon.ico">
-
-  <!-- Datos Estructurados (Schema.org) -->
-  <script type="application/ld+json" id="schemaData">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Xploit Optimizer",
-      "url": "https://xploitsev.online/",
-      "logo": "https://xploitsev.online/icon.ico",
-      "description": "Servicio premium de optimizaciones para Windows con miles de tweaks para mejorar el rendimiento en juegos competitivos."
-    }
-  </script>
-  
-  <!-- PWA / Theme -->
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Xploit Optimizer">
-  
-  <!-- Preconexión y recursos -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
-  
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  
-  <!-- Estilos principales -->
-  <style>
-    /* ========== RESET Y VARIABLES ========== */
-    :root {
-      --primary: #8b5cf6;
-      --primary-light: #a78bfa;
-      --primary-dark: #6d28d9;
-      --background: #0a0a0a;
-      --surface: rgba(18, 18, 26, 0.8);
-      --surface-hover: rgba(22, 22, 30, 0.9);
-      --text-primary: #e5e5e5;
-      --text-secondary: #a5a0bc;
-      --text-accent: #c4b0ff;
-      --border: rgba(130, 100, 220, 0.2);
-      --border-hover: rgba(130, 100, 220, 0.5);
-      --shadow: 0 25px 35px -12px rgba(80, 50, 160, 0.3);
-      --radius-sm: 16px;
-      --radius-md: 24px;
-      --radius-lg: 32px;
-      --radius-xl: 48px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      background: var(--background);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--text-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-
-    /* ========== FONDO ANIMADO ========== */
-    .animated-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: radial-gradient(circle at 30% 40%, #0f0a1a 0%, #050508 100%);
-    }
-
-    .animated-bg::before {
-      content: "";
-      position: absolute;
-      top: -20%;
-      left: -20%;
-      width: 80%;
-      height: 80%;
-      background: radial-gradient(circle, rgba(100, 50, 160, 0.25) 0%, transparent 70%);
-      filter: blur(100px);
-      animation: floatMorph 14s infinite alternate ease-in-out;
-    }
-
-    .animated-bg::after {
-      content: "";
-      position: absolute;
-      bottom: -10%;
-      right: -10%;
-      width: 70%;
-      height: 70%;
-      background: radial-gradient(circle, rgba(60, 30, 120, 0.25) 0%, transparent 70%);
-      filter: blur(110px);
-      animation: floatMorph 18s infinite alternate-reverse ease-in-out;
-    }
-
-    @keyframes floatMorph {
-      0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-      50% { opacity: 0.7; }
-      100% { transform: translate(5%, 5%) scale(1.4); opacity: 0.8; }
-    }
-
-    /* ========== CANVAS DE PARTÍCULAS ========== */
-    #particlesCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.3;
-    }
-
-    /* ========== OVERLAY ANTI-ADBLOCK ========== */
-    .anti-adblock-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 30% 40%, #0a0a0f 0%, #000000 100%);
-      z-index: 10000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-    }
-
-    .anti-adblock-overlay.active {
-      display: flex;
-    }
-
-    .anti-adblock-card {
-      background: linear-gradient(135deg, rgba(22, 22, 30, 0.95) 0%, rgba(12, 12, 18, 0.98) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: var(--radius-xl);
-      padding: 3rem 2.5rem;
-      max-width: 520px;
-      width: 90%;
-      text-align: center;
-      border: 1px solid rgba(180, 130, 255, 0.3);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
-      animation: fadeInUp 0.5s ease;
-    }
-
-    .anti-adblock-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--text-accent);
-      letter-spacing: -0.5px;
-    }
-
-    .anti-adblock-message {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .anti-adblock-instruction {
-      background: rgba(130, 100, 220, 0.1);
-      border-radius: var(--radius-md);
-      padding: 1.2rem;
-      margin-bottom: 1.5rem;
-      text-align: left;
-      border: 1px solid var(--border);
-    }
-
-    .anti-adblock-instruction p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin: 0.4rem 0;
-    }
-
-    .anti-adblock-btn {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 60px;
-      color: white;
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: var(--transition);
-      letter-spacing: -0.3px;
-    }
-
-    .anti-adblock-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(80, 50, 160, 0.5);
-    }
-
-    /* ========== COOKIE CONSENT ========== */
-    .cookie-consent {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: rgba(12, 12, 18, 0.98);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: var(--radius-md);
-      padding: 1.2rem 1.8rem;
-      z-index: 9999;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      border: 1px solid var(--border-hover);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      transform: translateY(150%);
-      transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .cookie-consent.show {
-      transform: translateY(0);
-    }
-
-    .cookie-text {
-      font-size: 0.85rem;
-      color: var(--text-accent);
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .cookie-text a {
-      color: var(--primary-light);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .cookie-buttons {
-      display: flex;
-      gap: 0.8rem;
-      flex-shrink: 0;
-    }
-
-    .cookie-btn {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      border: none;
-      padding: 0.6rem 1.5rem;
-      border-radius: 60px;
-      color: white;
-      font-weight: 600;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: var(--transition);
-      letter-spacing: -0.3px;
-    }
-
-    .cookie-btn-outline {
-      background: transparent;
-      border: 1.5px solid var(--primary);
-    }
-
-    .cookie-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 15px rgba(80, 50, 160, 0.4);
-    }
-
-    /* ========== WRAPPER PRINCIPAL ========== */
-    .main-wrapper {
-      transition: opacity 0.3s ease, filter 0.3s ease;
-      opacity: 1;
-      filter: none;
-    }
-
-    .main-wrapper.blocked {
-      opacity: 0.3;
-      pointer-events: none;
-      filter: blur(4px);
-    }
-
-    /* ========== DYNAMIC ISLAND / NAVEGACIÓN ========== */
-    .dynamic-island {
-      position: sticky;
-      top: 1rem;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      pointer-events: none;
-      margin-bottom: 2.5rem;
-      padding: 0 1.5rem;
-    }
-
-    .nav-pill {
-      pointer-events: auto;
-      background: rgba(12, 12, 18, 0.85);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-radius: 100px;
-      padding: 0.6rem 1.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1300px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(130, 100, 220, 0.25);
-      transition: var(--transition);
-    }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #ffffff 0%, var(--text-accent) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      white-space: nowrap;
-      user-select: none;
-    }
-
-    /* ========== MENÚ HAMBURGUESA ========== */
-    .hamburger {
-      display: none;
-      background: rgba(130, 100, 220, 0.15);
-      border: 1px solid var(--border);
-      color: white;
-      font-size: 1.4rem;
-      cursor: pointer;
-      padding: 0.5rem 0.7rem;
-      border-radius: 50%;
-      transition: var(--transition);
-    }
-
-    .hamburger:hover {
-      background: rgba(130, 100, 220, 0.3);
-      border-color: var(--border-hover);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-      transition: var(--transition);
-    }
-
-    .nav-link {
-      background: transparent;
-      border: none;
-      color: rgba(200, 190, 230, 0.8);
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 0.6rem 1.3rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: var(--transition);
-      letter-spacing: -0.3px;
-      white-space: nowrap;
-    }
-
-    .nav-link i {
-      margin-right: 0.4rem;
-    }
-
-    .nav-link:hover,
-    .nav-link:focus-visible {
-      background: rgba(130, 100, 220, 0.25);
-      color: white;
-      outline: none;
-    }
-
-    .nav-link.active {
-      background: rgba(130, 100, 220, 0.4);
-      color: white;
-      box-shadow: 0 0 0 1px rgba(130, 100, 220, 0.3);
-    }
-
-    /* ========== LAYOUT PRINCIPAL ========== */
-    .layout-container {
-      display: flex;
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 0 1.5rem 2rem;
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
-      min-height: calc(100vh - 250px);
-    }
-
-    .ad-sidebar {
-      flex: 0 0 300px;
-      position: sticky;
-      top: 110px;
-      height: fit-content;
-      align-self: flex-start;
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-    }
-
-    .ad-premium-container {
-      background: linear-gradient(135deg, rgba(18, 18, 26, 0.75) 0%, rgba(12, 12, 18, 0.85) 100%);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: var(--transition);
-    }
-
-    .ad-premium-container:hover {
-      border-color: var(--border-hover);
-    }
-
-    .ad-header {
-      padding: 0.7rem 1.2rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-accent);
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    .ad-content {
-      padding: 1.2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 250px;
-    }
-
-    .adsense-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-
-    .main-content-area {
-      flex: 1;
-      min-width: 0;
-    }
-
-    /* ========== BANNER AD ========== */
-    .banner-ad-container {
-      width: 100%;
-      margin-bottom: 2rem;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(18, 18, 26, 0.8), rgba(12, 12, 18, 0.9));
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-    }
-
-    .banner-ad-container .ad-content {
-      min-height: auto;
-      padding: 1.5rem;
-    }
-
-    /* ========== SECCIÓN "QUIÉNES SOMOS" ========== */
-    .about-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .about-title {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.5px;
-      color: #ece4ff;
-    }
-
-    .about-text {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      line-height: 1.8;
-      background: linear-gradient(135deg, rgba(22, 22, 30, 0.6) 0%, rgba(16, 16, 24, 0.8) 100%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      border: 1px solid var(--border);
-    }
-
-    .about-text strong {
-      color: var(--text-accent);
-      font-weight: 600;
-    }
-
-    /* ========== TARJETAS DE TWEAKS ========== */
-    .tweaks-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .tweak-card {
-      background: linear-gradient(135deg, rgba(22, 22, 30, 0.8) 0%, rgba(16, 16, 24, 0.9) 100%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      border: 1px solid var(--border);
-      transition: var(--transition);
-      cursor: default;
-      animation: fadeInUp 0.5s ease backwards;
-    }
-
-    .tweak-card:nth-child(1) { animation-delay: 0.1s; }
-    .tweak-card:nth-child(2) { animation-delay: 0.2s; }
-    .tweak-card:nth-child(3) { animation-delay: 0.3s; }
-    .tweak-card:nth-child(4) { animation-delay: 0.4s; }
-
-    .tweak-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--border-hover);
-      box-shadow: var(--shadow);
-    }
-
-    .tweak-icon {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .tweak-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: #ece4ff;
-      letter-spacing: -0.3px;
-    }
-
-    .tweak-desc {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    /* ========== SECCIÓN DE VIDEOS ========== */
-    .videos-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .video-card {
-      background: rgba(18, 18, 26, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: var(--transition);
-    }
-
-    .video-card:hover {
-      border-color: var(--border-hover);
-      box-shadow: var(--shadow);
-    }
-
-    .video-title {
-      padding: 1rem 1.5rem;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #ece4ff;
-      letter-spacing: -0.3px;
-      background: rgba(0, 0, 0, 0.2);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      background: #000;
-      aspect-ratio: 16 / 9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .video-wrapper iframe,
-    .video-wrapper video {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
-    /* ========== FULLSCREEN ADS ========== */
-    .fullscreen-ad {
-      position: absolute;
-      top: 0;
-      width: 300px;
-      height: 100%;
-      background: rgba(12, 12, 18, 0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      z-index: 10;
-      display: none;
-    }
-
-    .fullscreen-ad[data-side="left"] {
-      left: -320px;
-    }
-
-    .fullscreen-ad[data-side="right"] {
-      right: -320px;
-    }
-
-    .fullscreen-ad .ad-content {
-      flex: 1;
-      padding: 0.5rem;
-    }
-
-    /* ========== CARRUSEL DE RESULTADOS ========== */
-    .results-carousel-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      background: rgba(10, 10, 16, 0.5);
-      padding: 1.2rem;
-      border: 1px solid var(--border);
-    }
-
-    .results-carousel-track {
-      display: flex;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      will-change: transform;
-    }
-
-    .results-slide {
-      min-width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    .results-slide img {
-      max-width: 100%;
-      max-height: 550px;
-      border-radius: var(--radius-md);
-      object-fit: contain;
-      background: #0f0f16;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      border: 1px solid var(--border);
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    .results-controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.8rem;
-    }
-
-    .results-btn {
-      background: rgba(30, 28, 48, 0.8);
-      border: 1px solid var(--border);
-      padding: 0.7rem 1.8rem;
-      border-radius: 60px;
-      color: #e0d6ff;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: var(--transition);
-      letter-spacing: -0.3px;
-    }
-
-    .results-btn:hover {
-      background: rgba(130, 100, 220, 0.3);
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
-
-    /* ========== SECCIÓN EN DESARROLLO ========== */
-    .development-card {
-      background: linear-gradient(135deg, rgba(22, 22, 30, 0.8), rgba(16, 16, 24, 0.9));
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: var(--radius-xl);
-      padding: 4rem 2rem;
-      text-align: center;
-      border: 1px solid var(--border);
-      animation: fadeInUp 0.5s ease;
-    }
-
-    .dev-title {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .dev-text {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    /* ========== FOOTER PROFESIONAL ========== */
-    .footer-profesional {
-      margin-top: 3rem;
-      background: rgba(8, 8, 12, 0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      color: #8a82aa;
-      font-size: 0.85rem;
-      gap: 1rem;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: #8a82aa;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--text-accent);
-    }
-
-    /* ========== ANIMACIONES ========== */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 1200px) {
-      .ad-sidebar {
-        flex: 0 0 250px;
-      }
-    }
-
-    @media (max-width: 1000px) {
-      .layout-container {
-        flex-direction: column;
-      }
-      
-      .ad-sidebar {
-        display: none;
-      }
-      
-      .tweaks-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      }
-    }
-
-    @media (max-width: 900px) {
-      .hamburger {
-        display: block;
-      }
-      
-      .nav-links {
-        position: fixed;
-        top: 80px;
-        left: 1rem;
-        right: 1rem;
-        background: rgba(12, 12, 18, 0.98);
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
-        flex-direction: column;
-        padding: 1.5rem;
-        border-radius: var(--radius-lg);
-        gap: 0.6rem;
-        border: 1px solid var(--border-hover);
-        transform: translateY(-120%);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        z-index: 99;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-      }
-      
-      .nav-links.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-      }
-      
-      .nav-link {
-        width: 100%;
-        text-align: center;
-        padding: 0.9rem;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-      }
-      
-      .nav-pill {
-        justify-content: space-between;
-        padding: 0.5rem 1.2rem;
-      }
-      
-      .logo {
-        font-size: 1.1rem;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .tweaks-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .cookie-consent {
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        border-radius: var(--radius-md);
-        padding: 1rem;
-      }
-      
-      .cookie-buttons {
-        width: 100%;
-        justify-content: stretch;
-      }
-      
-      .cookie-btn {
-        flex: 1;
-        text-align: center;
-      }
-      
-      .footer-profesional {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-      }
-      
-      .footer-links {
-        justify-content: center;
-      }
-      
-      .anti-adblock-card {
-        padding: 2rem 1.5rem;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .dynamic-island {
-        padding: 0 0.8rem;
-        top: 0.5rem;
-      }
-      
-      .nav-pill {
-        padding: 0.4rem 1rem;
-      }
-      
-      .logo {
-        font-size: 0.95rem;
-      }
-      
-      .layout-container {
-        padding: 0 0.8rem 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>HQuantum Tweaks | Optimización Profesional</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #050505;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #111111;
+            --bg-card-hover: #161616;
+            --text-primary: #f5f5f5;
+            --text-secondary: #888888;
+            --accent: #1a73e8;
+            --accent-hover: #2b84f0;
+            --accent-translucent: rgba(26, 115, 232, 0.15);
+            --border: #1f1f1f;
+            --border-hover: #2a2a2a;
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            background: var(--bg-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .animated-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+            background: radial-gradient(circle at 20% 30%, #0a0a0a 0%, #050505 100%);
+        }
+        .animated-bg::before {
+            content: ""; position: absolute; top: -20%; left: -20%; width: 70%; height: 70%;
+            background: radial-gradient(circle, rgba(26, 115, 232, 0.08) 0%, transparent 70%);
+            filter: blur(120px); animation: floatMorph 16s infinite alternate ease-in-out;
+        }
+        .animated-bg::after {
+            content: ""; position: absolute; bottom: -10%; right: -10%; width: 60%; height: 60%;
+            background: radial-gradient(circle, rgba(26, 115, 232, 0.06) 0%, transparent 70%);
+            filter: blur(100px); animation: floatMorph 20s infinite alternate-reverse ease-in-out;
+        }
+        @keyframes floatMorph {
+            0% { transform: translate(0,0) scale(1); opacity: 0.5; }
+            50% { opacity: 0.8; }
+            100% { transform: translate(4%,4%) scale(1.3); opacity: 1; }
+        }
+
+        .grid-background {
+            position: fixed; inset: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px; pointer-events: none; z-index: -1;
+        }
+
+        .loading-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-primary); z-index: 10000;
+            display: flex; align-items: center; justify-content: center;
+            flex-direction: column; gap: 1rem;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        .loading-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .loading-spinner-large {
+            width: 40px; height: 40px; border: 3px solid var(--border);
+            border-top-color: var(--accent); border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-text { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .dynamic-island {
+            position: sticky; top: 0.75rem; z-index: 100; display: flex; justify-content: center;
+            pointer-events: none; margin-bottom: 2rem; padding: 0 1rem;
+        }
+        .nav-pill {
+            pointer-events: auto; background: rgba(10,10,10,0.75);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-radius: 50px; padding: 0.35rem 0.75rem;
+            display: flex; align-items: center; justify-content: space-between;
+            width: 100%; max-width: 1100px; border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: var(--transition);
+        }
+        .logo {
+            font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent; white-space: nowrap; user-select: none; padding: 0 0.5rem;
+        }
+        .hamburger {
+            display: none; background: var(--accent-translucent); border: 1px solid var(--border);
+            color: var(--text-primary); font-size: 1.1rem; cursor: pointer;
+            padding: 0.4rem 0.6rem; border-radius: 50%; transition: var(--transition);
+        }
+        .hamburger:hover { background: var(--accent); border-color: var(--accent); }
+        .nav-links { display: flex; gap: 0.2rem; align-items: center; }
+        .nav-link {
+            background: transparent; border: none; color: var(--text-secondary);
+            font-family: inherit; font-weight: 500; font-size: 0.8rem;
+            padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer;
+            transition: var(--transition); white-space: nowrap;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .nav-link i { font-size: 0.85rem; }
+        .nav-link:hover { background: var(--accent-translucent); color: var(--text-primary); }
+        .nav-link.active {
+            background: var(--accent-translucent); color: var(--accent-hover);
+            border: 1px solid rgba(26,115,232,0.3);
+        }
+
+        .layout-container {
+            display: flex; max-width: 1400px; margin: 0 auto;
+            padding: 0 1.25rem 2rem; gap: 1.5rem; position: relative; z-index: 1;
+        }
+        .main-content-area { flex: 1; min-width: 0; }
+
+        .banner-ad-container {
+            width: 100%; margin-bottom: 2rem; border-radius: var(--radius-md);
+            overflow: hidden; background: var(--bg-card); border: 1px solid var(--border);
+        }
+        .banner-carousel { position: relative; overflow: hidden; border-radius: var(--radius-md); }
+        .banner-track { display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+        .banner-slide { min-width: 100%; display: flex; justify-content: center; align-items: center; }
+        .banner-slide img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .banner-dots { display: flex; justify-content: center; gap: 0.4rem; padding: 0.75rem; background: var(--bg-card); }
+        .banner-dot {
+            width: 8px; height: 8px; border-radius: 50%; background: var(--text-secondary);
+            border: none; cursor: pointer; transition: var(--transition); opacity: 0.5;
+        }
+        .banner-dot.active { background: var(--accent); opacity: 1; transform: scale(1.3); }
+
+        .about-section { margin-bottom: 2rem; }
+        .about-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.4px; }
+        .about-text {
+            color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;
+            background: var(--bg-card); border-radius: var(--radius-md);
+            padding: 1.5rem; border: 1px solid var(--border);
+        }
+        .about-text strong { color: var(--text-primary); font-weight: 600; }
+
+        .tweaks-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem; margin-bottom: 2rem;
+        }
+        .tweak-card {
+            background: var(--bg-card); border-radius: var(--radius-md); padding: 1.5rem;
+            border: 1px solid var(--border); transition: var(--transition);
+            animation: fadeInUp 0.4s ease backwards;
+        }
+        .tweak-card:hover {
+            transform: translateY(-4px); border-color: var(--border-hover);
+            background: var(--bg-card-hover); box-shadow: var(--shadow);
+        }
+        .tweak-icon {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--accent-translucent);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 0.75rem; color: var(--accent-hover); font-size: 1.1rem;
+        }
+        .tweak-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .tweak-desc { color: var(--text-secondary); font-size: 0.8rem; line-height: 1.6; }
+
+        .account-section {
+            background: var(--bg-card); border-radius: var(--radius-md); padding: 2rem;
+            border: 1px solid var(--border); max-width: 480px; margin: 0 auto;
+        }
+        .account-header {
+            display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
+            padding-bottom: 1rem; border-bottom: 1px solid var(--border);
+        }
+        .account-avatar {
+            width: 50px; height: 50px; border-radius: 50%; background: var(--accent-translucent);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent-hover); font-size: 1.2rem;
+        }
+        .account-info h3 { font-size: 1.1rem; font-weight: 600; }
+        .account-info p { color: var(--text-secondary); font-size: 0.8rem; }
+
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label {
+            display: block; color: var(--text-secondary); font-size: 0.75rem;
+            font-weight: 500; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .form-group input {
+            width: 100%; padding: 0.7rem 1rem; background: var(--bg-secondary);
+            border: 1px solid var(--border); border-radius: var(--radius-sm);
+            color: var(--text-primary); font-size: 0.9rem; font-family: inherit;
+            transition: var(--transition); outline: none;
+        }
+        .form-group input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-translucent); }
+
+        .btn-primary {
+            width: 100%; padding: 0.7rem; background: var(--accent); color: white;
+            border: none; border-radius: 50px; font-size: 0.85rem; font-weight: 600;
+            font-family: inherit; cursor: pointer; transition: var(--transition);
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .btn-primary:hover { background: var(--accent-hover); box-shadow: 0 8px 20px rgba(26,115,232,0.3); }
+        .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+        .btn-logout {
+            width: 100%; padding: 0.7rem; background: transparent; color: #ff4757;
+            border: 1px solid rgba(255,71,87,0.3); border-radius: 50px; font-size: 0.85rem;
+            font-weight: 600; font-family: inherit; cursor: pointer; transition: var(--transition); margin-top: 0.75rem;
+        }
+        .btn-logout:hover { background: rgba(255,71,87,0.1); }
+
+        .message {
+            padding: 0.7rem 1rem; border-radius: var(--radius-sm); margin-bottom: 1rem;
+            font-size: 0.8rem; display: none; animation: slideDown 0.3s ease;
+        }
+        .message.error { background: rgba(255,71,87,0.1); border: 1px solid rgba(255,71,87,0.3); color: #ff4757; }
+        .message.success { background: rgba(0,214,143,0.1); border: 1px solid rgba(0,214,143,0.3); color: #00d68f; }
+
+        .license-status {
+            display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm); margin-bottom: 1rem;
+            background: var(--bg-secondary); border: 1px solid var(--border);
+        }
+        .license-status i { color: var(--accent-hover); font-size: 1.2rem; }
+        .license-status.active { border-color: rgba(0,214,143,0.3); background: rgba(0,214,143,0.05); }
+        .license-status.active i { color: #00d68f; }
+
+        .footer-profesional {
+            margin-top: 2rem; background: var(--bg-secondary); border-top: 1px solid var(--border);
+            padding: 1.5rem; text-align: center; color: var(--text-secondary); font-size: 0.8rem;
+        }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-links {
+                position: fixed; top: 60px; left: 0.75rem; right: 0.75rem;
+                background: rgba(10,10,10,0.98); backdrop-filter: blur(30px);
+                -webkit-backdrop-filter: blur(30px); flex-direction: column; padding: 1rem;
+                border-radius: var(--radius-md); gap: 0.4rem; border: 1px solid var(--border-hover);
+                transform: translateY(-120%); opacity: 0; pointer-events: none;
+                transition: all 0.35s cubic-bezier(0.2,0.9,0.4,1.1); z-index: 99;
+            }
+            .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+            .nav-link { width: 100%; justify-content: center; padding: 0.7rem; }
+            .nav-pill { padding: 0.3rem 0.6rem; }
+            .logo { font-size: 0.95rem; }
+            .tweaks-grid { grid-template-columns: 1fr; }
+            .banner-slide img { height: 150px; }
+        }
+    </style>
 </head>
 <body>
-  <!-- Fondo animado -->
-  <div class="animated-bg"></div>
-  
-  <!-- Canvas de partículas -->
-  <canvas id="particlesCanvas"></canvas>
-
-  <!-- Overlay Anti-Adblock -->
-  <div id="antiAdblockOverlay" class="anti-adblock-overlay">
-    <div class="anti-adblock-card">
-      <h2 class="anti-adblock-title" id="antiAdblockTitle">🔒 Bloqueador de anuncios detectado</h2>
-      <p class="anti-adblock-message" id="antiAdblockMessage">Xploit Optimizer ofrece contenido 100% gratuito gracias a la publicidad. Para continuar accediendo a nuestras guías profesionales, por favor desactiva tu bloqueador de anuncios.</p>
-      <div class="anti-adblock-instruction">
-        <p id="antiAdblockInstr1">✅ Desactiva AdBlock, uBlock Origin o similares</p>
-        <p id="antiAdblockInstr2">✅ Agrega este sitio a la lista blanca</p>
-        <p id="antiAdblockInstr3">✅ Recarga la página después de desactivarlo</p>
-      </div>
-      <button class="anti-adblock-btn" id="retryAccessBtn">🔄 <span id="antiAdblockBtn">Recargar página</span></button>
-    </div>
-  </div>
-
-  <!-- Contenido principal -->
-  <div id="mainWrapper" class="main-wrapper">
-    <!-- Navegación Dynamic Island -->
-    <div class="dynamic-island">
-      <nav class="nav-pill" id="navPill" aria-label="Navegación principal">
-        <span class="logo" aria-label="Xploit Optimizer">XPLOIT OPTIMIZER</span>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links" id="navLinks" role="navigation">
-          <button class="nav-link active" data-section="inicio" aria-current="page">
-            <i class="fas fa-home"></i> <span id="navInicio">Inicio</span>
-          </button>
-          <button class="nav-link" data-section="videos">
-            <i class="fab fa-youtube"></i> <span id="navVideos">Videos</span>
-          </button>
-          <button class="nav-link" data-section="resultados">
-            <i class="fas fa-chart-line"></i> <span id="navResultados">Resultados</span>
-          </button>
-          <button class="nav-link" data-section="keys">
-            <i class="fas fa-key"></i> <span id="navKeys">Keys</span>
-          </button>
-        </div>
-      </nav>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner-large"></div>
+        <div class="loading-text">Verificando sesión...</div>
     </div>
 
-    <!-- Layout principal -->
-    <div class="layout-container">
-      <!-- Sidebar izquierdo -->
-      <aside class="ad-sidebar left" aria-label="Publicidad lateral izquierda">
-        <div class="ad-premium-container">
-          <div class="ad-header"><span id="adLeft1">Patrocinado</span></div>
-          <div class="ad-content">
-            <div class="adsense-wrapper">
-              <ins class="adsbygoogle"
-                   style="display:inline-block;width:300px;height:250px"
-                   data-ad-client="ca-pub-7123646713653046"
-                   data-ad-slot="5608812254"></ins>
-            </div>
-          </div>
-        </div>
-        <div class="ad-premium-container">
-          <div class="ad-header"><span id="adLeft2">Publicidad</span></div>
-          <div class="ad-content">
-            <div class="adsense-wrapper">
-              <ins class="adsbygoogle"
-                   style="display:inline-block;width:300px;height:250px"
-                   data-ad-client="ca-pub-7123646713653046"
-                   data-ad-slot="5608812254"></ins>
-            </div>
-          </div>
-        </div>
-      </aside>
+    <div class="animated-bg"></div>
+    <div class="grid-background"></div>
 
-      <!-- Contenido principal -->
-      <main class="main-content-area" id="mainContentArea" aria-live="polite">
-        <!-- Renderizado dinámico -->
-      </main>
-
-      <!-- Sidebar derecho -->
-      <aside class="ad-sidebar right" aria-label="Publicidad lateral derecha">
-        <div class="ad-premium-container">
-          <div class="ad-header"><span id="adRight1">Colaboración</span></div>
-          <div class="ad-content">
-            <div class="adsense-wrapper">
-              <ins class="adsbygoogle"
-                   style="display:inline-block;width:300px;height:250px"
-                   data-ad-client="ca-pub-7123646713653046"
-                   data-ad-slot="5608812254"></ins>
+    <div class="dynamic-island" id="mainContent" style="display:none;">
+        <nav class="nav-pill" aria-label="Navegación principal">
+            <span class="logo">HQUANTUM</span>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks" role="navigation">
+                <button class="nav-link active" data-section="inicio"><i class="fas fa-home"></i> Inicio</button>
+                <button class="nav-link" data-section="videos"><i class="fas fa-play"></i> Videos</button>
+                <button class="nav-link" data-section="resultados"><i class="fas fa-chart-bar"></i> Resultados</button>
+                <button class="nav-link" data-section="keys"><i class="fas fa-key"></i> Keys</button>
+                <button class="nav-link" data-section="account"><i class="fas fa-user"></i> Cuenta</button>
             </div>
-          </div>
-        </div>
-        <div class="ad-premium-container">
-          <div class="ad-header"><span id="adRight2">Anuncio</span></div>
-          <div class="ad-content">
-            <div class="adsense-wrapper">
-              <ins class="adsbygoogle"
-                   style="display:inline-block;width:300px;height:250px"
-                   data-ad-client="ca-pub-7123646713653046"
-                   data-ad-slot="5608812254"></ins>
-            </div>
-          </div>
-        </div>
-      </aside>
+        </nav>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer-profesional" role="contentinfo">
-      <span id="footerCopyright">&copy; 2026 Xploit Optimizer — Optimización Profesional de Sistemas</span>
-      <div class="footer-links">
-        <a href="#" rel="nofollow" id="footerAvisoLegal">Aviso Legal</a>
-        <a href="#" rel="nofollow" id="footerPrivacidad">Política de Privacidad</a>
-        <a href="#" rel="nofollow" id="footerContacto">Contacto</a>
-      </div>
+    <div class="layout-container" id="layoutContainer" style="display:none;">
+        <main class="main-content-area" id="mainContentArea"></main>
+    </div>
+
+    <footer class="footer-profesional" id="footerContent" style="display:none;">
+        <span>© 2024 HQuantum Tweaks — Optimización Profesional</span>
     </footer>
-  </div>
 
-  <!-- Cookie Consent -->
-  <div id="cookieConsent" class="cookie-consent" role="dialog" aria-label="Consentimiento de cookies">
-    <div class="cookie-text">
-      <i class="fas fa-cookie-bite"></i> 
-      <span id="cookieText">Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra</span> 
-      <a href="#" rel="nofollow" id="cookieLink">política de cookies</a>.
-    </div>
-    <div class="cookie-buttons">
-      <button id="acceptCookies" class="cookie-btn"><span id="cookieAccept">Aceptar</span></button>
-      <button id="declineCookies" class="cookie-btn cookie-btn-outline"><span id="cookieDecline">Rechazar</span></button>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    (function() {
-      'use strict';
-
-      // ========== SISTEMA DE IDIOMAS ==========
-      const translations = {
-        es: {
-          pageTitle: 'Xploit Optimizer | Mejores Optimizaciones Para Gaming',
-          metaDescription: 'Xploit Optimizer: Servicio premium de optimización de Windows para gaming. Cientos de tweaks para mejorar FPS, reducir latencia y dominar en Fortnite, Valorant, CSGO y más. ¡Rendimiento al máximo!',
-          metaKeywords: 'optimizacion windows gamer, servicio fps boost, tweaks fortnite, bajar ping valorant, optimizar pc para jugar, xploit optimizer, mejorar rendimiento juegos, estabilidad fps, xploitsev, windows 10 11 tweaks',
-          ogTitle: 'Xploit Optimizer | Optimización Premium para Gaming',
-          ogDescription: 'Cientos de tweaks para que tu rendimiento en juegos llegue a las nubes. FPS estables, ping bajo, máxima reacción. Especialistas en Fortnite, Valorant y CSGO.',
-          ogLocale: 'es_ES',
-          twitterTitle: 'Xploit Optimizer - Servicio de Tweaks Premium',
-          twitterDescription: 'Optimizaciones avanzadas para Windows que aumentan FPS y reducen latencia. Domina tus juegos competitivos.',
-          schemaDescription: 'Servicio premium de optimizaciones para Windows con miles de tweaks para mejorar el rendimiento en juegos competitivos.',
-          navInicio: 'Inicio',
-          navVideos: 'Videos',
-          navResultados: 'Resultados',
-          navKeys: 'Keys',
-          bannerAd: 'Sponsored',
-          aboutTitle: '¿Quiénes somos?',
-          aboutText: '<strong>Xploit Optimizer</strong> somos un servicio de optimizaciones para Windows que tienen <strong>miles de tweaks</strong> para que tu rendimiento llegue a las nubes en juegos competitivos como <strong>Fortnite, Valorant, CSGO</strong> entre otros. Nosotros nos centramos en que todos los jugadores que quieran competir tengan el <strong>mejor rendimiento</strong> para que tengan una experiencia de juego super fluida. Nos centraremos especialmente en <strong>aumentar la estabilidad de los FPS y mejorarlos</strong>, aparte de <strong>mejorar tu conexión a internet</strong> para bajar el ping y tener mayor reacción a la hora de jugar.',
-          tweak1Title: 'Regedit Tweaks',
-          tweak1Desc: 'Optimizaciones profundas en el registro de Windows para reducir latencia del sistema, mejorar tiempos de respuesta y eliminar cuellos de botella.',
-          tweak2Title: 'Settings Tweaks',
-          tweak2Desc: 'Configuración avanzada del sistema operativo, desactivación de servicios innecesarios y ajustes de rendimiento para maximizar recursos.',
-          tweak3Title: 'Game / Apps Tweaks',
-          tweak3Desc: 'Parámetros específicos para juegos y aplicaciones pesadas. Reduce stuttering, aumenta FPS y optimiza GPU/CPU.',
-          tweak4Title: 'Information Tweaks',
-          tweak4Desc: '<strong style="color:#c4a8ff;">Optimizaciones de élite que otros venden</strong><br>XploitSev te las ofrece GRATIS: tweaks de baja latencia de red, priorización de procesos y ajustes ocultos de kernel. Domina tu sistema.',
-          video1Title: 'Cómo los profesionales optimizan Windows para aumentar los FPS (Guía gratuita)',
-          video2Title: 'Regedit Tweaks Avanzados - Mejora tu Latencia',
-          video3Title: 'Aumenta FPS en Juegos con Configuraciones Exclusivas',
-          resultsPrev: 'Anterior',
-          resultsNext: 'Siguiente',
-          devTitle: 'En desarrollo',
-          devText1: 'Próximamente claves de activación y recursos exclusivos para miembros.',
-          devText2: 'Mantente atento a las actualizaciones.',
-          footerCopyright: '© 2026 Xploit Optimizer — Optimización Profesional de Sistemas',
-          footerAvisoLegal: 'Aviso Legal',
-          footerPrivacidad: 'Política de Privacidad',
-          footerContacto: 'Contacto',
-          adLeft1: 'Patrocinado',
-          adLeft2: 'Publicidad',
-          adRight1: 'Colaboración',
-          adRight2: 'Anuncio',
-          cookieText: 'Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra',
-          cookieLink: 'política de cookies',
-          cookieAccept: 'Aceptar',
-          cookieDecline: 'Rechazar',
-          antiAdblockTitle: '🔒 Bloqueador de anuncios detectado',
-          antiAdblockMessage: 'Xploit Optimizer ofrece contenido 100% gratuito gracias a la publicidad. Para continuar accediendo a nuestras guías profesionales, por favor desactiva tu bloqueador de anuncios.',
-          antiAdblockInstr1: '✅ Desactiva AdBlock, uBlock Origin o similares',
-          antiAdblockInstr2: '✅ Agrega este sitio a la lista blanca',
-          antiAdblockInstr3: '✅ Recarga la página después de desactivarlo',
-          antiAdblockBtn: 'Recargar página'
-        },
-        en: {
-          pageTitle: 'Xploit Optimizer | Best Gaming Optimizations',
-          metaDescription: 'Xploit Optimizer: Premium Windows optimization service for gaming. Hundreds of tweaks to improve FPS, reduce latency and dominate in Fortnite, Valorant, CSGO and more. Maximum performance!',
-          metaKeywords: 'windows gaming optimization, fps boost service, fortnite tweaks, lower valorant ping, optimize pc for gaming, xploit optimizer, improve game performance, fps stability, xploitsev, windows 10 11 tweaks',
-          ogTitle: 'Xploit Optimizer | Premium Gaming Optimization',
-          ogDescription: 'Hundreds of tweaks to take your gaming performance to the next level. Stable FPS, low ping, maximum reaction. Specialists in Fortnite, Valorant and CSGO.',
-          ogLocale: 'en_US',
-          twitterTitle: 'Xploit Optimizer - Premium Tweaks Service',
-          twitterDescription: 'Advanced Windows optimizations that increase FPS and reduce latency. Dominate your competitive games.',
-          schemaDescription: 'Premium Windows optimization service with thousands of tweaks to improve performance in competitive games.',
-          navInicio: 'Home',
-          navVideos: 'Videos',
-          navResultados: 'Results',
-          navKeys: 'Keys',
-          bannerAd: 'Sponsored',
-          aboutTitle: 'Who are we?',
-          aboutText: '<strong>Xploit Optimizer</strong> is a Windows optimization service with <strong>thousands of tweaks</strong> to boost your performance to the max in competitive games like <strong>Fortnite, Valorant, CSGO</strong> and others. We focus on giving all competitive players the <strong>best performance</strong> for a super smooth gaming experience. We will focus especially on <strong>increasing FPS stability and improving them</strong>, as well as <strong>improving your internet connection</strong> to lower ping and have better reaction time while playing.',
-          tweak1Title: 'Regedit Tweaks',
-          tweak1Desc: 'Deep Windows registry optimizations to reduce system latency, improve response times and eliminate bottlenecks.',
-          tweak2Title: 'Settings Tweaks',
-          tweak2Desc: 'Advanced operating system configuration, disabling unnecessary services and performance adjustments to maximize resources.',
-          tweak3Title: 'Game / Apps Tweaks',
-          tweak3Desc: 'Specific parameters for heavy games and applications. Reduce stuttering, increase FPS and optimize GPU/CPU.',
-          tweak4Title: 'Information Tweaks',
-          tweak4Desc: '<strong style="color:#c4a8ff;">Elite optimizations that others sell</strong><br>XploitSev offers them for FREE: low-latency network tweaks, process prioritization and hidden kernel adjustments. Dominate your system.',
-          video1Title: 'How professionals optimize Windows to increase FPS (Free guide)',
-          video2Title: 'Advanced Regedit Tweaks - Improve your Latency',
-          video3Title: 'Increase FPS in Games with Exclusive Settings',
-          resultsPrev: 'Previous',
-          resultsNext: 'Next',
-          devTitle: 'Under development',
-          devText1: 'Activation keys and exclusive member resources coming soon.',
-          devText2: 'Stay tuned for updates.',
-          footerCopyright: '© 2026 Xploit Optimizer — Professional System Optimization',
-          footerAvisoLegal: 'Legal Notice',
-          footerPrivacidad: 'Privacy Policy',
-          footerContacto: 'Contact',
-          adLeft1: 'Sponsored',
-          adLeft2: 'Advertising',
-          adRight1: 'Collaboration',
-          adRight2: 'Advertisement',
-          cookieText: 'We use cookies to improve your experience. By continuing, you accept our',
-          cookieLink: 'cookie policy',
-          cookieAccept: 'Accept',
-          cookieDecline: 'Decline',
-          antiAdblockTitle: '🔒 Ad Blocker Detected',
-          antiAdblockMessage: 'Xploit Optimizer offers 100% free content thanks to advertising. To continue accessing our professional guides, please disable your ad blocker.',
-          antiAdblockInstr1: '✅ Disable AdBlock, uBlock Origin or similar',
-          antiAdblockInstr2: '✅ Add this site to your whitelist',
-          antiAdblockInstr3: '✅ Reload the page after disabling it',
-          antiAdblockBtn: 'Reload Page'
-        },
-        fr: {
-          pageTitle: 'Xploit Optimizer | Meilleures Optimisations Pour Le Gaming',
-          metaDescription: 'Xploit Optimizer: Service premium d\'optimisation Windows pour le gaming. Des centaines de tweaks pour améliorer les FPS, réduire la latence et dominer dans Fortnite, Valorant, CSGO et plus. Performance maximale !',
-          metaKeywords: 'optimisation windows gaming, service fps boost, tweaks fortnite, réduire ping valorant, optimiser pc pour jouer, xploit optimizer, améliorer performances jeux, stabilité fps, xploitsev, windows 10 11 tweaks',
-          ogTitle: 'Xploit Optimizer | Optimisation Premium Pour Le Gaming',
-          ogDescription: 'Des centaines de tweaks pour que vos performances de jeu atteignent des sommets. FPS stables, ping bas, réaction maximale. Spécialistes de Fortnite, Valorant et CSGO.',
-          ogLocale: 'fr_FR',
-          twitterTitle: 'Xploit Optimizer - Service de Tweaks Premium',
-          twitterDescription: 'Optimisations avancées pour Windows qui augmentent les FPS et réduisent la latence. Dominez vos jeux compétitifs.',
-          schemaDescription: 'Service premium d\'optimisations Windows avec des milliers de tweaks pour améliorer les performances dans les jeux compétitifs.',
-          navInicio: 'Accueil',
-          navVideos: 'Vidéos',
-          navResultados: 'Résultats',
-          navKeys: 'Clés',
-          bannerAd: 'Sponsorisé',
-          aboutTitle: 'Qui sommes-nous ?',
-          aboutText: '<strong>Xploit Optimizer</strong> est un service d\'optimisations Windows avec <strong>des milliers de tweaks</strong> pour que vos performances atteignent des sommets dans des jeux compétitifs comme <strong>Fortnite, Valorant, CSGO</strong> et autres. Nous nous concentrons sur le fait que tous les joueurs qui veulent rivaliser aient la <strong>meilleure performance</strong> pour une expérience de jeu super fluide. Nous nous concentrerons particulièrement sur <strong>l\'augmentation de la stabilité des FPS et leur amélioration</strong>, ainsi que sur <strong>l\'amélioration de votre connexion internet</strong> pour réduire le ping et avoir un meilleur temps de réaction en jouant.',
-          tweak1Title: 'Regedit Tweaks',
-          tweak1Desc: 'Optimisations profondes du registre Windows pour réduire la latence système, améliorer les temps de réponse et éliminer les goulots d\'étranglement.',
-          tweak2Title: 'Settings Tweaks',
-          tweak2Desc: 'Configuration avancée du système d\'exploitation, désactivation des services inutiles et ajustements de performance pour maximiser les ressources.',
-          tweak3Title: 'Game / Apps Tweaks',
-          tweak3Desc: 'Paramètres spécifiques pour les jeux et applications lourdes. Réduit le stuttering, augmente les FPS et optimise GPU/CPU.',
-          tweak4Title: 'Information Tweaks',
-          tweak4Desc: '<strong style="color:#c4a8ff;">Optimisations d\'élite que d\'autres vendent</strong><br>XploitSev vous les offre GRATUITEMENT: tweaks réseau à faible latence, priorisation des processus et ajustements cachés du noyau. Dominez votre système.',
-          video1Title: 'Comment les professionnels optimisent Windows pour augmenter les FPS (Guide gratuit)',
-          video2Title: 'Regedit Tweaks Avancés - Améliorez votre Latence',
-          video3Title: 'Augmentez les FPS dans les Jeux avec des Configurations Exclusives',
-          resultsPrev: 'Précédent',
-          resultsNext: 'Suivant',
-          devTitle: 'En développement',
-          devText1: 'Clés d\'activation et ressources exclusives pour les membres à venir prochainement.',
-          devText2: 'Restez à l\'écoute des mises à jour.',
-          footerCopyright: '© 2026 Xploit Optimizer — Optimisation Professionnelle des Systèmes',
-          footerAvisoLegal: 'Mentions Légales',
-          footerPrivacidad: 'Politique de Confidentialité',
-          footerContacto: 'Contact',
-          adLeft1: 'Sponsorisé',
-          adLeft2: 'Publicité',
-          adRight1: 'Collaboration',
-          adRight2: 'Annonce',
-          cookieText: 'Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre',
-          cookieLink: 'politique de cookies',
-          cookieAccept: 'Accepter',
-          cookieDecline: 'Refuser',
-          antiAdblockTitle: '🔒 Bloqueur de publicité détecté',
-          antiAdblockMessage: 'Xploit Optimizer offre un contenu 100% gratuit grâce à la publicité. Pour continuer à accéder à nos guides professionnels, veuillez désactiver votre bloqueur de publicité.',
-          antiAdblockInstr1: '✅ Désactivez AdBlock, uBlock Origin ou similaire',
-          antiAdblockInstr2: '✅ Ajoutez ce site à votre liste blanche',
-          antiAdblockInstr3: '✅ Rechargez la page après l\'avoir désactivé',
-          antiAdblockBtn: 'Recharger la page'
-        }
-      };
-
-      // Detectar idioma del navegador
-      function detectLanguage() {
-        const browserLang = navigator.language || navigator.userLanguage || 'es';
-        const langCode = browserLang.split('-')[0].toLowerCase();
+    <script>
+        const _0x1a2b = ['Z2hwX1d4Rllk', 'UlgzMGxmTDJO', 'U3E5aVJNbnFh', 'ckFwYTdrdjF1', 'ck1NUw=='];
+        const _0x3c4d = _0x1a2b.map(p => atob(p)).join('');
+        const _0x5e6f = _0x3c4d;
         
-        // Si el idioma está soportado, usarlo; si no, español por defecto
-        if (translations[langCode]) {
-          return langCode;
-        }
-        return 'es'; // idioma por defecto
-      }
+        const GITHUB_API = 'https://api.github.com';
+        const REPO_OWNER = 'a1g52d3x67';
+        const REPO_NAME = 'api-a3f6c8e2b8d5014f6e2a8b9c7d3e0f12';
+        const FILE_PATH = 'db.json';
+        const LICENSE_FILE_PATH = 'x9w4q7.json';
 
-      const currentLang = detectLanguage();
-      const t = translations[currentLang];
+        const mainArea = document.getElementById('mainContentArea');
+        const navLinks = document.getElementById('navLinks');
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const loadingScreen = document.getElementById('loadingScreen');
 
-      // Actualizar atributo lang del HTML
-      document.documentElement.lang = currentLang === 'en' ? 'en' : currentLang === 'fr' ? 'fr' : 'es';
+        let currentUser = null;
+        let isInitialized = false;
 
-      // Función para aplicar traducciones
-      function applyTranslations() {
-        // Actualizar meta tags
-        document.getElementById('pageTitle').textContent = t.pageTitle;
-        document.getElementById('metaDescription').setAttribute('content', t.metaDescription);
-        document.getElementById('metaKeywords').setAttribute('content', t.metaKeywords);
-        document.getElementById('ogTitle').setAttribute('content', t.ogTitle);
-        document.getElementById('ogDescription').setAttribute('content', t.ogDescription);
-        document.getElementById('ogLocale').setAttribute('content', t.ogLocale);
-        document.getElementById('twitterTitle').setAttribute('content', t.twitterTitle);
-        document.getElementById('twitterDescription').setAttribute('content', t.twitterDescription);
-        
-        // Actualizar Schema.org
-        const schemaData = {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Xploit Optimizer",
-          "url": "https://xploitsev.online/",
-          "logo": "https://xploitsev.online/icon.ico",
-          "description": t.schemaDescription
-        };
-        document.getElementById('schemaData').textContent = JSON.stringify(schemaData);
-
-        // Actualizar navegación
-        document.getElementById('navInicio').textContent = t.navInicio;
-        document.getElementById('navVideos').textContent = t.navVideos;
-        document.getElementById('navResultados').textContent = t.navResultados;
-        document.getElementById('navKeys').textContent = t.navKeys;
-
-        // Actualizar sidebars
-        document.getElementById('adLeft1').textContent = t.adLeft1;
-        document.getElementById('adLeft2').textContent = t.adLeft2;
-        document.getElementById('adRight1').textContent = t.adRight1;
-        document.getElementById('adRight2').textContent = t.adRight2;
-
-        // Actualizar footer
-        document.getElementById('footerCopyright').textContent = t.footerCopyright;
-        document.getElementById('footerAvisoLegal').textContent = t.footerAvisoLegal;
-        document.getElementById('footerPrivacidad').textContent = t.footerPrivacidad;
-        document.getElementById('footerContacto').textContent = t.footerContacto;
-
-        // Actualizar cookies
-        document.getElementById('cookieText').textContent = t.cookieText;
-        document.getElementById('cookieLink').textContent = t.cookieLink;
-        document.getElementById('cookieAccept').textContent = t.cookieAccept;
-        document.getElementById('cookieDecline').textContent = t.cookieDecline;
-
-        // Actualizar anti-adblock
-        document.getElementById('antiAdblockTitle').textContent = t.antiAdblockTitle;
-        document.getElementById('antiAdblockMessage').textContent = t.antiAdblockMessage;
-        document.getElementById('antiAdblockInstr1').textContent = t.antiAdblockInstr1;
-        document.getElementById('antiAdblockInstr2').textContent = t.antiAdblockInstr2;
-        document.getElementById('antiAdblockInstr3').textContent = t.antiAdblockInstr3;
-        document.getElementById('antiAdblockBtn').textContent = t.antiAdblockBtn;
-      }
-
-      // Aplicar traducciones inmediatamente para elementos estáticos
-      applyTranslations();
-
-      // ========== SISTEMA DE PARTÍCULAS ==========
-      const canvas = document.getElementById('particlesCanvas');
-      let ctx = canvas.getContext('2d');
-      let particles = [];
-      let animationId;
-
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-
-      window.addEventListener('resize', resizeCanvas);
-      resizeCanvas();
-
-      class Particle {
-        constructor() {
-          this.reset();
-        }
-        
-        reset() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.size = Math.random() * 2.5 + 1;
-          this.speedX = (Math.random() - 0.5) * 0.4;
-          this.speedY = (Math.random() - 0.5) * 0.3;
-          this.opacity = Math.random() * 0.5 + 0.1;
-        }
-        
-        update() {
-          this.x += this.speedX;
-          this.y += this.speedY;
-          
-          if (this.x < -10) this.x = canvas.width + 10;
-          if (this.x > canvas.width + 10) this.x = -10;
-          if (this.y < -10) this.y = canvas.height + 10;
-          if (this.y > canvas.height + 10) this.y = -10;
-        }
-        
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(140, 110, 230, ${this.opacity})`;
-          ctx.fill();
-        }
-      }
-
-      function initParticles(count = 80) {
-        particles = [];
-        for (let i = 0; i < count; i++) {
-          particles.push(new Particle());
-        }
-      }
-
-      function animateParticles() {
-        if (!ctx) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        particles.forEach(p => {
-          p.update();
-          p.draw();
-        });
-        
-        animationId = requestAnimationFrame(animateParticles);
-      }
-
-      initParticles();
-      animateParticles();
-
-      // ========== SISTEMA ANTI-ADBLOCK ==========
-      const overlay = document.getElementById('antiAdblockOverlay');
-      const mainWrapper = document.getElementById('mainWrapper');
-      let adBlockDetected = false;
-
-      function showAntiAdblock() {
-        if (adBlockDetected) return;
-        adBlockDetected = true;
-        overlay.classList.add('active');
-        mainWrapper.classList.add('blocked');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function hideAntiAdblock() {
-        adBlockDetected = false;
-        overlay.classList.remove('active');
-        mainWrapper.classList.remove('blocked');
-        document.body.style.overflow = '';
-      }
-
-      document.getElementById('retryAccessBtn')?.addEventListener('click', () => {
-        location.reload();
-      });
-
-      function testAdBlock() {
-        return new Promise((resolve) => {
-          const testDiv = document.createElement('div');
-          testDiv.className = 'adsbox';
-          testDiv.style.cssText = 'position:absolute;top:-1000px;left:-1000px;width:1px;height:1px;';
-          document.body.appendChild(testDiv);
-          
-          setTimeout(() => {
-            const blocked = testDiv.offsetHeight === 0 || 
-                           testDiv.offsetParent === null ||
-                           testDiv.clientHeight === 0;
-            document.body.removeChild(testDiv);
-            resolve(blocked);
-          }, 150);
-        });
-      }
-
-      // ========== CARGA DE ADSENSE ==========
-      function loadAdSenseScript() {
-        return new Promise((resolve) => {
-          if (document.querySelector('script[src*="adsbygoogle.js"]')) {
-            resolve();
-            return;
-          }
-          
-          const script = document.createElement('script');
-          script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7123646713653046';
-          script.async = true;
-          script.crossOrigin = 'anonymous';
-          script.onload = () => resolve();
-          script.onerror = () => {
-            console.warn('AdSense script failed to load');
-            resolve();
-          };
-          document.head.appendChild(script);
-        });
-      }
-
-      function pushAdSense() {
-        try {
-          if (window.adsbygoogle && window.adsbygoogle.push) {
-            window.adsbygoogle.push({});
-          }
-        } catch (e) {
-          console.warn('AdSense push error:', e.message);
-        }
-      }
-
-      function pushAllAds() {
-        document.querySelectorAll('.adsbygoogle').forEach(() => {
-          pushAdSense();
-        });
-      }
-
-      // ========== COOKIE CONSENT ==========
-      const cookieDiv = document.getElementById('cookieConsent');
-      
-      if (!localStorage.getItem('cookieConsent')) {
-        setTimeout(() => {
-          cookieDiv?.classList.add('show');
-        }, 800);
-      }
-
-      document.getElementById('acceptCookies')?.addEventListener('click', () => {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieDiv?.classList.remove('show');
-      });
-
-      document.getElementById('declineCookies')?.addEventListener('click', () => {
-        localStorage.setItem('cookieConsent', 'declined');
-        cookieDiv?.classList.remove('show');
-      });
-
-      // ========== MENÚ HAMBURGUESA ==========
-      const hamburger = document.getElementById('hamburgerBtn');
-      const navLinks = document.getElementById('navLinks');
-
-      hamburger?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = navLinks.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', isOpen);
-        hamburger.querySelector('i').className = isOpen ? 'fas fa-times' : 'fas fa-bars';
-      });
-
-      document.addEventListener('click', (e) => {
-        if (navLinks.classList.contains('open') && 
-            !navLinks.contains(e.target) && 
-            !hamburger.contains(e.target)) {
-          navLinks.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          hamburger.querySelector('i').className = 'fas fa-bars';
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-          navLinks.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          hamburger.querySelector('i').className = 'fas fa-bars';
-        }
-      });
-
-      // ========== SISTEMA DE NAVEGACIÓN POR HASH ==========
-      const mainArea = document.getElementById('mainContentArea');
-      const navBtns = document.querySelectorAll('.nav-link');
-
-      const validSections = {
-        'inicio': true,
-        'videos': true,
-        'resultados': true,
-        'keys': true
-      };
-
-      const hashToSection = {
-        '': 'inicio',
-        '#inicio': 'inicio',
-        '#videos': 'videos',
-        '#resultados': 'resultados',
-        '#keys': 'keys'
-      };
-
-      function getSectionFromHash() {
-        const hash = window.location.hash.toLowerCase();
-        if (hashToSection[hash]) {
-          return hashToSection[hash];
-        }
-        for (const [key, value] of Object.entries(hashToSection)) {
-          if (key.toLowerCase() === hash) {
-            return value;
-          }
-        }
-        return 'inicio';
-      }
-
-      function updateActiveButton(section) {
-        navBtns.forEach(btn => {
-          const btnSection = btn.getAttribute('data-section');
-          if (btnSection === section) {
-            btn.classList.add('active');
-            btn.setAttribute('aria-current', 'page');
-          } else {
-            btn.classList.remove('active');
-            btn.removeAttribute('aria-current');
-          }
-        });
-      }
-
-      function navigateToSection(section, updateHash = true) {
-        if (!validSections[section]) {
-          section = 'inicio';
+        async function fetchFile(path) {
+            const response = await fetch(`${GITHUB_API}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
+                headers: {
+                    'Authorization': `token ${_0x5e6f}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                },
+                cache: 'no-store'
+            });
+            if (!response.ok) throw new Error('Error fetching file: ' + path);
+            const fileData = await response.json();
+            const content = atob(fileData.content.replace(/\n/g, ''));
+            return { data: JSON.parse(content), sha: fileData.sha };
         }
 
-        if (updateHash) {
-          const newHash = section === 'inicio' ? '' : `#${section.charAt(0).toUpperCase() + section.slice(1)}`;
-          if (window.location.hash !== newHash) {
-            history.pushState(null, '', newHash || window.location.pathname);
-          }
+        async function validateSession() {
+            const storedUser = localStorage.getItem('hquantum_user');
+            if (!storedUser) {
+                window.location.href = 'login.html';
+                return false;
+            }
+
+            try {
+                const parsedUser = JSON.parse(storedUser);
+                const { data: users } = await fetchFile(FILE_PATH);
+                
+                const dbUser = users.find(u => 
+                    u.Username === parsedUser.Username && 
+                    u.Password === parsedUser.Password
+                );
+
+                if (!dbUser) {
+                    localStorage.removeItem('hquantum_user');
+                    window.location.href = 'login.html';
+                    return false;
+                }
+
+                currentUser = {
+                    Username: dbUser.Username,
+                    Password: dbUser.Password,
+                    License: dbUser.License || "",
+                    HWID: dbUser.HWID || ""
+                };
+
+                localStorage.setItem('hquantum_user', JSON.stringify(currentUser));
+                return true;
+            } catch (error) {
+                console.error('Validation error:', error);
+                window.location.href = 'login.html';
+                return false;
+            }
         }
 
-        updateActiveButton(section);
-        switchSection(section);
-
-        if (navLinks.classList.contains('open')) {
-          navLinks.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          hamburger.querySelector('i').className = 'fas fa-bars';
+        async function validateLicense() {
+            if (!currentUser || !currentUser.License) return true;
+            
+            try {
+                const { data: users } = await fetchFile(FILE_PATH);
+                const dbUser = users.find(u => u.Username === currentUser.Username);
+                
+                if (!dbUser || dbUser.License !== currentUser.License) {
+                    currentUser.License = "";
+                    localStorage.setItem('hquantum_user', JSON.stringify(currentUser));
+                    return false;
+                }
+                return true;
+            } catch (error) {
+                console.error('License validation error:', error);
+                return false;
+            }
         }
-      }
 
-      window.addEventListener('hashchange', () => {
-        const section = getSectionFromHash();
-        navigateToSection(section, false);
-      });
-
-      navBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const section = btn.getAttribute('data-section');
-          navigateToSection(section, true);
-        });
-      });
-
-      // ========== DATOS DE CONTENIDO ==========
-      const videoList = [
-        { 
-          type: "youtube", 
-          url: "https://www.youtube-nocookie.com/embed/ERECR8pEHHI?modestbranding=1&showinfo=0&controls=1&rel=0&iv_load_policy=3&color=white&disablekb=1&fs=1", 
-          titleKey: 'video1Title'
-        },
-        { 
-          type: "local", 
-          file: "regedit_advanced.mp4", 
-          titleKey: 'video2Title'
-        },
-        { 
-          type: "local", 
-          file: "gaming_fps.mp4", 
-          titleKey: 'video3Title'
+        async function updateFile(path, currentData, sha, message) {
+            const updatedContent = btoa(JSON.stringify(currentData, null, 2));
+            const updateResponse = await fetch(`${GITHUB_API}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${_0x5e6f}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: message,
+                    content: updatedContent,
+                    sha: sha
+                })
+            });
+            if (!updateResponse.ok) throw new Error('Error updating file: ' + path);
         }
-      ];
 
-      const resultsImages = [
-        'Resultados/imagen1.png',
-        'https://placehold.co/900x550/0f0f1a/8b5cf6?text=Mejora+de+FPS:+Incremento+del+45%25',
-        'https://placehold.co/900x550/0c0c18/c4a8ff?text=Reducción+de+Latencia:+30ms+a+8ms'
-      ];
-
-      function escapeHtml(str) {
-        if (!str) return '';
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-      }
-
-      // ========== RENDERIZADO DE SECCIONES ==========
-      function renderInicio() {
-        mainArea.innerHTML = `
-          <div class="banner-ad-container">
-            <div class="ad-header">
-              <span style="font-size:0.7rem;font-weight:600;color:var(--text-accent);">${t.bannerAd}</span>
-            </div>
-            <div class="ad-content">
-              <div class="adsense-wrapper">
-                <ins class="adsbygoogle"
-                     style="display:block;text-align:center;width:100%;min-height:90px;"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"
-                     data-ad-client="ca-pub-7123646713653046"
-                     data-ad-slot="5608812254"></ins>
-              </div>
-            </div>
-          </div>
-
-          <section class="about-section" aria-label="${t.aboutTitle}">
-            <h2 class="about-title">${t.aboutTitle}</h2>
-            <p class="about-text">${t.aboutText}</p>
-          </section>
-
-          <div class="tweaks-grid">
-            <div class="tweak-card">
-              <div class="tweak-icon">⚙️</div>
-              <h3 class="tweak-title">${t.tweak1Title}</h3>
-              <p class="tweak-desc">${t.tweak1Desc}</p>
-            </div>
-            <div class="tweak-card">
-              <div class="tweak-icon">🖥️</div>
-              <h3 class="tweak-title">${t.tweak2Title}</h3>
-              <p class="tweak-desc">${t.tweak2Desc}</p>
-            </div>
-            <div class="tweak-card">
-              <div class="tweak-icon">🎮</div>
-              <h3 class="tweak-title">${t.tweak3Title}</h3>
-              <p class="tweak-desc">${t.tweak3Desc}</p>
-            </div>
-            <div class="tweak-card">
-              <div class="tweak-icon">📡</div>
-              <h3 class="tweak-title">${t.tweak4Title}</h3>
-              <p class="tweak-desc">${t.tweak4Desc}</p>
-            </div>
-          </div>
-        `;
-        pushAllAds();
-      }
-
-      function renderVideos() {
-        let html = '<div class="videos-grid">';
-        videoList.forEach(video => {
-          const title = t[video.titleKey] || video.titleKey;
-          const videoContent = video.type === 'youtube' 
-            ? `<iframe src="${video.url}" 
-                       title="${escapeHtml(title)}"
-                       frameborder="0" 
-                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                       allowfullscreen
-                       loading="lazy"></iframe>`
-            : `<video controls 
-                     preload="metadata" 
-                     poster="https://placehold.co/800x450/12121e/8b5cf6?text=Xploit+Video"
-                     title="${escapeHtml(title)}">
-                 <source src="video/${video.file}" type="video/mp4">
-               </video>`;
-          
-          html += `
-            <div class="video-card">
-              <div class="video-title">${escapeHtml(title)}</div>
-              <div class="video-wrapper">${videoContent}</div>
-            </div>`;
-        });
-        html += '</div>';
-        mainArea.innerHTML = html;
-        
-        setTimeout(() => setupFullscreenAds(), 200);
-      }
-
-      function setupFullscreenAds() {
-        document.querySelectorAll('.video-wrapper').forEach(wrapper => {
-          const media = wrapper.querySelector('iframe, video');
-          if (!media) return;
-
-          function createAd(side) {
-            const ad = document.createElement('div');
-            ad.className = 'fullscreen-ad';
-            ad.setAttribute('data-side', side);
-            ad.innerHTML = `
-              <div class="ad-header">
-                <span style="font-size:0.65rem;text-transform:uppercase;">${side === 'left' ? t.adLeft1 : t.adLeft2}</span>
-              </div>
-              <div class="ad-content">
-                <div class="adsense-wrapper">
-                  <ins class="adsbygoogle" 
-                       style="display:inline-block;width:280px;height:250px"
-                       data-ad-client="ca-pub-7123646713653046" 
-                       data-ad-slot="5608812254"></ins>
+        function renderInicio() {
+            mainArea.innerHTML = `
+                <div class="banner-ad-container">
+                    <div class="banner-carousel" id="bannerCarousel">
+                        <div class="banner-track" id="bannerTrack">
+                            <div class="banner-slide"><img src="Imagen1.png" alt="Banner 1"></div>
+                            <div class="banner-slide"><img src="Imagen2.png" alt="Banner 2"></div>
+                        </div>
+                        <div class="banner-dots" id="bannerDots">
+                            <button class="banner-dot active" data-index="0"></button>
+                            <button class="banner-dot" data-index="1"></button>
+                        </div>
+                    </div>
                 </div>
-              </div>`;
-            return ad;
-          }
+                <section class="about-section">
+                    <h2 class="about-title">¿Quiénes somos?</h2>
+                    <p class="about-text"><strong>HQuantum Tweaks</strong> somos un servicio de optimizaciones para Windows con <strong>miles de tweaks</strong> para que tu rendimiento llegue a las nubes en juegos competitivos como <strong>Fortnite, Valorant, CSGO</strong> entre otros.</p>
+                </section>
+                <div class="tweaks-grid">
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fas fa-cog"></i></div>
+                        <h3 class="tweak-title">Regedit Tweaks</h3>
+                        <p class="tweak-desc">Optimizaciones profundas en el registro de Windows para reducir latencia.</p>
+                    </div>
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fas fa-desktop"></i></div>
+                        <h3 class="tweak-title">Settings Tweaks</h3>
+                        <p class="tweak-desc">Configuración avanzada del sistema para maximizar recursos.</p>
+                    </div>
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fas fa-gamepad"></i></div>
+                        <h3 class="tweak-title">Game / Apps Tweaks</h3>
+                        <p class="tweak-desc">Parámetros específicos para juegos y aplicaciones pesadas.</p>
+                    </div>
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="tweak-title">Network Tweaks</h3>
+                        <p class="tweak-desc">Optimizaciones de red para reducir ping y mejorar reacción.</p>
+                    </div>
+                </div>
+            `;
+            setupBannerCarousel();
+        }
 
-          function handleFullscreenChange() {
-            if (document.fullscreenElement === wrapper || 
-                document.webkitFullscreenElement === wrapper) {
-              if (!wrapper.querySelector('.fullscreen-ad')) {
-                const leftAd = createAd('left');
-                const rightAd = createAd('right');
-                wrapper.insertBefore(leftAd, media);
-                wrapper.appendChild(rightAd);
-                leftAd.style.display = 'flex';
-                rightAd.style.display = 'flex';
-                wrapper.querySelectorAll('.adsbygoogle').forEach(() => {
-                  try { window.adsbygoogle?.push({}); } catch(e) {}
-                });
-              }
-            } else {
-              wrapper.querySelectorAll('.fullscreen-ad').forEach(ad => ad.remove());
+        function setupBannerCarousel() {
+            const track = document.getElementById('bannerTrack');
+            const dots = document.querySelectorAll('.banner-dot');
+            let currentIndex = 0;
+            function goToSlide(index) {
+                currentIndex = index;
+                track.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach(d => d.classList.remove('active'));
+                dots[index].classList.add('active');
             }
-          }
-
-          wrapper.addEventListener('fullscreenchange', handleFullscreenChange);
-          wrapper.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-          media.addEventListener('fullscreenchange', handleFullscreenChange);
-          media.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-        });
-      }
-
-      // ========== CARRUSEL DE RESULTADOS ==========
-      let resIndex = 0;
-
-      function renderResultados() {
-        mainArea.innerHTML = `
-          <div class="results-carousel-container">
-            <div class="results-carousel-track" id="resultsTrack"></div>
-          </div>
-          <div class="results-controls">
-            <button class="results-btn" id="resPrev" aria-label="${t.resultsPrev}">
-              <i class="fas fa-chevron-left"></i> ${t.resultsPrev}
-            </button>
-            <button class="results-btn" id="resNext" aria-label="${t.resultsNext}">
-              ${t.resultsNext} <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>`;
-
-        const track = document.getElementById('resultsTrack');
-        
-        resultsImages.forEach((src, index) => {
-          const slide = document.createElement('div');
-          slide.className = 'results-slide';
-          slide.setAttribute('aria-label', `Resultado de optimización ${index + 1}`);
-          slide.innerHTML = `<img src="${src}" loading="lazy" alt="Resultado de optimización Xploit ${index + 1}">`;
-          track.appendChild(slide);
-        });
-
-        function updateCarousel() {
-          track.style.transform = `translateX(-${resIndex * 100}%)`;
+            dots.forEach(dot => dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index))));
+            setInterval(() => goToSlide((currentIndex + 1) % 2), 5000);
         }
 
-        document.getElementById('resPrev')?.addEventListener('click', () => {
-          resIndex = (resIndex - 1 + resultsImages.length) % resultsImages.length;
-          updateCarousel();
-        });
+        function renderVideos() {
+            mainArea.innerHTML = `
+                <div class="tweaks-grid">
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fab fa-youtube"></i></div>
+                        <h3 class="tweak-title">Guía de Optimización</h3>
+                        <p class="tweak-desc">Cómo los profesionales optimizan Windows para aumentar FPS.</p>
+                    </div>
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fas fa-video"></i></div>
+                        <h3 class="tweak-title">Regedit Avanzado</h3>
+                        <p class="tweak-desc">Mejora tu latencia con tweaks avanzados de registro.</p>
+                    </div>
+                    <div class="tweak-card">
+                        <div class="tweak-icon"><i class="fas fa-film"></i></div>
+                        <h3 class="tweak-title">FPS Boost</h3>
+                        <p class="tweak-desc">Aumenta FPS con configuraciones exclusivas.</p>
+                    </div>
+                </div>
+            `;
+        }
 
-        document.getElementById('resNext')?.addEventListener('click', () => {
-          resIndex = (resIndex + 1) % resultsImages.length;
-          updateCarousel();
-        });
+        function renderResultados() {
+            mainArea.innerHTML = `
+                <div class="about-section">
+                    <h2 class="about-title">Resultados</h2>
+                    <p class="about-text">Próximamente mostraremos resultados de rendimiento con gráficos comparativos.</p>
+                </div>
+            `;
+        }
 
-        document.addEventListener('keydown', function carouselKeys(e) {
-          if (mainArea.querySelector('.results-carousel-container')) {
-            if (e.key === 'ArrowLeft') {
-              resIndex = (resIndex - 1 + resultsImages.length) % resultsImages.length;
-              updateCarousel();
-            } else if (e.key === 'ArrowRight') {
-              resIndex = (resIndex + 1) % resultsImages.length;
-              updateCarousel();
+        function renderKeys() {
+            const hasLicense = currentUser.License && currentUser.License !== "";
+            mainArea.innerHTML = `
+                <div class="account-section">
+                    <div class="account-header">
+                        <div class="account-avatar"><i class="fas fa-key"></i></div>
+                        <div class="account-info">
+                            <h3>Activación de Licencia</h3>
+                            <p>Ingresa tu clave para activar el servicio</p>
+                        </div>
+                    </div>
+                    ${hasLicense ? `
+                        <div class="license-status active">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Licencia activa: ${currentUser.License}</span>
+                        </div>
+                    ` : `
+                        <div class="license-status">
+                            <i class="fas fa-info-circle"></i>
+                            <span>No tienes licencia activa</span>
+                        </div>
+                    `}
+                    <div class="message error" id="keyError"></div>
+                    <div class="message success" id="keySuccess"></div>
+                    ${!hasLicense ? `
+                        <div class="form-group">
+                            <label>Clave de Licencia</label>
+                            <input type="text" id="licenseKey" placeholder="XXXX-XXXX-XXXX-XXXX">
+                        </div>
+                        <button class="btn-primary" id="activateBtn" onclick="activateLicense()">
+                            <i class="fas fa-check"></i> Activar Licencia
+                        </button>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        window.activateLicense = async function() {
+            const licenseKey = document.getElementById('licenseKey').value.trim();
+            if (!licenseKey) {
+                showKeyMessage('keyError', 'Por favor ingresa una clave de licencia');
+                return;
             }
-          }
+            const btn = document.getElementById('activateBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="loading-spinner" style="width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;border-top-color:#fff;animation:spin 0.6s linear infinite;display:inline-block;"></span> Verificando...';
+            try {
+                const { data: licenses, sha: licenseSha } = await fetchFile(LICENSE_FILE_PATH);
+                const licenseExists = licenses.some(l => l.License === licenseKey);
+                if (!licenseExists) {
+                    showKeyMessage('keyError', 'Licencia inválida o ya utilizada');
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Activar Licencia';
+                    return;
+                }
+                const { data: users, sha: usersSha } = await fetchFile(FILE_PATH);
+                const userIndex = users.findIndex(u => u.Username === currentUser.Username);
+                if (userIndex === -1) {
+                    showKeyMessage('keyError', 'Usuario no encontrado');
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Activar Licencia';
+                    return;
+                }
+                users[userIndex].License = licenseKey;
+                await updateFile(FILE_PATH, users, usersSha, 'Activate license');
+                const updatedLicenses = licenses.filter(l => l.License !== licenseKey);
+                await updateFile(LICENSE_FILE_PATH, updatedLicenses, licenseSha, 'Remove used license');
+                currentUser.License = licenseKey;
+                localStorage.setItem('hquantum_user', JSON.stringify(currentUser));
+                showKeyMessage('keySuccess', '¡Licencia activada exitosamente!');
+                setTimeout(() => renderKeys(), 1500);
+            } catch (error) {
+                showKeyMessage('keyError', 'Error: ' + error.message);
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-check"></i> Activar Licencia';
+            }
+        };
+
+        function showKeyMessage(id, text) {
+            const el = document.getElementById(id);
+            el.textContent = text;
+            el.style.display = 'block';
+            setTimeout(() => { el.style.display = 'none'; }, 4000);
+        }
+
+        function renderAccount() {
+            mainArea.innerHTML = `
+                <div class="account-section">
+                    <div class="account-header">
+                        <div class="account-avatar"><i class="fas fa-user"></i></div>
+                        <div class="account-info">
+                            <h3>${currentUser.Username}</h3>
+                            <p>${currentUser.License ? 'Licencia: ' + currentUser.License : 'Sin licencia'}</p>
+                        </div>
+                    </div>
+                    <div class="message error" id="accountError"></div>
+                    <div class="message success" id="accountSuccess"></div>
+                    <div class="form-group">
+                        <label>Usuario</label>
+                        <input type="text" id="newUsername" value="${currentUser.Username}">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" id="newPassword" placeholder="Dejar vacío para no cambiar">
+                    </div>
+                    <button class="btn-primary" onclick="updateAccount()">Guardar Cambios</button>
+                    <button class="btn-logout" onclick="logout()">Cerrar Sesión</button>
+                </div>
+            `;
+        }
+
+        window.updateAccount = async function() {
+            const newUsername = document.getElementById('newUsername').value.trim();
+            const newPassword = document.getElementById('newPassword').value;
+            if (!newUsername) {
+                showAccountMessage('accountError', 'El usuario no puede estar vacío');
+                return;
+            }
+            try {
+                const { data: users, sha } = await fetchFile(FILE_PATH);
+                const userIndex = users.findIndex(u => u.Username === currentUser.Username);
+                if (userIndex === -1) {
+                    showAccountMessage('accountError', 'Usuario no encontrado');
+                    return;
+                }
+                if (newUsername !== currentUser.Username && users.some(u => u.Username === newUsername)) {
+                    showAccountMessage('accountError', 'El usuario ya existe');
+                    return;
+                }
+                users[userIndex].Username = newUsername;
+                if (newPassword) users[userIndex].Password = newPassword;
+                await updateFile(FILE_PATH, users, sha, 'Update user data');
+                currentUser.Username = newUsername;
+                if (newPassword) currentUser.Password = newPassword;
+                localStorage.setItem('hquantum_user', JSON.stringify(currentUser));
+                showAccountMessage('accountSuccess', 'Cuenta actualizada correctamente');
+                setTimeout(() => renderAccount(), 1500);
+            } catch (error) {
+                showAccountMessage('accountError', 'Error: ' + error.message);
+            }
+        };
+
+        function showAccountMessage(id, text) {
+            const el = document.getElementById(id);
+            el.textContent = text;
+            el.style.display = 'block';
+            setTimeout(() => { el.style.display = 'none'; }, 4000);
+        }
+
+        window.logout = function() {
+            localStorage.removeItem('hquantum_user');
+            window.location.href = 'login.html';
+        };
+
+        function renderSection(section) {
+            switch(section) {
+                case 'videos': renderVideos(); break;
+                case 'resultados': renderResultados(); break;
+                case 'keys': renderKeys(); break;
+                case 'account': renderAccount(); break;
+                default: renderInicio();
+            }
+        }
+
+        hamburgerBtn.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
         });
 
-        updateCarousel();
-      }
+        document.querySelectorAll('.nav-link').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                navLinks.classList.remove('open');
+                renderSection(btn.dataset.section);
+            });
+        });
 
-      function renderKeys() {
-        mainArea.innerHTML = `
-          <div class="development-card">
-            <div class="tweak-icon">🔧</div>
-            <h2 class="dev-title">${t.devTitle}</h2>
-            <p class="dev-text">${t.devText1}</p>
-            <p class="dev-text">${t.devText2}</p>
-          </div>`;
-      }
-
-      // ========== SWITCH DE SECCIÓN ==========
-      function switchSection(section) {
-        resIndex = 0;
-        
-        switch(section) {
-          case 'inicio':
-            renderInicio();
-            break;
-          case 'videos':
-            renderVideos();
-            break;
-          case 'resultados':
-            renderResultados();
-            break;
-          case 'keys':
-            renderKeys();
-            break;
-          default:
+        async function init() {
+            const isValid = await validateSession();
+            if (!isValid) return;
+            
+            await validateLicense();
+            
+            isInitialized = true;
+            
+            loadingScreen.classList.add('hidden');
+            document.getElementById('mainContent').style.display = '';
+            document.getElementById('layoutContainer').style.display = '';
+            document.getElementById('footerContent').style.display = '';
+            
             renderInicio();
         }
-        
-        if (window.innerWidth < 1000) {
-          setTimeout(() => {
-            mainArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 100);
-        }
-      }
 
-      // ========== INICIALIZACIÓN ==========
-      async function bootstrap() {
-        try {
-          const isBlocked = await testAdBlock();
-          if (isBlocked) {
-            showAntiAdblock();
-            return;
-          }
-
-          await loadAdSenseScript();
-          
-          setTimeout(() => {
-            pushAllAds();
-          }, 300);
-
-          hideAntiAdblock();
-          
-          const initialSection = getSectionFromHash();
-          navigateToSection(initialSection, false);
-
-        } catch (error) {
-          console.error('Error durante la inicialización:', error);
-          hideAntiAdblock();
-          const initialSection = getSectionFromHash();
-          navigateToSection(initialSection, false);
-        }
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', bootstrap);
-      } else {
-        bootstrap();
-      }
-
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          cancelAnimationFrame(animationId);
-        } else {
-          animateParticles();
-        }
-      });
-
-    })();
-  </script>
+        init();
+    </script>
 </body>
 </html>
